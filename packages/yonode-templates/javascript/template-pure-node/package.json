@@ -1,24 +1,14 @@
 {
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
-  "author": "Mr Sharafdin",
-  "license": "MIT",
-  "homepage": "https://yonode.org/",
-  "engines": {
-    "node": "^18.0.0 || >=20.0.0"
-  },
-  "repository": "git+https://github.com/sharafdin/yonode.git",
-  "keywords": [
-    "yonode",
-    "node",
-    "backend",
-    "dev-server"
-  ],
+  "name": "yonode-pure-starter",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "./src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js"
   },
+  "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.6",
