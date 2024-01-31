@@ -10,6 +10,7 @@ import cors from 'cors';
 import { rateLimit } from 'express-rate-limit';
 import helmet from 'helmet';
 import morgan from 'morgan';
+import connectDB from './config/db.js';
 
 const PORT = port;
 
@@ -50,7 +51,7 @@ app.use(apiRateLimit);
 
 
 // database connection
-// connectDB();
+connectDB();
 
 app.listen(PORT, () => {
     console.log(process.env.PORT);
