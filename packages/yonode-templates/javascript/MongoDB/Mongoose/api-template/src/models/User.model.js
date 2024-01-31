@@ -6,7 +6,6 @@ import validator from "validator";
 const { Schema, model } = mongoose;
 
 const userSchema = new Schema({
-
     name: {
         type: String,
     },
