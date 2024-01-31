@@ -1,13 +1,13 @@
 import jwt from 'jsonwebtoken';
-import { JWT_SECRET_KEY, Web_Url } from "../config/config.js";
-import User from "../models/User.js";
+import { JWT_SECRET_KEY, Web_Url } from "../config/initial.config.js";
+import User from "../models/User.model.js";
 import sendVerificationEmail from "../utils/emails/sendVerificationToken.js";
 import { generateVerificationToken } from "../util/generations.js";
 
 export const registerUser = async (req, res) => {
 
     try {
-        const { username, password, email } = req.body;
+        const { name, username, password, email } = req.body;
 
         const isUserExists = await User.findOne({
             $or: [
@@ -35,6 +35,7 @@ export const registerUser = async (req, res) => {
         console.log("tokeExpireDate", tokeExpireDate);
 
         const userInfo = new User({
+            name,
             username,
             email,
             password,
@@ -64,8 +65,6 @@ export const verifyUser = async (req, res) => {
     try {
 
         const { token, userId: _id } = req.query;
-        // const _id = req.query.userId;
-        // const token = req.query.token;
 
         const user = await User.findOne({ _id, token });
 

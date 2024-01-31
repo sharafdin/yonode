@@ -2,7 +2,7 @@
 import express from 'express';
 import chalk from 'chalk';
 import cookieParser from 'cookie-parser';
-import { port } from './config/config.js';
+import { port } from './config/initial.config.js';
 // import connectDB from './config/db.js';
 // import usersRouter from './routes/users.js';
 
@@ -10,7 +10,8 @@ import cors from 'cors';
 import { rateLimit } from 'express-rate-limit';
 import helmet from 'helmet';
 import morgan from 'morgan';
-import connectDB from './config/db.js';
+import connectDB from './config/db.config.js';
+import userRouter from './routes/user.router.js';
 
 const PORT = port;
 
@@ -29,7 +30,7 @@ var corsOptionsDelegate = function (req, callback) {
     } else {
         corsOptions = { origin: false };
     }
-    callback(null, corsOptions); 
+    callback(null, corsOptions);
 };
 
 app.use(cors(corsOptionsDelegate));
@@ -47,7 +48,7 @@ app.use(apiRateLimit);
 
 
 // route management
-app.use('/api/v1/users', usersRouter);
+app.use('/api/v1/users', userRouter);
 
 
 // database connection
