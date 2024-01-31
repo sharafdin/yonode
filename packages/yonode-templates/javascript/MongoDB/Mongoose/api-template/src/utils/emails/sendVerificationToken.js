@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer';
-import { emailPass, emailService, emailUser } from '../../config/initial.config.js';
+import { emailFrom, emailPass, emailService, emailUser } from '../../config/initial.config.js';
 
 const transporter = nodemailer.createTransport({
     service: emailService,
@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
 const sendVerificationEmail = (to, verificationLink) => {
 
     const mailOptions = {
-        from: emailUser,
+        from: emailFrom,
         to,
         subject: "Verification Email",
         html: `click the link below to verify your email ${verificationLink}`

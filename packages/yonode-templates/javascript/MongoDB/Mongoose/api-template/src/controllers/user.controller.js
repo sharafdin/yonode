@@ -108,14 +108,12 @@ export const loginUser = async (req, res) => {
 
         const { username, email, password } = req.body;
 
-
         const isUserExists = await User.findOne({
             $or: [
                 { email: email?.toLowerCase() },
                 { username: username?.toLowerCase() }
             ]
         }).select("+password");
-
 
         if (!isUserExists.isEmailConfirmed) {
             return res.status(401).send("Confirm your email first");
