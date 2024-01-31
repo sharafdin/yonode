@@ -17,9 +17,7 @@ const PORT = port;
 
 const app = express();
 
-
 app.use(morgan("dev"));
-
 
 var whitelist = ['http://localhost:8000'];
 
