@@ -62,13 +62,18 @@ export const registerUser = async (req, res) => {
 
 };
 
+
 export const verifyUser = async (req, res) => {
-
     try {
+        const { token, userId } = req.query;
 
-        const { token, userId: _id } = req.query;
-
-        const user = await User.findOne({ _id, token });
+        // Find the user by ID and token
+        const user = await prisma.user.findUnique({
+            where: {
+                id: userId, // Assuming `id` is the field name in your Prisma model
+                token: token,
+            },
+        });
 
         if (!user) {
             return res.status(400).send("Invalid Token...");
@@ -81,78 +86,93 @@ export const verifyUser = async (req, res) => {
         }
 
         const maxAge = new Date();
-
         maxAge.setHours(maxAge.getHours() - 24);
 
         if (expirationTime < maxAge) {
             return res.status(400).send("Token has expired");
         }
 
-        user.isEmailConfirmed = true;
-        user.token = undefined;
-
-        user.expireDate = undefined;
-
-        await user.save();
+        // Update the user's email confirmation status and clear the token and expireDate
+        await prisma.user.update({
+            where: {
+                id: userId, // Again, assuming `id` is the correct field name
+            },
+            data: {
+                isEmailConfirmed: true,
+                token: null, // Assuming you want to clear the token
+                expireDate: null, // Assuming you want to clear the expiration date
+            },
+        });
 
         res.status(200).send({ status: true, message: "Token has been verified." });
-
     } catch (err) {
         console.log("error at user verification", err);
         res.status(400).send(err.message);
     }
-
 };
 
 
+
 // Login User
+
+
+// Helper function to compare passwords
+const comparePassword = async (inputPassword, userPassword) => {
+    return bcrypt.compare(inputPassword, userPassword);
+};
+
 export const loginUser = async (req, res) => {
-
     try {
-
         const { username, email, password } = req.body;
 
-        const isUserExists = await User.findOne({
-            $or: [
-                { email: email?.toLowerCase() },
-                { username: username?.toLowerCase() }
-            ]
-        }).select("+password");
+        // Find the user by email or username
+        const user = await prisma.user.findFirst({
+            where: {
+                OR: [
+                    { email: email?.toLowerCase() },
+                    { username: username?.toLowerCase() },
+                ],
+            },
+           
+        });
 
-        if (!isUserExists.isEmailConfirmed) {
-            return res.status(401).send("Confirm your email first");
-        }
-
-        if (!isUserExists) {
+        if (!user) {
             return res.status(400).send("Invalid username or password");
         }
 
-        const validPassword = await isUserExists.comparePassword(password);
+        if (!user.isEmailConfirmed) {
+            return res.status(401).send("Confirm your email first");
+        }
 
+        // Compare the provided password with the user's password
+        const validPassword = await comparePassword(password, user.password);
 
         if (!validPassword) {
             return res.status(400).send("Invalid username or password");
         }
-        const expiresIn = 7 * 24 * 60 * 60;
 
-        const token = jwt.sign({ _id: isUserExists._id }, JWT_SECRET_KEY, { expiresIn });
+        const expiresIn = 7 * 24 * 60 * 60; // Token validity in seconds
 
+        // Create a token
+        const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET_KEY, { expiresIn });
+
+        // Send the token in a HTTP-only cookie
         res.cookie("token", token, {
             httpOnly: true,
-            secure: false,
-            maxAge: expiresIn * 1000
+            secure: false, // Set to true if using https
+            maxAge: expiresIn * 1000, // Convert to milliseconds
         });
 
-        isUserExists.password = undefined;
+        // Prepare user object for response, excluding password
+        const { password: _, ...userWithoutPassword } = user;
 
-        res.status(200).send({ ...isUserExists.toJSON(), expiresIn });
-
+        res.status(200).send({ ...userWithoutPassword, expiresIn });
     } catch (err) {
         console.log("first login failed", err);
         res.status(400).send(err.message);
     }
-
 };
+
 
 export const logoutUser = (req, res) => {
 
