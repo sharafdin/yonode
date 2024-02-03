@@ -4,10 +4,6 @@
 
 Visit our documentation to [get started with Yonode](https://docs.yonode.org).
 
-## Who is using Yonode?
-
-Yonode is trusted and utilized by developers around the globe, from individual contributors to large corporations. Discover how Yonode is being implemented in different projects by visiting our showcase.
-
 ## Community
 
 Join the vibrant Yonode community:
