@@ -1,8 +1,9 @@
 {
-  "name": "yonode-api-template",
+  "name": "yonode-api-starter",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
   "type": "module",
+  "main": "./src/app.js",
   "scripts": {
     "start": "node ./src/app.js",
     "dev": "nodemon ./src/app.js"
@@ -10,20 +11,18 @@
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.1.1",
-    "chalk": "5.3.0",
-    "class-validator": "^0.14.1",
     "cookie-parser": "^1.4.6",
+    "chalk": "5.3.0",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "express-async-handler": "^1.2.0",
     "express-rate-limit": "^6.10.0",
     "helmet": "^7.0.0",
+    "joi": "^17.10.0",
     "jsonwebtoken": "^9.0.2",
-    "mongodb": "^6.3.0",
-    "morgan": "^1.10.0",
-    "reflect-metadata": "^0.2.1",
-    "typeorm": "^0.3.20"
+    "mongoose": "^7.5.0",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
