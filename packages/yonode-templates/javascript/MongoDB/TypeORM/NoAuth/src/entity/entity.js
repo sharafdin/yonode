@@ -9,9 +9,6 @@ const schemaName = new EntitySchema({
       type: "int",
       generated: true,
     },
-    name: {
-      type: "varchar",
-    },
   },
 });
 export default schemaName;
