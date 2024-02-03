@@ -10,12 +10,10 @@ const AppDataSource = new DataSource({
   database: "yonode",
   // entities: [User],
   synchronize: true,
-  useUnifiedTopology: true,
 });
 AppDataSource.initialize()
   .then(async () => {
-    console.log("database connected");
-    console.log("Data Source has been initialized!");
+    console.log(`${chalk.green.bold("Connected")} to the database ✅`);
   })
   .catch((error) => console.log(error));
 export default AppDataSource;
