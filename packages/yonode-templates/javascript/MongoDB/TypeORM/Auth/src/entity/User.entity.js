@@ -1,53 +1,58 @@
-import {
-  Entity,
-  ObjectIdColumn,
-  Column,
-  BeforeInsert,
-  CreateDateColumn,
-  UpdateDateColumn,
-} from "typeorm";
-import { IsEmail, Matches } from "class-validator";
-import bcrypt from "bcrypt";
+// Use ESM import syntax
+import { EntitySchema } from "typeorm";
 
-@Entity()
-export class User {
-  @ObjectIdColumn()
-  id;
+const User = new EntitySchema({
+  name: "User",
+  tableName: "users",
+  columns: {
+    _id: {
+      primary: true,
+      type: "mongodb-object-id",
+      objectId: true,
+    },
+    name: {
+      type: "varchar",
+      nullable: false,
+    },
+    email: {
+      type: "varchar",
+      unique: true,
+      nullable: false,
+    },
+    username: {
+      type: "varchar",
+      unique: true,
+      nullable: false,
+    },
+    password: {
+      type: "varchar",
+      nullable: false,
+    },
+    isEmailConfirmed: {
+      type: "boolean",
+      default: false,
+      nullable: false,
+    },
+    token: {
+      type: "varchar",
+      nullable: true,
+    },
+    expireDate: {
+      type: "timestamp",
+      nullable: true,
+    },
+    createdAt: {
+      name: "created_at",
+      type: "timestamp",
+      createDate: true,
+    },
+    updatedAt: {
+      name: "updated_at",
+      type: "timestamp",
+      updateDate: true,
+    },
+  },
+});
 
-  @Column()
-  name;
-
-  @Column({
-    unique: true,
-  })
-  @Matches(/^[a-zA-Z0-9_.-]*$/, {
-    message: "username should not contain special characters except _. and -",
-  })
-  username;
-
-  @Column({
-    select: false,
-  })
-  password;
-
-  @Column({
-    unique: true,
-  })
-  @IsEmail({}, { message: "Invalid email" })
-  email;
-
-  @CreateDateColumn()
-  createdAt;
-
-  @UpdateDateColumn()
-  updatedAt;
-
-  @BeforeInsert()
-  async hashPassword() {
-    this.password = await bcrypt.hash(this.password, 10);
-  }
-
-  async comparePassword(attempt) {
-    return await bcrypt.compare(attempt, this.password);
-  }
-}
+// Use ESM export syntax
+export default User;
