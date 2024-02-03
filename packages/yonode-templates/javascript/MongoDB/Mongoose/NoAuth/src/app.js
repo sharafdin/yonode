@@ -3,8 +3,11 @@ import express from 'express';
 import { port } from './config/initial.config.js';
 import connectDB from './config/db.config.js';
 
-const PORT = port;
 const app = express();
+const PORT = port;
+
+// rest of your code here
+
 
 // database connection
 connectDB();
