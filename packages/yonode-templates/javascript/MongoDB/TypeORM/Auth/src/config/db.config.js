@@ -2,23 +2,18 @@ import "reflect-metadata";
 import { DataSource } from "typeorm";
 import { dbURL } from "./initial.config.js";
 import chalk from "chalk";
+import User from "../entity/User.entity.js";
 
 const AppDataSource = new DataSource({
   type: "mongodb",
   url: dbURL,
   database: "yonode",
-  entities: ["./src/entity/**/*.js"],
+  entities: [User],
   synchronize: true,
-  useUnifiedTopology: true,
-  useNewUrlParser: true,
 });
-
 AppDataSource.initialize()
-  .then(() => {
+  .then(async () => {
     console.log(`${chalk.green.bold("Connected")} to the database ✅`);
   })
-  .catch((err) => {
-    console.log(`${chalk.red.bold("Error")} connecting to database`, err);
-  });
-
+  .catch((error) => console.log(error));
 export default AppDataSource;
