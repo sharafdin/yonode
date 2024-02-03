@@ -2,6 +2,7 @@
 import express from 'express';
 import { port } from './config/initial.config.js';
 import chalk from 'chalk'
+
 // Initializing app 
 const app = express();
 const PORT = port;
