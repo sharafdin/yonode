@@ -1,3 +1,4 @@
-export const controlerName = async (req, res) => {
-  return req.send("welcome ");
+export const controller = async (req, res) => {
+  try {
+  } catch (error) {}
 };

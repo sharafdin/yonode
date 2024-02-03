@@ -2,7 +2,6 @@ import "reflect-metadata";
 import { DataSource } from "typeorm";
 import { dbURL } from "./initial.config.js";
 import chalk from "chalk";
-// import { User } from "../entity/User.js";
 
 const AppDataSource = new DataSource({
   type: "mongodb",
