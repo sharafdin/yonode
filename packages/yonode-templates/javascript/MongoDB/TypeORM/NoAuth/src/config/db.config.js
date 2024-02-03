@@ -2,7 +2,6 @@ import "reflect-metadata";
 import { DataSource } from "typeorm";
 import { dbURL } from "./initial.config.js";
 import chalk from "chalk";
-// import { User } from "../entity/User.js";
 
 const AppDataSource = new DataSource({
   type: "mongodb",
@@ -11,9 +10,11 @@ const AppDataSource = new DataSource({
   entities: ["../entity/**/*.js"],
   synchronize: true,
 });
+
 AppDataSource.initialize()
   .then(async () => {
-    console.log(`${chalk.green.bold("Connected")} to the database ✅`);
+    console.log(`${chalk.green.bold("Connected")} to the database`);
   })
-  .catch((error) => console.log(error));
+  .catch((error) => console.log(`${chalk.red.bold("Failed")} to connect the database: ${error}`));
+
 export default AppDataSource;
