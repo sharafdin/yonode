@@ -8,7 +8,7 @@ const AppDataSource = new DataSource({
   type: "mongodb",
   url: dbURL,
   database: "yonode",
-  // entities: [User],
+  entities: ["../entity/**/*.js"],
   synchronize: true,
 });
 AppDataSource.initialize()

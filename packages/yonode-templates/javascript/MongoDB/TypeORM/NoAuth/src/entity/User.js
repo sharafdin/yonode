@@ -1,8 +1,8 @@
 import { EntitySchema } from "typeorm";
 
-const User = new EntitySchema({
-  name: "Category", // Will use table name `category` as default behaviour.
-  tableName: "categories", // Optional: Provide `tableName` property to override the default behaviour for table name.
+const schemaName = new EntitySchema({
+  name: "schemaName", // Will use table name `category` as default behaviour.
+  tableName: "tableName", // Optional: Provide `tableName` property to override the default behaviour for table name.
   columns: {
     id: {
       primary: true,
@@ -14,4 +14,4 @@ const User = new EntitySchema({
     },
   },
 });
-export default User;
+export default schemaName;
