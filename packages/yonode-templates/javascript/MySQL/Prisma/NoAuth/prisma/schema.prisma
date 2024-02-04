@@ -10,5 +10,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
-
+model modelName {
+  id Int @id @default(autoincrement())
+}
