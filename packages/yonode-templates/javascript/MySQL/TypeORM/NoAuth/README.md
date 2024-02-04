@@ -1,4 +1,4 @@
-# Yonode + MySQL with Sequelize
+# Yonode + MySQL with TypeORM
 
 This template simplifies setting up a server in [Yonode](https://yonode.org) with Node.js and Express, offering a quick start for server-side development.
 
