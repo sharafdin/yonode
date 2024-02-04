@@ -4,7 +4,7 @@ This template simplifies setting up a server in [Yonode](https://yonode.org) wit
 
 ## Getting Started
 
-Initially, navigate to the .env file to set up the required environment variables:
+Initially, navigate to the .env file to set up the required environment variables.
 
 Next, launch the development server:
 
