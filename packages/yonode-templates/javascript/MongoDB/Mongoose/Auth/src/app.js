@@ -3,7 +3,7 @@ import express from 'express';
 import chalk from 'chalk';
 import cookieParser from 'cookie-parser';
 import { port } from './config/initial.config.js';
-// import connectDB from './config/db.js';
+import connectDB from './config/db.js';
 // import usersRouter from './routes/users.js';
 
 import cors from 'cors';
