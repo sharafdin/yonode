@@ -10,12 +10,14 @@ import {
 import chalk from "chalk";
 
 const AppDataSource = new DataSource({
-  type: "mysql",
+  type: "postgres",
   host: databaseHost,
   username: databaseUsername,
   password: databasePassword,
   port: databasePort,
   database: databaseName,
+  synchronize: true,
+  logging: false,
   entities: ["../entity/**/*.js"],
 });
 
