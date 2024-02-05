@@ -5,10 +5,8 @@ import chalk from "chalk";
 
 const AppDataSource = new DataSource({
   type: "mysql",
-  host: dbURL,
-  port: 3306,
-  username: "root",
-  password: "",
+  url: dbURL,
+
   database: dbName,
   entities: ["../entity/**/*.js"],
 });
