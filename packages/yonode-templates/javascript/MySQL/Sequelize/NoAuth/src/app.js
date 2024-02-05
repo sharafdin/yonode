@@ -4,6 +4,8 @@ import cors from 'cors';
 import chalk from 'chalk';
 import { serverPort } from './config/initial.config.js';
 import { connectDB } from './config/db.config.js';
+import models from './models/models.js';
+
 
 // Initializing app 
 const app = express();
