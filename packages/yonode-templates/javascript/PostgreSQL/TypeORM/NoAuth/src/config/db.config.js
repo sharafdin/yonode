@@ -4,12 +4,11 @@ import { dbName, dbURL } from "./initial.config.js";
 import chalk from "chalk";
 
 const AppDataSource = new DataSource({
-  type: "mysql",
-  host: dbURL,
-  port: 3306,
-  username: "root",
-  password: "",
+  type: "postgres",
+  url: dbURL,
   database: dbName,
+  synchronize: true,
+  logging: false,
   entities: ["../entity/**/*.js"],
 });
 
