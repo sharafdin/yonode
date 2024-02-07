@@ -8,7 +8,6 @@ import models from './models/models.js';
 
 // Initializing app 
 const app = express();
-const PORT = serverPort
 
 // rest of your code here
 app.use(express.json());
@@ -17,7 +16,7 @@ app.use(cors());
 // database connection
 connectDB()
 
-app.listen(PORT, () => {
-    console.log(`${chalk.green.bold('Server')} is listening on  ${PORT} 🚀 `);
+app.listen(serverPort, () => {
+    console.log(`${chalk.green.bold('Server')} is listening on  ${serverPort} 🚀 `);
 });
 

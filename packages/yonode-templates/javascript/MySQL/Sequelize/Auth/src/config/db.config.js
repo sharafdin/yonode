@@ -1,15 +1,8 @@
 import chalk from "chalk";
 import { Sequelize } from "sequelize"
-import { 
-    databaseHost, databaseName, databasePassword, 
-    databasePort, databaseUsername 
-} from "./initial.config.js";
+import { dbUrl } from './initial.config.js';
 
-export const sequelize = new Sequelize(databaseName,databaseUsername,databasePassword,{
-    dialect : "mysql",
-    host: databaseHost,
-    port : databasePort
-});
+export const sequelize = new Sequelize(dbUrl);
 
 export const connectDB = async () => {
     try {
