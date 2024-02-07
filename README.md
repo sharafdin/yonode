@@ -1,5 +1,7 @@
 # Yonode
 
+The Node.js Toolkit for Rapid Development
+
 ## Getting Started
 
 Visit our documentation to [get started with Yonode](https://docs.yonode.org).
