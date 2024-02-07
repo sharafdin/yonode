@@ -1,7 +1,23 @@
 {
   "name": "yonode",
   "version": "0.0.1",
+  "description": "A Web Server Framework for Node.js",
   "main": "index.js",
-  "license": "MIT",
-  "private": true
+  "type": "module",
+  "bin": {
+    "yonode": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "keywords": [],
+  "author": "Mr Sharafdin",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^12.0.0",
+    "inquirer": "^9.2.14"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.9"
+  }
 }
