@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
-import { dbName, dbURL } from "./initial.config.js";
+import { dbName, dbUrl } from "./initial.config.js";
 import chalk from "chalk";
 
 const connectDB = async () => {
     try {
-        await mongoose.connect(dbURL, {
+        await mongoose.connect(dbUrl, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             dbName
