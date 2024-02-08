@@ -1,7 +1,7 @@
-import dotenv from "dotenv";
+import dotenv from 'dotenv';
 
 dotenv.config();
 
-export const port = process.env.PORT || 8000;
-export const dbURL = process.env.DATABASE_URL;
-export const dbName = process.env.DB_NAME;
+export const port = process.env.SERVER_PORT || 8000;
+export const dbUrl = process.env.DATABASE_URL;
+export const dbName = process.env.DATABASE_NAME  || 'yonodeDB';

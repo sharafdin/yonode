@@ -16,7 +16,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/sharafdin/yonode.git",
-    "directory": "packages/yonode"
+    "directory": "main/packages/yonode"
   },
   "keywords": [
     "yonode",
