@@ -1,24 +1,13 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
-import {
-  databaseHost,
-  databaseName,
-  databasePassword,
-  databasePort,
-  databaseUsername,
-} from "./initial.config.js";
+import { dbName, dbUrl } from "./initial.config.js";
 import chalk from "chalk";
 
 const AppDataSource = new DataSource({
   type: "postgres",
-  host: databaseHost,
-  username: databaseUsername,
-  password: databasePassword,
-  port: databasePort,
-  database: databaseName,
-  synchronize: true,
-  logging: false,
-  entities: ["../entity/**/*.js"],
+  url: dbUrl,
+  database: dbName,
+  entities: ["../entity/*/.js"],
 });
 
 AppDataSource.initialize()
