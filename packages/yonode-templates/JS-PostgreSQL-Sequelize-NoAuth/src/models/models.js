@@ -1,4 +1,5 @@
 import modelName from './model.js'
+
 const models = {
     modelName
 }
