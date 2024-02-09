@@ -1,4 +1,4 @@
-# Yonode + PostgreSQL with Prisma
+# Yonode + PostgreSQL with Sequelize
 
 This template simplifies setting up a server in [Yonode](https://yonode.org) with Node.js and Express, offering a quick start for server-side development.
 
@@ -8,7 +8,7 @@ Initially, navigate to the .env file to set up the required environment variable
 
 Next, launch the development server:
 
-bash
+```bash
 npm run server
 # or
 yarn server
@@ -16,9 +16,10 @@ yarn server
 pnpm server
 # or
 bun server
-
+```
 The server is running and ready to serve requests.
 
 Now, Go to the Src directory and start building the server.
 
-Happy coding!
+Happy coding! 
+
