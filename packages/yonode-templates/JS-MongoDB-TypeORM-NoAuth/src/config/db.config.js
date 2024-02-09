@@ -13,8 +13,14 @@ const AppDataSource = new DataSource({
 
 AppDataSource.initialize()
   .then(async () => {
-    console.log(`${chalk.green.bold("Connected")} to the database`);
+    console.log(
+      `${chalk.green.bold("Successfully")} connected to the database`
+    );
   })
-  .catch((error) => console.log(`${chalk.red.bold("Failed")} to connect the database: ${error}`));
+  .catch((error) =>
+    console.log(
+      `${chalk.red.bold("Failed")} to connect to the database: ${error}`
+    )
+  );
 
 export default AppDataSource;
