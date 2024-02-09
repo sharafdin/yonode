@@ -15,5 +15,5 @@ const app = express();
 connectDB()
 
 app.listen(port, () => {
-    console.log(`${chalk.green.bold('Server')} is listening on port ${port} 🚀 `);
+    console.log(`${chalk.green.bold('Server')} is listening on port ${port} `);
 });
