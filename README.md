@@ -1,4 +1,4 @@
-# Yonode + MongoDB with Prisma
+# Yonode + MongoDB with TypeORM
 
 This template simplifies setting up a server in [Yonode](https://yonode.org) with Node.js and Express, offering a quick start for server-side development.
 
@@ -22,3 +22,4 @@ The server is running and ready to serve requests.
 Now, Go to the Src directory and start building the server.
 
 Happy coding! 
+
