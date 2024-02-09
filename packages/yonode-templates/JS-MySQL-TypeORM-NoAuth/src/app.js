@@ -3,7 +3,7 @@ import express from "express";
 import chalk from "chalk";
 
 import { port } from "./config/initial.config.js";
-import AppDataSource from "./config/db.config.js";
+import "./config/db.config.js";
 
 const app = express();
 
