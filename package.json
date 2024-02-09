@@ -23,8 +23,7 @@
     "helmet": "^7.0.0",
     "nodemailer": "^6.9.9",
     "uuidv4": "^6.2.13",
-    "reflect-metadata": "^0.1.13",
-    "typeorm": "0.3.20"
+    "sequelize": "^6.36.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
