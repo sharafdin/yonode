@@ -1,18 +1,25 @@
-import { Sequelize } from 'sequelize';
-import { dbUrl} from './initial.config.js'
-import chalk from 'chalk';
+import "reflect-metadata";
+import { DataSource } from "typeorm";
+import { dbName, dbUrl } from "./initial.config.js";
+import chalk from "chalk";
 
-const sequelize = new Sequelize(dbUrl);
-export const connectDB = async () => {
-    try {
-        await sequelize.authenticate();
-        console.log(`${chalk.green.bold('Connected')}  to the database`);
-        await sequelize.sync({ force: true });
-        console.log(`${chalk.green.bold('Models synced')} successfully`);
-    } catch (error) {
-        console.log(`${chalk.red.bold('Error')} connecting to database`, error);
-        process.exit(1);
-    }
-}
+const AppDataSource = new DataSource({
+  type: "postgres",
+  url: dbUrl,
+  database: dbName,
+  entities: ["../entity/*/.js"],
+});
 
-export default sequelize;
+AppDataSource.initialize()
+  .then(async () => {
+    console.log(
+      `${chalk.green.bold("Successfully")} connected to the database`
+    );
+  })
+  .catch((error) =>
+    console.log(
+      `${chalk.red.bold("Failed")} to connect to the database: ${error}`
+    )
+  );
+
+export default AppDataSource;
