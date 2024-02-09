@@ -4,7 +4,7 @@ import chalk from 'chalk';
 
 import { port } from './config/initial.config.js';
 import { connectDB } from './config/db.config.js';
-import models from './models/models.js';
+import './models/models.js';
 
 const app = express();
 
