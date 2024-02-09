@@ -1,11 +1,11 @@
 // import the packages
 import express from "express";
-import { port } from "./config/initial.config.js";
 
 //import your files
-import "./config/db.config.js";
+import { port } from "./config/initial.config.js";
+import chalk from "chalk";
 
-//Initializing your app
+// Initializing the app
 const app = express();
 
 // rest of your code here
