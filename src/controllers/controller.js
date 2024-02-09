@@ -4,4 +4,4 @@ export const controller = async (req, res) => {
     } catch (error) {
         
     }
-}
+};
