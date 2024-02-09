@@ -1,28 +1,29 @@
 {
-  "name": "yonode-api-starter",
-  "version": "1.0.0",
-  "description": "",
-  "type": "module",
+  "name": "yonode-api",
+  "version": "0.0.0",
+  "private": true,
   "main": "./src/app.js",
+  "type": "module",
   "scripts": {
     "start": "node ./src/app.js",
     "dev": "nodemon ./src/app.js"
   },
-  "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.1.1",
-    "cookie-parser": "^1.4.6",
     "chalk": "5.3.0",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "express-async-handler": "^1.2.0",
-    "express-rate-limit": "^6.10.0",
+    "express-rate-limit": "^7.1.5",
     "helmet": "^7.0.0",
     "joi": "^17.10.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^7.5.0",
-    "morgan": "^1.10.0"
+    "mongoose": "^8.1.1",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.9.9",
+    "uuidv4": "^6.2.13"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
