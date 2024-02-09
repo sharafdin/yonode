@@ -1,16 +1,15 @@
 // import the packages
-import express from 'express';
-import { port } from './config/initial.config.js';
-import chalk from 'chalk'
+import express from "express";
 
-// Initializing app 
+//import your files
+import { port } from "./config/initial.config.js";
+import chalk from "chalk";
+
+// Initializing the app
 const app = express();
-const PORT = port;
 
 // rest of your code here
 
-
-
-app.listen(PORT, () => {
-    console.log(`${chalk.blue.bold('Server')} is listening on port ${PORT} 🚀`);
+app.listen(port, () => {
+  console.log(`${chalk.green.bold("Server")} is listening on port ${port}`);
 });
