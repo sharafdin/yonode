@@ -3,7 +3,7 @@ name: Publish Yonode Package
 on:
   push:
     branches:
-      - yonode
+      - main
 
 jobs:
   publish:
