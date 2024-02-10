@@ -5,7 +5,7 @@ import chalk from "chalk";
 
 const AppDataSource = new DataSource({
   type: "mongodb",
-  url: dbURL,
+  url: dbUrl,
   database: dbName,
   entities: ["../entity/**/*.js"],
   synchronize: true,
