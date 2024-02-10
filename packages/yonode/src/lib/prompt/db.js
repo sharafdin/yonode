@@ -1,8 +1,8 @@
 import inquirer from 'inquirer'
-import { mongodbOrm } from '../orm/mongoDB.js';
-import { ormType } from '../orm/orm.js';
-import { options } from '../index.js';
-import { databaseQuestion } from '../lib/questions.js';
+import { mongodbOrm } from '../../orm/mongoDB.js';
+import { ormType } from '../../orm/orm.js';
+import { options } from '../../index.js';
+import { databaseQuestion } from '../questions.js';
 
 export const databaseType = () => {
     inquirer.prompt(
