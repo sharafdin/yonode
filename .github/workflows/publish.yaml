@@ -3,7 +3,7 @@ name: Publish Yonode Package
 on:
   push:
     branches:
-      - yonode
+      - main
 
 jobs:
   publish:
@@ -20,5 +20,6 @@ jobs:
           registry-url: 'https://registry.npmjs.org/'
       - name: Publish to npm
         run: npm publish --access public
+        working-directory: packages/yonode
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
