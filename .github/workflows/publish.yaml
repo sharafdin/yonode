@@ -2,11 +2,13 @@ name: Publish Yonode Package
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - "v*" # Push events to matching v*, i.e. v1.0, v20.15.10
 
 jobs:
   publish:
+   # prevents this action from running on forks
+    if: github.repository == 'sharafdin/yonode'
     name: Publish Yonode Package
     runs-on: ubuntu-latest
     
