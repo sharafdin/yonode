@@ -1,6 +1,7 @@
 // import the packages
 import express from "express";
 import { port } from "./config/initial.config.js";
+import chalk from "chalk";
 
 //import your files
 import "./config/db.config.js";
