@@ -1,3 +1,12 @@
+# 0.5.4.beta (2024-02-10)
+
+## What's Changed
+* completed fixed the templated name for windows by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/96
+* Sharafdin by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/97
+* custom error: when you installing the same folder and the folder already exists files by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/98
+
+
+**Full Changelog**: https://github.com/sharafdin/yonode/compare/v0.5.3-beta...v0.5.4-beta
 
 # 0.5.2.beta (2024-02-10)
 
