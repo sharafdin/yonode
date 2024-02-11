@@ -77,9 +77,13 @@
 
 **Full Changelog**: https://github.com/sharafdin/yonode/commits/v0.5.2.beta
 
-# 0.5.1.beta (2024-02-10) - Releasing as a beta version for testing noAuth
+# 0.5.1.beta (2024-02-10)
 
-# 0.1.0-test.3 (2024-02-07) - For adding readme.md file
+Releasing as a beta version for testing noAuth
+
+# 0.1.0-test.3 (2024-02-07)
+
+For adding readme.md file
 
 # 0.1.0-test.2 (2024-02-07)
 
