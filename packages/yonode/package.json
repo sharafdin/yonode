@@ -1,7 +1,7 @@
 {
   "name": "yonode",
   "description": "A Web Server Framework for Node.js",
-  "version": "0.5.3-beta",
+  "version": "0.5.4-beta",
   "author": "Mr Sharafdin",
   "license": "MIT",
   "main": "./src/index.js",
