@@ -17,9 +17,9 @@ pnpm start
 # or
 bun start
 ```
+
 The server is running and ready to serve requests.
 
 Now, Go to the Src directory and start building the server.
 
 Happy coding! 
-
