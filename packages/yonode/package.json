@@ -27,7 +27,6 @@
   "files": [
     "LICENSE",
     "README.md",
-    "CHANGELOG.md",
     "src/"
   ],
   "bugs": {
