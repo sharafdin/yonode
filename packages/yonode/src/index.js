@@ -9,7 +9,7 @@
 
 import { execSync } from 'child_process';
 import fs from 'fs';
-import path from 'path';
+import path, { basename } from 'path';
 import inquirer from 'inquirer';
 import './lib/programOptions.js';
 import { databaseType } from './lib/prompt/db.js';
@@ -36,47 +36,47 @@ let cloneDirectory = process.cwd();
 export const cloneRepo = (projectName, branchName) => {
 
 
-    let tempProjectName = cloneDirectory.split('/').pop();
+    let tempProjectName = basename(process.cwd());
 
     if (projectName === '.') {
         console.log(`cloning the repository with name ${tempProjectName}`);
     }
-    
+
     const gitCloneCommand = `git clone --depth 1 -b ${branchName} https://github.com/sharafdin/yonode.git ${projectName}`
-    
+
     const gitClone = runCommand(gitCloneCommand)
-    
-    if(!gitClone) process.exit(1);
-    
+
+    if (!gitClone) process.exit(1);
+
     if (projectName === '.') {
 
         const packageJsonPath = path.join(cloneDirectory, 'package.json');
         const packageJson = fs.readFileSync(packageJsonPath).toString();
 
-        
+
         const packageJsonData = JSON.parse(packageJson)
 
         packageJsonData['name'] = tempProjectName
-        
+
         fs.writeFileSync(packageJsonPath, JSON.stringify(packageJsonData, null, 2));
-        
+
         console.log('\nCongratulations! follow these commands:\n');
-        console.log(`   npm install \n   npm start\n`); 
+        console.log(`   npm install \n   npm start`);
     } else {
         cloneDirectory = path.join(process.cwd(), projectName);
 
         const packageJsonPath = path.join(cloneDirectory, 'package.json');
         const packageJson = fs.readFileSync(packageJsonPath).toString();
 
-        
+
         const packageJsonData = JSON.parse(packageJson)
 
         packageJsonData['name'] = projectName
-        
+
         fs.writeFileSync(packageJsonPath, JSON.stringify(packageJsonData, null, 2));
-        
+
         console.log('\nCongratulations! follow these commands:\n');
-        console.log(`   cd ${projectName} \n   npm install \n   npm start\n`);
+        console.log(`   cd ${projectName} \n   npm install \n   npm start`);
     }
 
     process.exit(1);
@@ -86,7 +86,7 @@ export const cloneRepo = (projectName, branchName) => {
 
 export let projectName = process.argv[2]
 
-if(projectName === '.'){
+if (projectName === '.') {
     const files = fs.readdirSync(cloneDirectory);
 
     if (files.length) {
