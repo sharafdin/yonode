@@ -8,7 +8,7 @@
 
 **Full Changelog**: https://github.com/sharafdin/yonode/compare/v0.5.3-beta...v0.5.4-beta
 
-# 0.5.2.beta (2024-02-10)
+# 0.5.3.beta (2024-02-10)
 
 ## What's Changed
 * added noAuth example in .env.example file by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/89
