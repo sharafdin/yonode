@@ -104,7 +104,16 @@ if (!projectName) {
             message: "What is your project name?",
             default: 'yonode-app'
         },
-    ).then(name => { projectName = name.projectName, main() })
+    ).then(name => {
+        if (name.projectName === '.') {
+            const files = fs.readdirSync(cloneDirectory);
+
+            if (files.length) {
+                console.log("The directory is not empty.");
+                process.exit(1);
+            }
+        } else { projectName = name.projectName, main() }
+    })
 } else {
     main()
 }
