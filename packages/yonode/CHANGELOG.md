@@ -1,10 +1,14 @@
-# 0.0.1-test.1 (2024-02-07)
 
-# 0.1.0-test.2 (2024-02-07)
+# 0.5.2.beta (2024-02-10)
 
-# 0.1.0-test.3 (2024-02-07) - For adding readme.md file
+## What's Changed
+* added noAuth example in .env.example file by @isasharafdin in https://github.com/sharafdin/yonode/pull/89
+* added comments .env.example file by @isasharafdin in https://github.com/sharafdin/yonode/pull/90
+* changed the terminal space and change the structure of the template c… by @isasharafdin in https://github.com/sharafdin/yonode/pull/91
+* added 1 patch version by @isasharafdin in https://github.com/sharafdin/yonode/pull/92
 
-# 0.5.1.beta (2024-02-10) - Releasing as a beta version for testing noAuth
+
+**Full Changelog**: https://github.com/sharafdin/yonode/compare/v0.5.2.beta...v0.5.3-beta
 
 # 0.5.2.beta (2024-02-10) 
 
@@ -79,13 +83,10 @@
 
 **Full Changelog**: https://github.com/sharafdin/yonode/commits/v0.5.2.beta
 
-# 0.5.2.beta (2024-02-10)
+# 0.5.1.beta (2024-02-10) - Releasing as a beta version for testing noAuth
 
-## What's Changed
-* added noAuth example in .env.example file by @isasharafdin in https://github.com/sharafdin/yonode/pull/89
-* added comments .env.example file by @isasharafdin in https://github.com/sharafdin/yonode/pull/90
-* changed the terminal space and change the structure of the template c… by @isasharafdin in https://github.com/sharafdin/yonode/pull/91
-* added 1 patch version by @isasharafdin in https://github.com/sharafdin/yonode/pull/92
+# 0.1.0-test.3 (2024-02-07) - For adding readme.md file
 
+# 0.1.0-test.2 (2024-02-07)
 
-**Full Changelog**: https://github.com/sharafdin/yonode/compare/v0.5.2.beta...v0.5.3-beta
+# 0.0.1-test.1 (2024-02-07)
