@@ -9,14 +9,15 @@ Initially, navigate to the .env file to set up the required environment variable
 Next, launch the development server:
 
 ```bash
-npm run server
+npm start
 # or
-yarn server
+yarn start
 # or
-pnpm server
+pnpm start
 # or
-bun server
+bun start
 ```
+
 The server is running and ready to serve requests.
 
 Now, Go to the Src directory and start building the server.
