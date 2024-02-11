@@ -16,7 +16,7 @@
 * changed packages structure by (@isasharafdin)[https://github.com/isasharafdin] in https://github.com/sharafdin/yonode/pull/1
 * configured db connection by (@isasharafdin)[https://github.com/isasharafdin] in https://github.com/sharafdin/yonode/pull/2
 * added user model by (@isasharafdin)[https://github.com/isasharafdin] in https://github.com/sharafdin/yonode/pull/3
-* added model, controller, routes, email by (@isasharafdin)[https://github.com/isasharafdin] in https://github.com/sharafdin/yonode/pull/4
+* added model, controller, routes, email by (@isasharafdin) [https://github.com/isasharafdin] in https://github.com/sharafdin/yonode/pull/4
 * added model, controller, routes, email by (@isasharafdin)[https://github.com/isasharafdin] in https://github.com/sharafdin/yonode/pull/5
 * added api-template in every issues by (@isasharafdin)[https://github.com/isasharafdin] in https://github.com/sharafdin/yonode/pull/10
 * added api-template in every issues by (@isasharafdin)[https://github.com/isasharafdin] in https://github.com/sharafdin/yonode/pull/11
