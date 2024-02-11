@@ -75,12 +75,6 @@
 * Sharafdin by @isasharafdin in https://github.com/sharafdin/yonode/pull/77
 * releasing beta version for noAuth by @isasharafdin in https://github.com/sharafdin/yonode/pull/88
 
-## Contributors
-* @isasharafdin made their first contribution in https://github.com/sharafdin/yonode/pull/1
-* @abdinasir-Tman made their first contribution in https://github.com/sharafdin/yonode/pull/12
-* @Miirshe made their first contribution in https://github.com/sharafdin/yonode/pull/13
-* @Omar-Tood made their first contribution in https://github.com/sharafdin/yonode/pull/17
-
 **Full Changelog**: https://github.com/sharafdin/yonode/commits/v0.5.2.beta
 
 # 0.5.1.beta (2024-02-10) - Releasing as a beta version for testing noAuth
