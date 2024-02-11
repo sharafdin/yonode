@@ -61,7 +61,7 @@ export const cloneRepo = (projectName, branchName) => {
         fs.writeFileSync(packageJsonPath, JSON.stringify(packageJsonData, null, 2));
         
         console.log('\nCongratulations! follow these commands:\n');
-        console.log(`   npm install \n   npm start`); 
+        console.log(`   npm install \n   npm start\n`); 
     } else {
         cloneDirectory = path.join(process.cwd(), projectName);
 
@@ -76,7 +76,7 @@ export const cloneRepo = (projectName, branchName) => {
         fs.writeFileSync(packageJsonPath, JSON.stringify(packageJsonData, null, 2));
         
         console.log('\nCongratulations! follow these commands:\n');
-        console.log(`   cd ${projectName} \n   npm install \n   npm start`);
+        console.log(`   cd ${projectName} \n   npm install \n   npm start\n`);
     }
 
     process.exit(1);
