@@ -1,14 +1,14 @@
 import { EntitySchema } from "typeorm";
 
-const schemaName = new EntitySchema({
-  name: "schemaName",
+const SchemaName = new EntitySchema({
+  name: "SchemaName",
   tableName: "tableName",
   columns: {
-    id: {
+    _id: {
       primary: true,
-      type: "int",
-      generated: true,
+      type: "mongodb-object-id",
+      objectId: true,
     },
   },
 });
-export default schemaName;
+export default SchemaName;
