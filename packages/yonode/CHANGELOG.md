@@ -1,4 +1,12 @@
-# 0.5.4.beta (2024-02-10)
+# 0.5.5-beta (2024-02-12)
+
+## What's Changed
+* fixed the custum error when installing in the same folder by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/99
+
+
+**Full Changelog**: https://github.com/sharafdin/yonode/compare/v0.5.4-beta...v0.5.5-beta
+
+# 0.5.4-beta (2024-02-12)
 
 ## What's Changed
 * completed fixed the templated name for windows by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/96
@@ -8,7 +16,7 @@
 
 **Full Changelog**: https://github.com/sharafdin/yonode/compare/v0.5.3-beta...v0.5.4-beta
 
-# 0.5.3.beta (2024-02-10)
+# 0.5.3-beta (2024-02-11)
 
 ## What's Changed
 * added noAuth example in .env.example file by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/89
@@ -19,7 +27,7 @@
 
 **Full Changelog**: https://github.com/sharafdin/yonode/compare/v0.5.2.beta...v0.5.3-beta
 
-# 0.5.2.beta (2024-02-10) 
+# 0.5.2-beta (2024-02-10) 
 
 ## What's Changed
 * changed packages structure by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/1
@@ -86,7 +94,7 @@
 
 **Full Changelog**: https://github.com/sharafdin/yonode/commits/v0.5.2.beta
 
-# 0.5.1.beta (2024-02-10)
+# 0.5.1-beta (2024-02-10)
 
 Releasing as a beta version for testing noAuth
 
