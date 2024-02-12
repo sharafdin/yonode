@@ -112,6 +112,7 @@ if (!projectName) {
                 console.log("The directory is not empty.");
                 process.exit(1);
             }
+            projectName = name.projectName, main()
         } else { projectName = name.projectName, main() }
     })
 } else {
