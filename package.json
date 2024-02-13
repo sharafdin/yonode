@@ -23,6 +23,8 @@
     "helmet": "^7.0.0",
     "nodemailer": "^6.9.9",
     "uuidv4": "^6.2.13",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
     "sequelize": "^6.36.0"
   },
   "devDependencies": {
