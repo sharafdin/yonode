@@ -8,7 +8,7 @@ import "./config/db.config.js";
 
 //Initializing your app
 const app = express();
-
+app.use(express.json())
 // rest of your code here
 
 app.listen(port, () => {
