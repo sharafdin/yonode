@@ -1,17 +1,17 @@
 import mongoose from "mongoose";
-import { dbURL } from "./initial.config.js";
+import { dbName, dbUrl } from "./initial.config.js";
 import chalk from "chalk";
 
 const connectDB = async () => {
     try {
-        await mongoose.connect(dbURL, {
+        await mongoose.connect(dbUrl, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            dbName: 'yonode'
+            dbName
         });
-        console.log(`${chalk.green.bold('Connected')} to the database ✅`);
-    } catch (err) {
-        console.log(`${chalk.red.bold('Error')} connecting to database`, err);
+        console.log(`${chalk.green.bold('Connected')} to the database`);
+    } catch (error) {
+        console.log(`${chalk.red.bold('Error')} connecting to database`, error);
         process.exit(1);
     }
 };
