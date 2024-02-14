@@ -26,7 +26,7 @@ export const repoConditions = () => {
         case options.language_type === 'JavaScript' && options.database_type === 'PostgreSQL' && options.orm_type === 'Sequelize' && options.auth === false:
             cloneRepo(projectName, 'JS-PostgreSQL-Sequelize-NoAuth-Template');
         case options.language_type === 'JavaScript' && options.database_type === 'PostgreSQL' && options.orm_type === 'TypeORM' && options.auth === false:
-            cloneRepo(projectName, 'JS-MySQL-TypeORM-NoAuth-Template');
+            cloneRepo(projectName, 'JS-PostgreSQL-TypeORM-NoAuth-Template');
             break;
         default:
             throw new Error ('unsupported option') 
