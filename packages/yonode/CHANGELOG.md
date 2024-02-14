@@ -1,3 +1,15 @@
+# 0.5.6 (2024-02-14)
+
+## What's Changed
+* modified some comments in .env.examples by @isasharafdin in https://github.com/sharafdin/yonode/pull/144
+* updated yonode templates by @isasharafdin in https://github.com/sharafdin/yonode/pull/145
+* updated yonode templates by @isasharafdin in https://github.com/sharafdin/yonode/pull/146
+* removed all the templates by @isasharafdin in https://github.com/sharafdin/yonode/pull/147
+* publish: added patch version by @isasharafdin in https://github.com/sharafdin/yonode/pull/150
+
+
+**Full Changelog**: https://github.com/sharafdin/yonode/compare/v0.5.5-beta...v0.5.6
+
 # 0.5.5-beta (2024-02-12)
 
 ## What's Changed
