@@ -9,6 +9,7 @@ import './models/models.js';
 
 // Initializing the app
 const app = express();
+app.use(express.json());
 
 // rest of your code here
 
