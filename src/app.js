@@ -8,7 +8,8 @@ import "./config/db.config.js";
 
 // Initializing the app
 const app = express();
-app.use(express.json())
+app.use(express.json());
+
 // rest of your code here
 
 
