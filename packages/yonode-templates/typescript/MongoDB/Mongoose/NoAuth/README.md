@@ -1,4 +1,4 @@
-# Yonode + MongoDB with Mongoose
+# Yonode + TypeScript + MongoDB with Mongoose
 
 This template simplifies setting up a server in [Yonode](https://yonode.org) with Node.js and Express, offering a quick start for server-side development.
 
