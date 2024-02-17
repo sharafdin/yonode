@@ -2,11 +2,11 @@
 import express from "express";
 import chalk from "chalk";
 
-//import your files
+// import your files
 import { port } from "./config/initial.config.js";
 import "./config/db.config.js";
 
-//Initializing your app
+// initializing your app
 const app = express();
 app.use(express.json());
 
