@@ -6,7 +6,7 @@ import chalk from "chalk";
 import { port } from './config/initial.config.js';
 import connectDB from './config/db.config.js';
 
-// Initializing the app
+// initializing the app
 const app = express();
 app.use(express.json());
 
