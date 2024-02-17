@@ -8,11 +8,7 @@ const AppDataSource = new DataSource({
   type: "mongodb",
   url: dbUrl,
   database: dbName,
-  synchronize: true,
-  logging: false,
   entities: [EntityName],
-  migrations: [],
-  subscribers: [],
 });
 AppDataSource.initialize()
   .then(async () => {

@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "main": "./src/index.ts",
+  "type": "module",
   "scripts": {
-    "start": "ts-node src/index.ts",
-    "dev": "nodemon",
+    "start": "tsx src/index.ts",
+    "dev": "nodemon -x ts-node src/index.ts",
     "build": "tsc",
     "typeorm": "typeorm-ts-node-commonjs"
   },
@@ -21,12 +22,13 @@
     "helmet": "^7.0.0",
     "joi": "^17.10.0",
     "jsonwebtoken": "^9.0.2",
+    "mongodb": "^5.9.2",
     "morgan": "^1.10.0",
     "nodemailer": "^6.9.9",
+    "pg": "^8.4.0",
     "reflect-metadata": "^0.1.13",
     "typeorm": "0.3.20",
-    "uuidv4": "^6.2.13",
-    "pg": "^8.4.0"
+    "uuidv4": "^6.2.13"
   },
   "devDependencies": {
     "@types/chalk": "^2.2.0",
