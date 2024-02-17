@@ -1,15 +1,13 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
-import { EntityName } from "./entity/Entity";
+import { EntityName } from "../entity/Entity";
 import chalk from "chalk";
+import { dbName, dbUrl } from "./initial.config";
 
 const AppDataSource = new DataSource({
-  type: "postgres",
-  host: "localhost",
-  port: 5432,
-  username: "test",
-  password: "test",
-  database: "test",
+  type: "mongodb",
+  url: dbUrl,
+  database: dbName,
   synchronize: true,
   logging: false,
   entities: [EntityName],
