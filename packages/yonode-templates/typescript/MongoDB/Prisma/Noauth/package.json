@@ -5,7 +5,7 @@
   "main": "./src/app.ts",
   "type": "module",
   "scripts": {
-    "start": "ts-node src/app.ts",
+    "start": "tsx src/app.ts",
     "dev": "nodemon",
     "build": "tsc"
   },
