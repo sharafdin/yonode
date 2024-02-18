@@ -8,10 +8,12 @@
  */
 
 import { execSync } from 'child_process';
+import fs from 'fs';
+import path, { basename } from 'path';
 import inquirer from 'inquirer';
+import './lib/programOptions.js';
+import { databaseType } from './lib/prompt/db.js';
 import { languageType } from './lib/questions.js';
-import './lib/programOptions.js'
-import { databaseType } from './lib/db.js';
 
 export const options = {
     language_type: '',
@@ -29,37 +31,90 @@ const runCommand = command => {
     }
     return true;
 }
+let cloneDirectory = process.cwd();
 
-const cloneRepo = (repoName) => {
-    const gitCheckoutCommand = `git clone --depth 1 https://github.com/sharafdin/yonode/tree/main/packages/yonode-templates/javascript/MongoDB/Mongoose/NoAuth ${repoName}`
+export const cloneRepo = (projectName, branchName) => {
 
-    const installDepsCommand = `cd ${repoName} && npm install`
 
-    console.log(`cloning the repository with name ${repoName}`);
+    let tempProjectName = basename(process.cwd());
 
-    const checkOut = runCommand(gitCheckoutCommand)
+    if (projectName === '.') {
+        console.log(`cloning the repository with name ${tempProjectName}`);
+    }
 
-    console.log(`installing dependencies for ${repoName}`);
+    const gitCloneCommand = `git clone --depth 1 -b ${branchName} https://github.com/sharafdin/yonode.git ${projectName}`
 
-    const installDeps = runCommand(installDepsCommand)
+    const gitClone = runCommand(gitCloneCommand)
 
-    console.log('Congratulations! you are ready. follow the commands to start');
+    if (!gitClone) process.exit(1);
 
-    console.log(`cd ${repoName} && npm start`);
+    if (projectName === '.') {
+
+        const packageJsonPath = path.join(cloneDirectory, 'package.json');
+        const packageJson = fs.readFileSync(packageJsonPath).toString();
+
+
+        const packageJsonData = JSON.parse(packageJson)
+
+        packageJsonData['name'] = tempProjectName
+
+        fs.writeFileSync(packageJsonPath, JSON.stringify(packageJsonData, null, 2));
+
+        console.log('\nCongratulations! follow these commands:\n');
+        console.log(`   npm install \n   npm start`);
+    } else {
+        cloneDirectory = path.join(process.cwd(), projectName);
+
+        const packageJsonPath = path.join(cloneDirectory, 'package.json');
+        const packageJson = fs.readFileSync(packageJsonPath).toString();
+
+
+        const packageJsonData = JSON.parse(packageJson)
+
+        packageJsonData['name'] = projectName
+
+        fs.writeFileSync(packageJsonPath, JSON.stringify(packageJsonData, null, 2));
+
+        console.log('\nCongratulations! follow these commands:\n');
+        console.log(`   cd ${projectName} \n   npm install \n   npm start`);
+    }
+
+    process.exit(1);
+
+
 }
 
-let repoName = process.argv[2]
+export let projectName = process.argv[2]
 
-if (!repoName) {
+if (projectName === '.') {
+    const files = fs.readdirSync(cloneDirectory);
+
+    if (files.length) {
+        console.log("The directory is not empty.");
+        process.exit(1);
+    }
+}
+
+if (!projectName) {
     console.log('please provide a repository name');
     inquirer.prompt(
         {
             type: "input",
-            name: "repoName",
+            name: "projectName",
             message: "What is your project name?",
             default: 'yonode-app'
         },
-    ).then(name => { repoName = name.repoName, main() })
+    ).then(name => {
+        if (name.projectName === '.') {
+            const files = fs.readdirSync(cloneDirectory);
+
+            if (files.length) {
+                console.log("The directory is not empty.");
+                process.exit(1);
+            }
+            projectName = name.projectName, main()
+        } else { projectName = name.projectName, main() }
+    })
 } else {
     main()
 }

@@ -1,7 +1,7 @@
 import inquirer from "inquirer";
 import { options } from "../index.js";
 import { ormQuestion } from "../lib/questions.js";
-import { authType } from "../lib/auth.js";
+import { authType } from "../lib/prompt/auth.js";
 
 export const ormType = () => {
   inquirer

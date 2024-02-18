@@ -1,7 +1,7 @@
 import inquirer from 'inquirer'
 import { options } from '../index.js';
 import { mongodbOrmQuestion } from '../lib/questions.js';
-import { authType } from '../lib/auth.js';
+import { authType } from '../lib/prompt/auth.js';
 
 export const mongodbOrm = () => {
     inquirer.prompt(
@@ -12,11 +12,11 @@ export const mongodbOrm = () => {
             authType()
         } else if (answer.mongodb_orm === 'Prisma') {
             options.orm_type = answer.mongodb_orm
-            console.log('Prisma');
+            authType()
         }
         else {
             options.orm_type = answer.mongodb_orm
-            console.log('TypeORM');
+            authType()
         }
     })
         .catch((error) => {
