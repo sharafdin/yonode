@@ -1,19 +1,12 @@
 // import the packages
-import express, { Express } from "express";
+import express from "express";
 import { port } from "config/initial.config";
-
 // import your files
-
-
 // initializing the app
-const app: Express = express();
+const app = express();
 app.use(express.json());
-
 // rest of your code here
-
-
-
-
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:/${port}/`);
+    console.log(`Server running on http://localhost:/${port}/`);
 });
+//# sourceMappingURL=app.js.map
