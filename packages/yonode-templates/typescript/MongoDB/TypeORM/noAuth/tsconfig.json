@@ -1,18 +1,14 @@
 {
   "compilerOptions": {
-    "lib": ["es5", "es6"],
-    "target": "es5",
-    "module": "ES6",
-    "moduleResolution": "node",
-    "outDir": "./build",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2020",
+    "baseUrl": "src",
+    "outDir": "./dist",
     "sourceMap": true,
-    "esModuleInterop": true
-    //  "noEmit": true,
-    //  "allowImportingTsExtensions": true
+    "noImplicitAny": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   },
-  "ts-node": {
-    "esm": true
-  }
+  "include": ["src/**/*"]
 }
