@@ -4,8 +4,8 @@
   "private": true,
   "main": "./src/app.ts",
   "scripts": {
-    "start": "ts-node src/app.ts",
-    "dev": "nodemon",
+    "start": "tsx src/app.ts",
+    "dev": "nodemon -x tsx src/app.ts",
     "build": "tsc"
   },
   "dependencies": {
@@ -41,7 +41,7 @@
     "@types/nodemailer": "^6.4.14",
     "@types/uuidv4": "^5.0.0",
     "nodemon": "^3.0.1",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.7.1",
     "typescript": "^5.3.3",
     "yonode": "^0.5.0"
   }
