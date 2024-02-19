@@ -13,5 +13,5 @@ AppDataSource.initialize()
   .then(async () => {
     console.log(`Connected to the database`);
   })
-  .catch((error) => console.error("Error connecting to database", error););
+  .catch((error) => console.error("Error connecting to database", error));
 export default AppDataSource;
