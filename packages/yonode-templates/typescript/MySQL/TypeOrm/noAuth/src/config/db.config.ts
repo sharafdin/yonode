@@ -1,7 +1,6 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
 import { EntityName } from "../entity/Entity";
-// import chalk from "chalk";
 import { dbName, dbUrl } from "./initial.config";
 
 const AppDataSource = new DataSource({
@@ -12,7 +11,7 @@ const AppDataSource = new DataSource({
 });
 AppDataSource.initialize()
   .then(async () => {
-    console.log(`connected to the database`);
+    console.log(`Connected to the database`);
   })
-  .catch((error) => console.log(`to connect to the database: ${error}`));
+  .catch((error) => console.error("Error connecting to database", error););
 export default AppDataSource;
