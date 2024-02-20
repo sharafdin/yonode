@@ -43,6 +43,8 @@
     "morgan": "^1.10.0",
     "nodemailer": "^6.9.9",
     "nodemon": "^3.0.3",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
     "sequelize": "^6.37.1",
     "uuidv4": "^6.2.13"
   }

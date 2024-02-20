@@ -1,17 +1,19 @@
 // import packages
-import express , { Express } from 'express';
+import express, { Express } from 'express';
 
 // import files
 import { port } from './config/initial.config';
+import { connectDB } from './config/db.config';
 
 
 // Initialize app
-const app:Express = express();
+const app: Express = express();
 app.use(express.json());
 
 // // rest of your code here
 
 // database connection
+connectDB();
 
 app.listen(port, () => {
     console.log(`Server running on http://localhost:/${port}`);
