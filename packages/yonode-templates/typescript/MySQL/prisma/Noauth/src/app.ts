@@ -11,7 +11,6 @@ app.use(express.json());
 
 // rest of your code here
 
-// database connection
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:/${port}`);
