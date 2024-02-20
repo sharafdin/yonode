@@ -7,6 +7,7 @@ import { connectDB } from "./config/db.config";
 
 // initializing the app
 const app: Express = express();
+app.use(express.json());
 
 // rest of your code here
 
@@ -15,4 +16,4 @@ connectDB();
 
 app.listen(port, () => {
     console.log(`Server running on http://localhost:/${port}`);
-  });
+});
