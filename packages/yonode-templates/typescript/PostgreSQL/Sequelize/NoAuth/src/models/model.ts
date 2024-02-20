@@ -5,9 +5,9 @@ interface modelAttributes {
 
 }
 
-interface modelType extends Model<modelAttributes> , modelAttributes{}
+interface modelType extends Model<modelAttributes>, modelAttributes{};
 
-const modelName = sequelize.define<modelType>("modelName",{
+const  modelName = sequelize.define<modelType>("modelName",{
 
 })
 
