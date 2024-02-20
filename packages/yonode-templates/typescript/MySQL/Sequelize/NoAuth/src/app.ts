@@ -4,7 +4,7 @@ import express, { Express } from "express";
 // import your files
 import { port } from "./config/initial.config";
 import { connectDB } from "./config/db.config";
-
+import "./models/models"
 // initializing the app
 const app: Express = express();
 app.use(express.json());
