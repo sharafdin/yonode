@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "main": "./src/app.ts",
-  "type": "module",
   "scripts": {
     "start": "tsx src/app.ts",
     "dev": "nodemon",
