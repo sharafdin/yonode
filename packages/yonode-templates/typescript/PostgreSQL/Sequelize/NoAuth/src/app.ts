@@ -4,6 +4,7 @@ import express, { Express } from 'express';
 // import files
 import { port } from './config/initial.config';
 import { connectDB } from './config/db.config';
+import "./models/models"
 
 
 // Initialize app
