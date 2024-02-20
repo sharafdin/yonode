@@ -7,8 +7,7 @@ interface modelAttributes {
 
 interface modelType extends Model<modelAttributes>, modelAttributes{};
 
-const  modelName = sequelize.define<modelType>("users",{
-    // rest of your schema model here
+const  modelName = sequelize.define<modelType>("modelName",{
 
 })
 
