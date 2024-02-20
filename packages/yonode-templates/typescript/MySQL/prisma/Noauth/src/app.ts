@@ -5,16 +5,14 @@ import express, { Express } from "express";
 import { port } from "./config/initial.config";
 
 
-// initializing the app
+// Initializing the app
 const app: Express = express();
 app.use(express.json());
 
 // rest of your code here
 
-
-
-
+// database connection
 
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:/${port}/`);
+  console.log(`Server running on http://localhost:/${port}`);
 });
