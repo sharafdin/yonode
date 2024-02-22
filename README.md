@@ -1,26 +1,25 @@
-# Yonode
+# Yonode + TypeScript + Mysql with Sequelize
 
-The Node.js Toolkit for Rapid Development
+This template simplifies setting up a server in [Yonode](https://yonode.org) with Node.js and Express, offering a quick start for server-side development.
 
 ## Getting Started
 
-Visit our documentation to [get started with Yonode](https://docs.yonode.org).
+Initially, navigate to the .env file to set up the required environment variables.
 
-## Community
+Next, launch the development server:
 
-Join the vibrant Yonode community:
+```bash
+npm start
+# or
+yarn start
+# or
+pnpm start
+# or
+bun start
+```
 
-- **GitHub Discussions**: Engage in conversations, ask questions, share ideas, and showcase your projects.
-- **Discord**: Connect and chat with fellow Yonode users and contributors. [Join](https://discord.gg/GFUK9rS9)
+The server is running and ready to serve requests.
 
-## Contributing
+Now, Go to the Src directory and start building the server.
 
-Interested in contributing to Yonode? Check out our [contributing guidelines](CONTRIBUTING.md).
-
-## License
-
-Yonode is an open-source package licensed under the [MIT License](LICENSE)
-
-## Security
-
-[Reporting a Vulnerability](SECURITY.md)
+Happy coding! 
