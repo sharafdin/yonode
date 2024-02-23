@@ -2,7 +2,7 @@
 
 /**
  * Yonode
- * A Web Server Framework for Node.js
+ * The Node.js Toolkit for Rapid Development.
  *
  * @author Mr Sharafdin <isasharafdin@gmail.com>
  */
@@ -123,12 +123,8 @@ function main() {
     inquirer
         .prompt(languageType)
         .then((answer) => {
-            if (answer.language_type === 'JavaScript') {
                 options.language_type = answer.language_type
                 databaseType()
-            } else {
-                console.log('sorry, typescript is not available');
-            }
         })
         .catch((error) => {
             if (error.isTtyError) {
