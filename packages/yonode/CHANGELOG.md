@@ -1,3 +1,36 @@
+# 0.6.0-beta (2024-02-23)
+
+## What's Changed
+* added v0.5.6 CHANGELOG.md by @isasharafdin in https://github.com/sharafdin/yonode/pull/152
+* Sharafdin by @isasharafdin in https://github.com/sharafdin/yonode/pull/153
+* started mongoose with AUTH by @isasharafdin in https://github.com/sharafdin/yonode/pull/155
+* updated all of the templates by @isasharafdin in https://github.com/sharafdin/yonode/pull/156
+* Sharafdin by @isasharafdin in https://github.com/sharafdin/yonode/pull/157
+* started typescript version of mongoDB with Mongoose for noAuth by @isasharafdin in https://github.com/sharafdin/yonode/pull/158
+* Completed NoAuth MongoDB with Mongoose for TypeScript by @isasharafdin in https://github.com/sharafdin/yonode/pull/160
+* Removed MongoDB Mongoose Auth for TypeScript. by @isasharafdin in https://github.com/sharafdin/yonode/pull/161
+* Tood by @Omar-Tood in https://github.com/sharafdin/yonode/pull/163
+* finished ts-mongodb-typeorm noAuth api-template by @abdinasir-Tman in https://github.com/sharafdin/yonode/pull/162
+* Merge pull request #162 from sharafdin/tman by @abdinasir-Tman in https://github.com/sharafdin/yonode/pull/164
+* change ts-node into tsx by @isasharafdin in https://github.com/sharafdin/yonode/pull/165
+* fixed mysql and postgresql by @abdinasir-Tman in https://github.com/sharafdin/yonode/pull/168
+* fix: Update README.md by @abdinasir-Tman in https://github.com/sharafdin/yonode/pull/169
+* initializing typescript with Prisma by @Omar-Tood in https://github.com/sharafdin/yonode/pull/170
+* Customized project: Node.js, TypeScript, Sequelize by @Miirshe in https://github.com/sharafdin/yonode/pull/172
+* Merge pull request #172 from sharafdin/miirshe by @Miirshe in https://github.com/sharafdin/yonode/pull/173
+* Completed: Node.js, TypeScript, Sequelize + Postgresql  by @Miirshe in https://github.com/sharafdin/yonode/pull/174
+* finished the ts-prisma with postgresql by @abdinasir-Tman in https://github.com/sharafdin/yonode/pull/175
+* Customized Project: Nodejs-Express-Typescript-Mysql by @Miirshe in https://github.com/sharafdin/yonode/pull/176
+* fix: added route.ts in routes folder by @isasharafdin in https://github.com/sharafdin/yonode/pull/180
+* Fix: added routes.ts in routes folder by @AbdullahiKhalif in https://github.com/sharafdin/yonode/pull/181
+* Fixed: added routes.ts in routes folder specially PostgreSQL part by @AbdullahiKhalif in https://github.com/sharafdin/yonode/pull/182
+* changed nodemoon structure by @isasharafdin in https://github.com/sharafdin/yonode/pull/183
+* removed test script in package.json file by @isasharafdin in https://github.com/sharafdin/yonode/pull/184
+* Sharafdin by @isasharafdin in https://github.com/sharafdin/yonode/pull/186
+* release: v0.6.0 by @isasharafdin in https://github.com/sharafdin/yonode/pull/187
+
+**Full Changelog**: https://github.com/sharafdin/yonode/compare/v0.5.6...v0.6.0-beta
+
 # 0.5.6 (2024-02-14)
 
 ## What's Changed
