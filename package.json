@@ -43,6 +43,6 @@
     "nodemon": "^3.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
-    "yonode": "^0.6.0"
+    "yonode": "^0.6.0-beta"
   }
 }
