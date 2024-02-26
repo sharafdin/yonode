@@ -1,5 +1,5 @@
 {
-  "name": "js-mongodb-mongoose",
+  "name": "yonode-api",
   "version": "0.0.0",
   "private": true,
   "main": "./src/app.js",
