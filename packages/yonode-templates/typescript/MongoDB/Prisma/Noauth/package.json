@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "tsx src/app.ts",
-    "dev": "nodemon",
+    "dev": "nodemon -x tsx src/app.ts",
     "build": "tsc"
   },
   "dependencies": {
