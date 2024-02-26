@@ -28,7 +28,7 @@
     "sequelize": "^6.36.0"
   },
   "devDependencies": {
-    "yonode": "^0.5.0",
+    "yonode": "^0.7.0",
     "nodemon": "^3.0.1"
   }
 }

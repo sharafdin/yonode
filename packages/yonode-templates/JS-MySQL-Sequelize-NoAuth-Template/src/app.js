@@ -14,6 +14,7 @@ app.use(express.json());
 // rest of your code here
 
 
+// database connection
 connectDB()
 
 app.listen(port, () => {
