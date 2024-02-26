@@ -12,6 +12,7 @@ app.use(express.json());
 
 // rest of your code here
 
+
 app.listen(port, () => {
   console.log(`${chalk.green.bold("Server")} is listening on port ${port}`);
 });
