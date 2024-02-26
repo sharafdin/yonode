@@ -1,15 +1,13 @@
 import mongoose from "mongoose";
 
-interface typeName {
-    
-  }
+interface typeName {}
 
 const { Schema, model } = mongoose;
 
-const schemaName = new Schema<typeName>({
-
+const userSchema = new Schema<typeName>({
+  name: String,
 });
 
-const modelName = model<typeName>("modelName", schemaName);
+const User = model<typeName>("User", userSchema);
 
-export default modelName;
+export default User;

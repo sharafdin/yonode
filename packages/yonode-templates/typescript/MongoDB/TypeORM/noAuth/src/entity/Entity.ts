@@ -1,7 +1,13 @@
-import { Entity, ObjectIdColumn, ObjectId } from "typeorm";
+import { Entity, ObjectIdColumn, ObjectId, Column } from "typeorm";
 
 @Entity()
 export class EntityName {
   @ObjectIdColumn()
-  _id: ObjectId;
+  id: ObjectId;
+
+  @Column("string")
+  firstName: string;
+
+  @Column("string")
+  lastName: string;
 }
