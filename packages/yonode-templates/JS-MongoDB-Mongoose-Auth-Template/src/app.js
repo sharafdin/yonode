@@ -5,7 +5,8 @@ import helmet from 'helmet';
 import cors from 'cors';
 import morgan from 'morgan';
 import rateLimit from 'express-rate-limit';
-
+import compression from 'compression';
+import cookieParser from 'cookie-parser';
 // Import your files
 import { port } from './config/initial.config.js';
 import connectDB from './config/db.config.js';
@@ -13,7 +14,7 @@ import authRoutes from './routes/authRoutes.js'; // Make sure you have this impo
 
 // Initializing the app
 const app = express();
-
+app.use(cookieParser());
 // Essential security headers with Helmet
 app.use(helmet());
 
@@ -24,6 +25,8 @@ app.use(cors());
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
 }
+
+app.use(compression()); // Compress all routes
 
 // Rate limiting to prevent brute-force attacks
 const limiter = rateLimit({
