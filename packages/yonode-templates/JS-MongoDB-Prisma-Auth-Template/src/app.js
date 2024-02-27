@@ -9,7 +9,6 @@ import compression from 'compression';
 import cookieParser from 'cookie-parser';
 // Import your files
 import { port } from './config/initial.config.js';
-import connectDB from './config/db.config.js';
 import authRoutes from './routes/authRoutes.js'; // Make sure you have this import for auth routes
 
 // Initializing the app

@@ -26,6 +26,8 @@ export async function register(req, res) {
   } catch (error) {
     // Handle any errors that occur during the registration process
     res.status(500).json({ message: "Server Error" });
+    
+    console.log("Error at user Registration" , error)
   }
 }
 
