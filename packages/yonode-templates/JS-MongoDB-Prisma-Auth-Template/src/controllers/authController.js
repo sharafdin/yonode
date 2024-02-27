@@ -22,7 +22,7 @@ export async function register(req, res) {
     // Create a new user instance and save it to the database
     user = await prisma.user.create({data: {email, password:hashPassword} });
     // Respond with the generated token
-    res.status(201).json({ token });
+    res.status(201).json({ user });
   } catch (error) {
     // Handle any errors that occur during the registration process
     res.status(500).json({ message: "Server Error" });
