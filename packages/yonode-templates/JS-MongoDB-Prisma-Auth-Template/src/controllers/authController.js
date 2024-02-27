@@ -1,7 +1,9 @@
-import User from "../models/User.js";
+
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { validationResult } from "express-validator";
+import prisma from "../../prisma/client.js";
+import { comparePassword, hashedPassword } from "../utils/password.js";
 
 // Handles new user registration
 export async function register(req, res) {
@@ -9,14 +11,16 @@ export async function register(req, res) {
 
   try {
     // Check if a user with the given email already exists
-    let user = await User.findOne({ email });
+    let user = await prisma.user.findUnique({ where: { email }});
     if (user) {
       return res.status(400).json({ message: "User already exists" });
     }
 
+    // Hash the password
+   const hashPassword = await hashedPassword(password);
+
     // Create a new user instance and save it to the database
-    user = new User({ email, password });
-    await user.save();
+    user = await prisma.user.create({data: {email, password:hashPassword} });
     // Respond with the generated token
     res.status(201).json({ token });
   } catch (error) {
@@ -31,13 +35,13 @@ export async function login(req, res) {
 
   try {
     // Check if a user with the given email exists
-    let user = await User.findOne({ email });
+    let user = await prisma.user.findUnique({ where: { email }});
     if (!user) {
       return res.status(400).json({ message: "Invalid Credentials" });
     }
 
     // Compare the provided password with the stored hashed password
-    const isMatch = await bcrypt.compare(password, user.password);
+    const isMatch = await comparePassword(password, user.password);
     if (!isMatch) {
       return res.status(400).json({ message: "Invalid Credentials" });
     }

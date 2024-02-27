@@ -38,8 +38,6 @@ app.use(limiter);
 // Built-in middleware for parsing JSON
 app.use(express.json());
 
-// Database connection
-connectDB();
 
 // Use authentication routes
 app.use('/api/auth', authRoutes);
