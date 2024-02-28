@@ -11,7 +11,7 @@ import cookieParser from 'cookie-parser';
 // import files
 import { port } from "./config/initial.config.js";
 import { connectDB } from './config/db.config.js';
-
+import "./models/models.js";
 // Initialize app
 const app = express();
 app.use(cookieParser());
