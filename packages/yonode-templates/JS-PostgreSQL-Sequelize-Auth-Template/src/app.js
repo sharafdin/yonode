@@ -10,6 +10,7 @@ import cookieParser from 'cookie-parser';
 
 // import files
 import { port } from "./config/initial.config.js";
+import { connectDB } from './config/db.config.js';
 
 // Initialize app
 const app = express();
@@ -40,7 +41,7 @@ app.use(limiter);
 app.use(express.json());
 
 // Database connection
-
+connectDB();
 
 // Use authentication routes
 
