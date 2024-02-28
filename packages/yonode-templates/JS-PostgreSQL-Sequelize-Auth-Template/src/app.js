@@ -12,6 +12,8 @@ import cookieParser from 'cookie-parser';
 import { port } from "./config/initial.config.js";
 import { connectDB } from './config/db.config.js';
 import "./models/models.js";
+import authRoutes from './routes/authRoutes.js'; // Make sure you have this import for auth routes
+
 // Initialize app
 const app = express();
 app.use(cookieParser());
@@ -44,6 +46,7 @@ app.use(express.json());
 connectDB();
 
 // Use authentication routes
+app.use('/api/auth', authRoutes);
 
 
 // Global error handler
