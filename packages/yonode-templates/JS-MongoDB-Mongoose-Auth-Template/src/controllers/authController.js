@@ -1,7 +1,6 @@
-import User from '../models/User.js';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import { validationResult } from 'express-validator';
+import User from '../models/User.js';
 
 // Handles new user registration
 export async function register(req, res) {
@@ -17,8 +16,9 @@ export async function register(req, res) {
         // Create a new user instance and save it to the database
         user = new User({ email, password });
         await user.save();
+        user.password = undefined;
         // Respond with the generated token
-        res.status(201).json({ token });
+        res.status(201).json({ user });
     } catch (error) {
         // Handle any errors that occur during the registration process
         res.status(500).json({ message: 'Server Error' });
@@ -52,9 +52,9 @@ export async function login(req, res) {
         res.status(500).json({ message: 'Server Error' });
     }
 }
-// Logout function to add a token to the blacklist
-export async function logout(req, res) {
-    const token = req.headers.authorization.split(' ')[1]; // Extract the token from the Authorization header
-    // you can do however you would like to add a token to the blacklist
-    res.status(200).json({ message: 'Successfully logged out' });
-}
+// // Logout function to add a token to the blacklist
+// export async function logout(req, res) {
+//     const token = req.headers.authorization.split(' ')[1]; // Extract the token from the Authorization header
+//     // you can do however you would like to add a token to the blacklist
+//     res.status(200).json({ message: 'Successfully logged out' });
+// }
