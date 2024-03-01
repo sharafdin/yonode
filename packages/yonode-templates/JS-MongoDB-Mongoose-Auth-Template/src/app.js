@@ -8,7 +8,7 @@ import rateLimit from "express-rate-limit";
 import compression from "compression";
 import cookieParser from "cookie-parser";
 // Import your files
-import { port } from "./config/initialConfig.js";
+import { NODE_ENV, port } from "./config/initialConfig.js";
 import connectDB from "./config/dbConfig.js";
 import authRoutes from "./routes/authRoutes.js"; // Make sure you have this import for auth routes
 
@@ -22,7 +22,7 @@ app.use(helmet());
 app.use(cors());
 
 // Logger middleware for development environment
-if (process.env.NODE_ENV === "development") {
+if (NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
