@@ -1,16 +1,16 @@
 // Import the packages
-import express from 'express';
+import express from "express";
 import chalk from "chalk";
-import helmet from 'helmet';
-import cors from 'cors';
-import morgan from 'morgan';
-import rateLimit from 'express-rate-limit';
-import compression from 'compression';
-import cookieParser from 'cookie-parser';
+import helmet from "helmet";
+import cors from "cors";
+import morgan from "morgan";
+import rateLimit from "express-rate-limit";
+import compression from "compression";
+import cookieParser from "cookie-parser";
 // Import your files
-import { port } from './config/initial.config.js';
-import connectDB from './config/db.config.js';
-import authRoutes from './routes/authRoutes.js'; // Make sure you have this import for auth routes
+import { port } from "./config/initialConfig.js";
+import connectDB from "./config/dbConfig.js";
+import authRoutes from "./routes/authRoutes.js"; // Make sure you have this import for auth routes
 
 // Initializing the app
 const app = express();
@@ -22,16 +22,16 @@ app.use(helmet());
 app.use(cors());
 
 // Logger middleware for development environment
-if (process.env.NODE_ENV === 'development') {
-    app.use(morgan('dev'));
+if (process.env.NODE_ENV === "development") {
+  app.use(morgan("dev"));
 }
 
 app.use(compression()); // Compress all routes
 
 // Rate limiting to prevent brute-force attacks
 const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100 // limit each IP to 100 requests per windowMs
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // limit each IP to 100 requests per windowMs
 });
 app.use(limiter);
 
@@ -42,17 +42,17 @@ app.use(express.json());
 connectDB();
 
 // Use authentication routes
-app.use('/api/auth', authRoutes);
+app.use("/api/auth", authRoutes);
 
 // Global error handler
 app.use((err, req, res, next) => {
-    console.error(chalk.red(err.stack));
-    res.status(err.status || 500).json({
-        message: err.message || 'Internal Server Error',
-        error: {}
-    });
+  console.error(chalk.red(err.stack));
+  res.status(err.status || 500).json({
+    message: err.message || "Internal Server Error",
+    error: {},
+  });
 });
 
 app.listen(port, () => {
-    console.log(`${chalk.green.bold("Server")} is listening on port ${port}`);
+  console.log(`${chalk.green.bold("Server")} is listening on port ${port}`);
 });
