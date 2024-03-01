@@ -1,3 +1,14 @@
+# 0.7.2 (2024-02-27)
+
+## What's Changed
+* Completed Auth for JS-MongoDB-Mongoose-Template by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/207
+* Added JS Mongoose, Express with Authentication by [@mchamoudadev](https://github.com/mchamoudadev/) in https://github.com/sharafdin/yonode/pull/208
+* Added logout functionality to the authentication system and updated t… by [@mchamoudadev](https://github.com/mchamoudadev/) in https://github.com/sharafdin/yonode/pull/209
+* Completed Auth For JS-MongoDB-Mongoose-Template  by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/210
+* added: JS-MongoDB-Mongoose-Auth-Template in yonode package by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/211
+
+**Full Changelog**: https://github.com/sharafdin/yonode/compare/v0.7.0...v0.7.2
+
 # 0.7.0 (2024-02-26)
 
 ## What's Changed

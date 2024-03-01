@@ -120,7 +120,7 @@ function main() {
     .then((answer) => {
       if (answer.language_type === "TypeScript") {
         console.log(
-            "Currently, TypeScript is unavailable. Expect its launch in v1.5.0. \nFor more info, visit: https://www.docs.yonode.org."
+            "Currently, TypeScript is unavailable. Expect its launch in v1.5.0. \nFor more info, visit: https://docs.yonode.org."
         );
         process.exit(0);
       }
