@@ -1,29 +1,18 @@
-import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
-import User from '../models/User.js';
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import User from "../models/User.js";
+import { JWT_SECRET } from "../config/initialConfig.js";
 
 // Handles new user registration
-export async function register(req, res) {
+export async function registerUser(req, res) {
   const { email, password } = req.body; // Extract email and password from request body
 
-    try {
-        // Check if a user with the given email already exists
-        let user = await User.findOne({ email });
-        if (user) {
-            return res.status(400).json({ message: 'User already exists' });
-        }
-
-        // Create a new user instance and save it to the database
-        user = new User({ email, password });
-        await user.save();
-        user.password = undefined;
-        // Respond with the generated token
-        res.status(201).json({ user });
-    } catch (error) {
-        // Handle any errors that occur during the registration process
-        res.status(500).json({ message: 'Server Error' });
+  try {
+    // Check if a user with the given email already exists
+    let user = await User.findOne({ email });
+    if (user) {
+      return res.status(400).json({ message: "User already exists" });
     }
-
     // Create a new user instance and save it to the database
     user = new User({ email, password });
     await user.save();
@@ -36,7 +25,7 @@ export async function register(req, res) {
 }
 
 // Handles user login
-export async function login(req, res) {
+export async function loginUser(req, res) {
   let { email, password } = req.body; // Extract email and password from request body
 
   try {
@@ -54,7 +43,7 @@ export async function login(req, res) {
 
     // Create a JWT payload and generate a token
     const payload = { userId: user._id };
-    const token = jwt.sign(payload, process.env.JWT_SECRET, {
+    const token = jwt.sign(payload, JWT_SECRET, {
       expiresIn: "1h",
     });
     // Respond with the generated token

@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { dbName, dbUrl } from "./initial.config.js";
+import { dbName, dbUrl } from "./initialConfig.js";
 import chalk from "chalk";
 
 const connectDB = async () => {
