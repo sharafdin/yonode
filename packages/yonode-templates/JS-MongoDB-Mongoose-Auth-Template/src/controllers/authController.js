@@ -17,7 +17,7 @@ export async function registerUser(req, res) {
     user = new User({ email, password });
     await user.save();
     // Respond with the generated token
-    res.status(201).json({ token });
+    res.status(201).json({message: "User created successfully"});
   } catch (error) {
     // Handle any errors that occur during the registration process
     res.status(500).json({ message: "Server Error" });
