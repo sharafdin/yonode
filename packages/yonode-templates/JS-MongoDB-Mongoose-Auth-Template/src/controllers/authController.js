@@ -1,7 +1,7 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";
-import { JWT_SECRET } from "../config/initialConfig.js";
+import { jwtSecret } from "../config/initialConfig.js";
 
 // Handles new user registration
 export async function registerUser(req, res) {
@@ -43,7 +43,7 @@ export async function loginUser(req, res) {
 
     // Create a JWT payload and generate a token
     const payload = { userId: user._id };
-    const token = jwt.sign(payload, JWT_SECRET, {
+    const token = jwt.sign(payload, jwtSecret, {
       expiresIn: "1h",
     });
     // Respond with the generated token
