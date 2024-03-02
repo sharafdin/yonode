@@ -1,4 +1,4 @@
-// Import the packages
+// Import required modules and configuration
 import express from "express";
 import chalk from "chalk";
 import helmet from "helmet";
@@ -7,14 +7,14 @@ import morgan from "morgan";
 import rateLimit from "express-rate-limit";
 import compression from "compression";
 import cookieParser from "cookie-parser";
-// Import your files
 import { nodeEnv, port } from "./config/initialConfig.js";
 import connectDB from "./config/dbConfig.js";
-import authRoutes from "./routes/authRoutes.js"; // Make sure you have this import for auth routes
+import authRoutes from "./routes/authRoutes.js";
 
 // Initializing the app
 const app = express();
 app.use(cookieParser());
+
 // Essential security headers with Helmet
 app.use(helmet());
 
@@ -26,7 +26,8 @@ if (nodeEnv === "development") {
   app.use(morgan("dev"));
 }
 
-app.use(compression()); // Compress all routes
+// Compress all routes
+app.use(compression());
 
 // Rate limiting to prevent brute-force attacks
 const limiter = rateLimit({
@@ -37,9 +38,6 @@ app.use(limiter);
 
 // Built-in middleware for parsing JSON
 app.use(express.json());
-
-// Database connection
-connectDB();
 
 // Use authentication routes
 app.use("/api/auth", authRoutes);
@@ -53,6 +51,10 @@ app.use((err, req, res, next) => {
   });
 });
 
+// Database connection
+connectDB();
+
+// Server running
 app.listen(port, () => {
   console.log(`${chalk.green.bold("Server")} is listening on port ${port}`);
 });
