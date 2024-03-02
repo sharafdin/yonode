@@ -1,209 +1,216 @@
+# 0.8.0 (2024-03-02)
+
+## What's Changed
+* feat: Changed JS-MongoDB-Mongoose-Auth-Template by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#213](https://github.com/sharafdin/yonode/pull/213)
+* Completed JS-MongoDB-Prisma-Auth-Template by [@Omar-Tood](https://github.com/Omar-Tood) in [#217](https://github.com/sharafdin/yonode/pull/217)
+* feat: SetUp -JS-MySQL-Sequelize-Auth-Template- by [@hanad124](https://github.com/hanad124) in [#218](https://github.com/sharafdin/yonode/pull/218)
+* feat: setup "JS-PostgreSQL-Sequelize-Auth-Template" by [@Miirshe](https://github.com/Miirshe) in [#219](https://github.com/sharafdin/yonode/pull/219)
+* feat[app.js]: Setup -app.js- Initializing express, app middlewares by [@Miirshe](https://github.com/Miirshe) in [#220](https://github.com/sharafdin/yonode/pull/220)
+* Added Core packages. by [@hanad124](https://github.com/hanad124) in [#221](https://github.com/sharafdin/yonode/pull/221)
+* Completed MSQL With Prisma Setup Auth-Template by [@Omar-Tood](https://github.com/Omar-Tood) in [#222](https://github.com/sharafdin/yonode/pull/222)
+* Finished PostgreSQL With Prisma Auth Template Done💥 by [@Omar-Tood](https://github.com/Omar-Tood) in [#223](https://github.com/sharafdin/yonode/pull/223)
+* removed logout by [@mchamoudadev](https://github.com/mchamoudadev) in [#224](https://github.com/sharafdin/yonode/pull/224)
+* Fixing and checking Mongoose For Auth by [@isasharafdin](https://github.com/isasharafdin) in [#226](https://github.com/sharafdin/yonode/pull/226)
+* Feat: Correct The Folder name With MySQL Prisma Auth Template by [@Omar-Tood](https://github.com/Omar-Tood) in [#225](https://github.com/sharafdin/yonode/pull/225)
+* checked auth, added jwt and node env in env file by [@isasharafdin](https://github.com/isasharafdin) in [#227](https://github.com/sharafdin/yonode/pull/227)
+* changed some variable style name into camelCase by [@isasharafdin](https://github.com/isasharafdin) in [#228](https://github.com/sharafdin/yonode/pull/228)
+* Added comments and changed some comments by [@isasharafdin](https://github.com/isasharafdin) in [#229](https://github.com/sharafdin/yonode/pull/229)
+* removed extra space in env file by [@isasharafdin](https://github.com/isasharafdin) in [#230](https://github.com/sharafdin/yonode/pull/230)
+* added Auth env examples in .env.example by [@isasharafdin](https://github.com/isasharafdin) in [#232](https://github.com/sharafdin/yonode/pull/232)
+* added JWT_SECRET_KEY & NODE_ENVIRONMENT in .env file for All noAuth Templates by [@isasharafdin](https://github.com/isasharafdin) in [#233](https://github.com/sharafdin/yonode/pull/233)
+* added JS for Auth Templates by [@isasharafdin](https://github.com/isasharafdin) in [#234](https://github.com/sharafdin/yonode/pull/234)
+* version 0.7.2 to 0.8.0 by [@isasharafdin](https://github.com/isasharafdin) in [#235](https://github.com/sharafdin/yonode/pull/235)
+
+**Full Changelog**: [https://github.com/sharafdin/yonode/compare/v0.7.2...v0.8.0](https://github.com/sharafdin/yonode/compare/v0.7.2
+
 # 0.7.2 (2024-02-27)
 
 ## What's Changed
-* Completed Auth for JS-MongoDB-Mongoose-Template by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/207
-* Added JS Mongoose, Express with Authentication by [@mchamoudadev](https://github.com/mchamoudadev/) in https://github.com/sharafdin/yonode/pull/208
-* Added logout functionality to the authentication system and updated t… by [@mchamoudadev](https://github.com/mchamoudadev/) in https://github.com/sharafdin/yonode/pull/209
-* Completed Auth For JS-MongoDB-Mongoose-Template  by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/210
-* added: JS-MongoDB-Mongoose-Auth-Template in yonode package by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/211
+* Completed Auth for JS-MongoDB-Mongoose-Template by [@isasharafdin](https://github.com/isasharafdin) in [#207](https://github.com/sharafdin/yonode/pull/207)
+* Added JS Mongoose, Express with Authentication by [@mchamoudadev](https://github.com/mchamoudadev) in [#208](https://github.com/sharafdin/yonode/pull/208)
+* Added logout functionality to the authentication system and updated t… by [@mchamoudadev](https://github.com/mchamoudadev) in [#209](https://github.com/sharafdin/yonode/pull/209)
+* Completed Auth For JS-MongoDB-Mongoose-Template by [@isasharafdin](https://github.com/isasharafdin) in [#210](https://github.com/sharafdin/yonode/pull/210)
+* added: JS-MongoDB-Mongoose-Auth-Template in yonode package by [@isasharafdin](https://github.com/isasharafdin) in [#211](https://github.com/sharafdin/yonode/pull/211)
 
-**Full Changelog**: https://github.com/sharafdin/yonode/compare/v0.7.0...v0.7.2
+**Full Changelog**: [https://github.com/sharafdin/yonode/compare/v0.7.0...v0.7.2](https://github.com/sharafdin/yonode/compare/v0.7.0...v0.7.2)
 
 # 0.7.0 (2024-02-26)
 
 ## What's Changed
-* added v0.5.6 CHANGELOG.md by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/152
-* Sharafdin by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/153
-* started mongoose with AUTH by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/155
-* updated all of the templates by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/156
-* Sharafdin by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/157
-* started typescript version of mongoDB with Mongoose for noAuth by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/158
-* Completed NoAuth MongoDB with Mongoose for TypeScript by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/160
-* Removed MongoDB Mongoose Auth for TypeScript. by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/161
-* Tood by [@Omar-Tood](https://github.com/Omar-Tood) in https://github.com/sharafdin/yonode/pull/163
-* finished ts-mongodb-typeorm noAuth api-template by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/162
-* Merge pull request #162 from sharafdin/tman by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/164
-* change ts-node into tsx by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/165
-* fixed mysql and postgresql by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/168
-* fix: Update README.md by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/169
-* initializing typescript with Prisma by [@Omar-Tood](https://github.com/Omar-Tood) in https://github.com/sharafdin/yonode/pull/170
-* Customized project: Node.js, TypeScript, Sequelize by [@Miirshe](https://github.com/Miirshe) in https://github.com/sharafdin/yonode/pull/172
-* Merge pull request #172 from sharafdin/miirshe by [@Miirshe](https://github.com/Miirshe) in https://github.com/sharafdin/yonode/pull/173
-* Completed: Node.js, TypeScript, Sequelize + Postgresql  by [@Miirshe](https://github.com/Miirshe) in https://github.com/sharafdin/yonode/pull/174
-* finished the ts-prisma with postgresql by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/175
-* Customized Project: Nodejs-Express-Typescript-Mysql by [@Miirshe](https://github.com/Miirshe) in https://github.com/sharafdin/yonode/pull/176
-* fix: added route.ts in routes folder by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/180
-* Fix: added routes.ts in routes folder by [@AbdullahiKhalif](https://github.com/abdullahiKhalif) in https://github.com/sharafdin/yonode/pull/181
-* Fixed: added routes.ts in routes folder specially PostgreSQL part by [@AbdullahiKhalif](https://github.com/abdullahiKhalif) in https://github.com/sharafdin/yonode/pull/182
-* changed nodemoon structure by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/183
-* removed test script in package.json file by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/184
-* Sharafdin by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/186
-* release: v0.6.0 by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/187
-* Added Contributing Guide by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/188
-* feature/typescript: Discontinue development for version 1.0 release by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/189
-* Upgrade package version from v0.6.0 to v0.7.0 in package.json by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/190
-* feat: updating JS-NoAuth-Templates by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/192
-* feat: Upgrade package version from v0.6.0 to v0.7.0 in package.json by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/194
-* Updating khaliifa branch by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/198
-* Updating my branch by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/199
-* Updating miirshe branch by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/197
-* Updating tood branch by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/195
-* Merge pull request #199 from sharafdin/main by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/200
-* Merge pull request #195 from sharafdin/main by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/201
-* Merge pull request #198 from sharafdin/main by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/202
-* Merge pull request #197 from sharafdin/main by [@isasharafdin](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/203
+* added v0.5.6 CHANGELOG.md by [@isasharafdin](https://github.com/isasharafdin) in [#152](https://github.com/sharafdin/yonode/pull/152)
+* Sharafdin by [@isasharafdin](https://github.com/isasharafdin) in [#153](https://github.com/sharafdin/yonode/pull/153)
+* started mongoose with AUTH by [@isasharafdin](https://github.com/isasharafdin) in [#155](https://github.com/sharafdin/yonode/pull/155)
+* updated all of the templates by [@isasharafdin](https://github.com/isasharafdin) in [#156](https://github.com/sharafdin/yonode/pull/156)
+* Sharafdin by [@isasharafdin](https://github.com/isasharafdin) in [#157](https://github.com/sharafdin/yonode/pull/157)
+* started typescript version of mongoDB with Mongoose for noAuth by [@isasharafdin](https://github.com/isasharafdin) in [#158](https://github.com/sharafdin/yonode/pull/158)
+* Completed NoAuth MongoDB with Mongoose for TypeScript by [@isasharafdin](https://github.com/isasharafdin) in [#160](https://github.com/sharafdin/yonode/pull/160)
+* Removed MongoDB Mongoose Auth for TypeScript by [@isasharafdin](https://github.com/isasharafdin) in [#161](https://github.com/sharafdin/yonode/pull/161)
+* Tood by [@Omar-Tood](https://github.com/Omar-Tood) in [#163](https://github.com/sharafdin/yonode/pull/163)
+* finished ts-mongodb-typeorm noAuth api-template by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#162](https://github.com/sharafdin/yonode/pull/162)
+* Merge pull request #162 from sharafdin/tman by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#164](https://github.com/sharafdin/yonode/pull/164)
+* change ts-node into tsx by [@isasharafdin](https://github.com/isasharafdin) in [#165](https://github.com/sharafdin/yonode/pull/165)
+* fixed mysql and postgresql by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#168](https://github.com/sharafdin/yonode/pull/168)
+* fix: Update README.md by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#169](https://github.com/sharafdin/yonode/pull/169)
+* initializing typescript with Prisma by [@Omar-Tood](https://github.com/Omar-Tood) in [#170](https://github.com/sharafdin/yonode/pull/170)
+* Customized project: Node.js, TypeScript, Sequelize by [@Miirshe](https://github.com/Miirshe) in [#172](https://github.com/sharafdin/yonode/pull/172)
+* Merge pull request #172 from sharafdin/miirshe by [@Miirshe](https://github.com/Miirshe) in [#173](https://github.com/sharafdin/yonode/pull/173)
+* Completed: Node.js, TypeScript, Sequelize + PostgreSQL by [@Miirshe](https://github.com/Miirshe) in [#174](https://github.com/sharafdin/yonode/pull/174)
+* finished the ts-prisma with postgresql by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#175](https://github.com/sharafdin/yonode/pull/175)
+* Customized Project: Node.js-Express-Typescript-MySQL by [@Miirshe](https://github.com/Miirshe) in [#176](https://github.com/sharafdin/yonode/pull/176)
+* fix: added route.ts in routes folder by [@isasharafdin](https://github.com/isasharafdin) in [#180](https://github.com/sharafdin/yonode/pull/180)
+* Fix: added routes.ts in routes folder by [@AbdullahiKhalif](https://github.com/abdullahiKhalif) in [#181](https://github.com/sharafdin/yonode/pull/181)
+* Fixed: added routes.ts in routes folder specially PostgreSQL part by [@AbdullahiKhalif](https://github.com/abdullahiKhalif) in [#182](https://github.com/sharafdin/yonode/pull/182)
+* changed nodemon structure by [@isasharafdin](https://github.com/isasharafdin) in [#183](https://github.com/sharafdin/yonode/pull/183)
+* removed test script in package.json file by [@isasharafdin](https://github.com/isasharafdin) in [#184](https://github.com/sharafdin/yonode/pull/184)
+* Sharafdin by [@isasharafdin](https://github.com/isasharafdin) in [#186](https://github.com/sharafdin/yonode/pull/186)
+* release: v0.6.0 by [@isasharafdin](https://github.com/isasharafdin) in [#187](https://github.com/sharafdin/yonode/pull/187)
+* Added Contributing Guide by [@isasharafdin](https://github.com/isasharafdin) in [#188](https://github.com/sharafdin/yonode/pull/188)
+* feature/typescript: Discontinue development for version 1.0 release by [@isasharafdin](https://github.com/isasharafdin) in [#189](https://github.com/sharafdin/yonode/pull/189)
+* Upgrade package version from v0.6.0 to v0.7.0 in package.json by [@isasharafdin](https://github.com/isasharafdin) in [#190](https://github.com/sharafdin/yonode/pull/190)
+* feat: updating JS-NoAuth-Templates by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#192](https://github.com/sharafdin/yonode/pull/192)
+* feat: Upgrade package version from v0.6.0 to v0.7.0 in package.json by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#194](https://github.com/sharafdin/yonode/pull/194)
+* Updating khaliifa branch by [@isasharafdin](https://github.com/isasharafdin) in [#198](https://github.com/sharafdin/yonode/pull/198)
+* Updating my branch by [@isasharafdin](https://github.com/isasharafdin) in [#199](https://github.com/sharafdin/yonode/pull/199)
+* Updating miirshe branch by [@isasharafdin](https://github.com/isasharafdin) in [#197](https://github.com/sharafdin/yonode/pull/197)
+* Updating tood branch by [@isasharafdin](https://github.com/isasharafdin) in [#195](https://github.com/sharafdin/yonode/pull/195)
+* Merge pull request #199 from sharafdin/main by [@isasharafdin](https://github.com/isasharafdin) in [#200](https://github.com/sharafdin/yonode/pull/200)
+* Merge pull request #195 from sharafdin/main by [@isasharafdin](https://github.com/isasharafdin) in [#201](https://github.com/sharafdin/yonode/pull/201)
+* Merge pull request #198 from sharafdin/main by [@isasharafdin](https://github.com/isasharafdin) in [#202](https://github.com/sharafdin/yonode/pull/202)
+* Merge pull request #197 from sharafdin/main by [@isasharafdin](https://github.com/isasharafdin) in [#203](https://github.com/sharafdin/yonode/pull/203)
 
-**Full Changelog**: https://github.com/sharafdin/yonode/compare/v0.5.6...v0.7.0
+**Full Changelog**: [https://github.com/sharafdin/yonode/compare/v0.5.6...v0.7.0](https://github.com/sharafdin/yonode/compare/v0.5.6...v0.7.0)
 
 # 0.6.0-beta (2024-02-23)
 
 ## What's Changed
-* added v0.5.6 CHANGELOG.md by [[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/152
-* Sharafdin by [[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/153
-* started mongoose with AUTH by [[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/155
-* updated all of the templates by [[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/156
-* Sharafdin by [[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/157
-* started typescript version of mongoDB with Mongoose for noAuth by [[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/158
-* Completed NoAuth MongoDB with Mongoose for TypeScript by [[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/160
-* Removed MongoDB Mongoose Auth for TypeScript. by [[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/161
-* Tood by [[@Omar-Tood](https://github.com/Omar-Tood)](https://github.com/Omar-Tood) in https://github.com/sharafdin/yonode/pull/163
-* finished ts-mongodb-typeorm noAuth api-template by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/162
-* Merge pull request #162 from sharafdin/tman by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/164
-* change ts-node into tsx by [[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/165
-* fixed mysql and postgresql by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/168
-* fix: Update README.md by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/169
-* initializing typescript with Prisma by [[@Omar-Tood](https://github.com/Omar-Tood)](https://github.com/Omar-Tood) in https://github.com/sharafdin/yonode/pull/170
-* Customized project: Node.js, TypeScript, Sequelize by [[@Miirshe](https://github.com/Miirshe)](https://github.com/Miirshe) in https://github.com/sharafdin/yonode/pull/172
-* Merge pull request #172 from sharafdin/miirshe by [[@Miirshe](https://github.com/Miirshe)](https://github.com/Miirshe) in https://github.com/sharafdin/yonode/pull/173
-* Completed: Node.js, TypeScript, Sequelize + Postgresql  by [[@Miirshe](https://github.com/Miirshe)](https://github.com/Miirshe) in https://github.com/sharafdin/yonode/pull/174
-* finished the ts-prisma with postgresql by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/175
-* Customized Project: Nodejs-Express-Typescript-Mysql by [[@Miirshe](https://github.com/Miirshe)](https://github.com/Miirshe) in https://github.com/sharafdin/yonode/pull/176
-* fix: added route.ts in routes folder by [[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/180
-* Fix: added routes.ts in routes folder by [[@AbdullahiKhalif](https://github.com/abdullahiKhalif)](https://github.com/AbdullahiKhalif) in https://github.com/sharafdin/yonode/pull/181
-* Fixed: added routes.ts in routes folder specially PostgreSQL part by [[@AbdullahiKhalif](https://github.com/abdullahiKhalif)](https://github.com/AbdullahiKhalif) in https://github.com/sharafdin/yonode/pull/182
-* changed nodemoon structure by [[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/183
-* removed test script in package.json file by [[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/184
-* Sharafdin by [[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/186
-* release: v0.6.0 by [[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/187
+* added v0.5.6 CHANGELOG.md by [@isasharafdin](https://github.com/isasharafdin) in [#152](https://github.com/sharafdin/yonode/pull/152)
+* Sharafdin by [@isasharafdin](https://github.com/isasharafdin) in [#153](https://github.com/sharafdin/yonode/pull/153)
+* started mongoose with AUTH by [@isasharafdin](https://github.com/isasharafdin) in [#155](https://github.com/sharafdin/yonode/pull/155)
+* updated all of the templates by [@isasharafdin](https://github.com/isasharafdin) in [#156](https://github.com/sharafdin/yonode/pull/156)
+* Sharafdin by [@isasharafdin](https://github.com/isasharafdin) in [#157](https://github.com/sharafdin/yonode/pull/157)
+* started typescript version of mongoDB with Mongoose for noAuth by [@isasharafdin](https://github.com/isasharafdin) in [#158](https://github.com/sharafdin/yonode/pull/158)
+* Completed NoAuth MongoDB with Mongoose for TypeScript by [@isasharafdin](https://github.com/isasharafdin) in [#160](https://github.com/sharafdin/yonode/pull/160)
+* Removed MongoDB Mongoose Auth for TypeScript by [@isasharafdin](https://github.com/isasharafdin) in [#161](https://github.com/sharafdin/yonode/pull/161)
+* Tood by [@Omar-Tood](https://github.com/Omar-Tood) in [#163](https://github.com/sharafdin/yonode/pull/163)
+* finished ts-mongodb-typeorm noAuth api-template by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#162](https://github.com/sharafdin/yonode/pull/162)
+* Merge pull request #162 from sharafdin/tman by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#164](https://github.com/sharafdin/yonode/pull/164)
+* change ts-node into tsx by [@isasharafdin](https://github.com/isasharafdin) in [#165](https://github.com/sharafdin/yonode/pull/165)
+* fixed mysql and postgresql by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#168](https://github.com/sharafdin/yonode/pull/168)
+* fix: Update README.md by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#169](https://github.com/sharafdin/yonode/pull/169)
+* initializing typescript with Prisma by [@Omar-Tood](https://github.com/Omar-Tood) in [#170](https://github.com/sharafdin/yonode/pull/170)
+* Customized project: Node.js, TypeScript, Sequelize by [@Miirshe](https://github.com/Miirshe) in [#172](https://github.com/sharafdin/yonode/pull/172)
+* Merge pull request #172 from sharafdin/miirshe by [@Miirshe](https://github.com/Miirshe) in [#173](https://github.com/sharafdin/yonode/pull/173)
+* Completed: Node.js, TypeScript, Sequelize + PostgreSQL by [@Miirshe](https://github.com/Miirshe) in [#174](https://github.com/sharafdin/yonode/pull/174)
+* finished the ts-prisma with postgresql by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#175](https://github.com/sharafdin/yonode/pull/175)
+* Customized Project: Node.js-Express-Typescript-MySQL by [@Miirshe](https://github.com/Miirshe) in [#176](https://github.com/sharafdin/yonode/pull/176)
+* fix: added route.ts in routes folder by [@isasharafdin](https://github.com/isasharafdin) in [#180](https://github.com/sharafdin/yonode/pull/180)
+* Fix: added routes.ts in routes folder by [@AbdullahiKhalif](https://github.com/abdullahiKhalif) in [#181](https://github.com/sharafdin/yonode/pull/181)
+* Fixed: added routes.ts in routes folder specially PostgreSQL part by [@AbdullahiKhalif](https://github.com/abdullahiKhalif) in [#182](https://github.com/sharafdin/yonode/pull/182)
+* changed nodemon structure by [@isasharafdin](https://github.com/isasharafdin) in [#183](https://github.com/sharafdin/yonode/pull/183)
+* removed test script in package.json file by [@isasharafdin](https://github.com/isasharafdin) in [#184](https://github.com/sharafdin/yonode/pull/184)
+* Sharafdin by [@isasharafdin](https://github.com/isasharafdin) in [#186](https://github.com/sharafdin/yonode/pull/186)
+* release: v0.6.0 by [@isasharafdin](https://github.com/isasharafdin) in [#187](https://github.com/sharafdin/yonode/pull/187)
 
-**Full Changelog**: https://github.com/sharafdin/yonode/compare/v0.5.6...v0.6.0-beta
+**Full Changelog**: [https://github.com/sharafdin/yonode/compare/v0.5.6...v0.6.0-beta](https://github.com/sharafdin/yonode/compare/v0.5.6...v0.6.0-beta)
 
 # 0.5.6 (2024-02-14)
 
 ## What's Changed
-* modified some comments in .env.examples by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/144
-* updated yonode templates by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/145
-* updated yonode templates by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/146
-* removed all the templates by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/147
-* publish: added patch version by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/150
+* modified some comments in .env.examples by [@isasharafdin](https://github.com/isasharafdin) in [#144](https://github.com/sharafdin/yonode/pull/144)
+* updated yonode templates by [@isasharafdin](https://github.com/isasharafdin) in [#145](https://github.com/sharafdin/yonode/pull/145)
+* updated yonode templates by [@isasharafdin](https://github.com/isasharafdin) in [#146](https://github.com/sharafdin/yonode/pull/146)
+* removed all the templates by [@isasharafdin](https://github.com/isasharafdin) in [#147](https://github.com/sharafdin/yonode/pull/147)
+* publish: added patch version by [@isasharafdin](https://github.com/isasharafdin) in [#150](https://github.com/sharafdin/yonode/pull/150)
 
-
-**Full Changelog**: https://github.com/sharafdin/yonode/compare/v0.5.5-beta...v0.5.6
+**Full Changelog**: [https://github.com/sharafdin/yonode/compare/v0.5.5-beta...v0.5.6](https://github.com/sharafdin/yonode/compare/v0.5.5-beta...v0.5.6)
 
 # 0.5.5-beta (2024-02-12)
 
 ## What's Changed
-* fixed the custum error when installing in the same folder by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/99
+* fixed the custom error when installing in the same folder by [@isasharafdin](https://github.com/isasharafdin) in [#99](https://github.com/sharafdin/yonode/pull/99)
 
-
-**Full Changelog**: https://github.com/sharafdin/yonode/compare/v0.5.4-beta...v0.5.5-beta
+**Full Changelog**: [https://github.com/sharafdin/yonode/compare/v0.5.4-beta...v0.5.5-beta](https://github.com/sharafdin/yonode/compare/v0.5.4-beta...v0.5.5-beta)
 
 # 0.5.4-beta (2024-02-12)
 
 ## What's Changed
-* completed fixed the templated name for windows by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/96
-* Sharafdin by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/97
-* custom error: when you installing the same folder and the folder already exists files by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/98
+* completed fixed the template name for windows by [@isasharafdin](https://github.com/isasharafdin) in [#96](https://github.com/sharafdin/yonode/pull/96)
+* Sharafdin by [@isasharafdin](https://github.com/isasharafdin) in [#97](https://github.com/sharafdin/yonode/pull/97)
+* custom error: when you installing in the same folder and the folder already exists files by [@isasharafdin](https://github.com/isasharafdin) in [#98](https://github.com/sharafdin/yonode/pull/98)
 
-
-**Full Changelog**: https://github.com/sharafdin/yonode/compare/v0.5.3-beta...v0.5.4-beta
+**Full Changelog**: [https://github.com/sharafdin/yonode/compare/v0.5.3-beta...v0.5.4-beta](https://github.com/sharafdin/yonode/compare/v0.5.3-beta...v0.5.4-beta)
 
 # 0.5.3-beta (2024-02-11)
 
 ## What's Changed
-* added noAuth example in .env.example file by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/89
-* added comments .env.example file by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/90
-* changed the terminal space and change the structure of the template c… by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/91
-* added 1 patch version by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/92
+* added noAuth example in .env.example file by [@isasharafdin](https://github.com/isasharafdin) in [#89](https://github.com/sharafdin/yonode/pull/89)
+* added comments .env.example file by [@isasharafdin](https://github.com/isasharafdin) in [#90](https://github.com/sharafdin/yonode/pull/90)
+* changed the terminal space and change the structure of the template c… by [@isasharafdin](https://github.com/isasharafdin) in [#91](https://github.com/sharafdin/yonode/pull/91)
+* added 1 patch version by [@isasharafdin](https://github.com/isasharafdin) in [#92](https://github.com/sharafdin/yonode/pull/92)
 
+**Full Changelog**: [https://github.com/sharafdin/yonode/compare/v0.5.2.beta...v0.5.3-beta](https://github.com/sharafdin/yonode/compare/v0.5.2.beta...v0.5.3-beta)
 
-**Full Changelog**: https://github.com/sharafdin/yonode/compare/v0.5.2.beta...v0.5.3-beta
-
-# 0.5.2-beta (2024-02-10) 
+# 0.5.2-beta (2024-02-10)
 
 ## What's Changed
-* changed packages structure by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/1
-* configured db connection by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/2
-* added user model by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/3
-* added model, controller, routes, email by ([[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin)) in https://github.com/sharafdin/yonode/pull/4
-* added model, controller, routes, email by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/5
-* added api-template in every issues by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/10
-* added api-template in every issues by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/11
-* started the template by [[@abdinasir-Tman](https://github.com/abdinasir-Tman)](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/12
-* created package.json and now has been started by [[[@Miirshe](https://github.com/Miirshe)](https://github.com/Miirshe)](https://github.com/Miirshe) in https://github.com/sharafdin/yonode/pull/13
-* try to work branch by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/14
-* Miirshe by [[[@Miirshe](https://github.com/Miirshe)](https://github.com/Miirshe)](https://github.com/Miirshe) in https://github.com/sharafdin/yonode/pull/15
-* Miirshe by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/16
-* Tood by [[[@Omar-Tood](https://github.com/Omar-Tood)](https://github.com/Omar-Tood)](https://github.com/Omar-Tood) in https://github.com/sharafdin/yonode/pull/17
-* Tman by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/18
-* Tood by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/19
-* started building the package by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/20
-* added CHANGELOG.md file by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/21
-* added MIT LICENSE by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/22
-* added README.md by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/23
-* changed the strcuture of the templates by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/24
-* implamented prisma by [[[@Omar-Tood](https://github.com/Omar-Tood)](https://github.com/Omar-Tood)](https://github.com/Omar-Tood) in https://github.com/sharafdin/yonode/pull/25
-* Tood by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/26
-* changed the strcuture of the templates by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/27
-* complated the prisma setp by [[[@Omar-Tood](https://github.com/Omar-Tood)](https://github.com/Omar-Tood)](https://github.com/Omar-Tood) in https://github.com/sharafdin/yonode/pull/29
-* Tood by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/30
-* updating miirshe branch by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/31
-* updating miirshe brancht #31 by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/32
-* now completed Auth and NoAuth set up mvc except model and also installed a lots packages by [[[@Miirshe](https://github.com/Miirshe)](https://github.com/Miirshe)](https://github.com/Miirshe) in https://github.com/sharafdin/yonode/pull/33
-* added noAuth db connection by [[@abdinasir-Tman](https://github.com/abdinasir-Tman)](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/34
-* finished typeorm noAuth Api by [[@abdinasir-Tman](https://github.com/abdinasir-Tman)](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/35
-* modified Entity schema name by [[@abdinasir-Tman](https://github.com/abdinasir-Tman)](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/36
-* Tman 1 by [[@abdinasir-Tman](https://github.com/abdinasir-Tman)](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/37
-* Tman by [[@abdinasir-Tman](https://github.com/abdinasir-Tman)](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/38
-* added CODE_OF_CONDUCT by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/39
-* fixed file cached by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/40
-* Update .gitignore by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/41
-* added readme and changed the security by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/42
-* removed the unsupported mongodb orms by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/43
-* fixed typeorm noAuth and started Auth by [[@abdinasir-Tman](https://github.com/abdinasir-Tman)](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/44
-* Sharafdin by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/45
-* completed set up Auth and NoAuth of mvc except model instead of using… by [[[@Miirshe](https://github.com/Miirshe)](https://github.com/Miirshe)](https://github.com/Miirshe) in https://github.com/sharafdin/yonode/pull/46
-* started type orm Aut structered the mvc by [[@abdinasir-Tman](https://github.com/abdinasir-Tman)](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/50
-* added mysql typeorm noAuth api-template by [[@abdinasir-Tman](https://github.com/abdinasir-Tman)](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/51
-* Completed set up of Auth and NoAuth of Mysql with Sequelize ORM by [[[@Miirshe](https://github.com/Miirshe)](https://github.com/Miirshe)](https://github.com/Miirshe) in https://github.com/sharafdin/yonode/pull/52
-* Initializing App specal NoAuth direcotory and also removes empty spac… by [[[@Miirshe](https://github.com/Miirshe)](https://github.com/Miirshe)](https://github.com/Miirshe) in https://github.com/sharafdin/yonode/pull/53
-* Initializing App special Auth directory and also removes empty space … by [[[@Miirshe](https://github.com/Miirshe)](https://github.com/Miirshe)](https://github.com/Miirshe) in https://github.com/sharafdin/yonode/pull/54
-* complated msql/prisma by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/58
-* established prisma client by [[[@Miirshe](https://github.com/Miirshe)](https://github.com/Miirshe)](https://github.com/Miirshe) in https://github.com/sharafdin/yonode/pull/62
-* fixed PostgreSQL typeorm no by [[@abdinasir-Tman](https://github.com/abdinasir-Tman)](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/63
-* complated postgreSQL and Prisma by [[[@Omar-Tood](https://github.com/Omar-Tood)](https://github.com/Omar-Tood)](https://github.com/Omar-Tood) in https://github.com/sharafdin/yonode/pull/64
-* completed auth and no auth test user model with sequelize by [[[@Miirshe](https://github.com/Miirshe)](https://github.com/Miirshe)](https://github.com/Miirshe) in https://github.com/sharafdin/yonode/pull/65
-* completed set up of no auth Connecting to MySQL database with Sequeli… by [[[@Miirshe](https://github.com/Miirshe)](https://github.com/Miirshe)](https://github.com/Miirshe) in https://github.com/sharafdin/yonode/pull/66
-* checking complated prisma mySQL by [[[@Omar-Tood](https://github.com/Omar-Tood)](https://github.com/Omar-Tood)](https://github.com/Omar-Tood) in https://github.com/sharafdin/yonode/pull/69
-* Tman by [[@abdinasir-Tman](https://github.com/abdinasir-Tman)](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/70
-* changed to import appdatasource to import only by [[@abdinasir-Tman](https://github.com/abdinasir-Tman)](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/71
-* JS-PostgreSQL noAuth api-template fully Structrectured as js-mongoose… by [[@abdinasir-Tman](https://github.com/abdinasir-Tman)](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/72
-* added .env file by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/73
-* added .env file to all of the templates by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/74
-* completed Prisma and typeorm structure by [[@abdinasir-Tman](https://github.com/abdinasir-Tman)](https://github.com/abdinasir-Tman) in https://github.com/sharafdin/yonode/pull/76
-* Sharafdin by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/77
-* releasing beta version for noAuth by [[[@isasharafdin](https://github.com/isasharafdin)](https://github.com/isasharafdin)](https://github.com/isasharafdin) in https://github.com/sharafdin/yonode/pull/88
+* changed packages structure by [@isasharafdin](https://github.com/isasharafdin) in [#1](https://github.com/sharafdin/yonode/pull/1)
+* configured db connection by [@isasharafdin](https://github.com/isasharafdin) in [#2](https://github.com/sharafdin/yonode/pull/2)
+* added user model by [@isasharafdin](https://github.com/isasharafdin) in [#3](https://github.com/sharafdin/yonode/pull/3)
+* added model, controller, routes, email by [@isasharafdin](https://github.com/isasharafdin) in [#4](https://github.com/sharafdin/yonode/pull/4) and [#5](https://github.com/sharafdin/yonode/pull/5)
+* added api-template in every issue by [@isasharafdin](https://github.com/isasharafdin) in [#10](https://github.com/sharafdin/yonode/pull/10) and [#11](https://github.com/sharafdin/yonode/pull/11)
+* started the template by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#12](https://github.com/sharafdin/yonode/pull/12)
+* created package.json and now has been started by [@Miirshe](https://github.com/Miirshe) in [#13](https://github.com/sharafdin/yonode/pull/13)
+* try to work branch by [@isasharafdin](https://github.com/isasharafdin) in [#14](https://github.com/sharafdin/yonode/pull/14)
+* Miirshe updates by [@Miirshe](https://github.com/Miirshe) in [#15](https://github.com/sharafdin/yonode/pull/15)
+* Tood updates by [@Omar-Tood](https://github.com/Omar-Tood) in [#17](https://github.com/sharafdin/yonode/pull/17)
+* started building the package by [@isasharafdin](https://github.com/isasharafdin) in [#20](https://github.com/sharafdin/yonode/pull/20)
+* added CHANGELOG.md file by [@isasharafdin](https://github.com/isasharafdin) in [#21](https://github.com/sharafdin/yonode/pull/21)
+* added MIT LICENSE by [@isasharafdin](https://github.com/isasharafdin) in [#22](https://github.com/sharafdin/yonode/pull/22)
+* added README.md by [@isasharafdin](https://github.com/isasharafdin) in [#23](https://github.com/sharafdin/yonode/pull/23)
+* implemented prisma by [@Omar-Tood](https://github.com/Omar-Tood) in [#25](https://github.com/sharafdin/yonode/pull/25)
+* updating miirshe branch by [@isasharafdin](https://github.com/isasharafdin) in [#31](https://github.com/sharafdin/yonode/pull/31)
+* now completed Auth and NoAuth set up MVC except model and also installed a lot of packages by [@Miirshe](https://github.com/Miirshe) in [#33](https://github.com/sharafdin/yonode/pull/33)
+* added noAuth db connection by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#34](https://github.com/sharafdin/yonode/pull/34)
+* finished typeorm noAuth Api by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#35](https://github.com/sharafdin/yonode/pull/35)
+* JS-PostgreSQL noAuth api-template fully Structured as js-mongoose… by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#72](https://github.com/sharafdin/yonode/pull/72)
+* added .env file by [@isasharafdin](https://github.com/isasharafdin) in [#73](https://github.com/sharafdin/yonode/pull/73)
+* added .env file to all of the templates by [@isasharafdin](https://github.com/isasharafdin) in [#74](https://github.com/sharafdin/yonode/pull/74)
+* completed Prisma and typeorm structure by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#76](https://github.com/sharafdin/yonode/pull/76)
+* Sharafdin updates by [@isasharafdin](https://github.com/isasharafdin) in [#77](https://github.com/sharafdin/yonode/pull/77)
+* releasing beta version for noAuth by [@isasharafdin](https://github.com/isasharafdin) in [#88](https://github.com/sharafdin/yonode/pull/88)
 
-**Full Changelog**: https://github.com/sharafdin/yonode/commits/v0.5.2.beta
+**Full Changelog**: [https://github.com/sharafdin/yonode/commits/v0.5.2.beta](https://github.com/sharafdin/yonode/commits/v0.5.2.beta)
 
 # 0.5.1-beta (2024-02-10)
 
-Releasing as a beta version for testing noAuth
+Releasing as a beta version for testing noAuth.
+
+## What's Changed
+No specific changes mentioned. This release is intended for testing noAuth functionalities.
+
+---
 
 # 0.1.0-test.3 (2024-02-07)
 
-For adding readme.md file
+For adding readme.md file.
+
+## What's Changed
+* Added readme.md file to enhance project documentation.
+
+---
 
 # 0.1.0-test.2 (2024-02-07)
 
+Initial setup and configuration.
+
+## What's Changed
+No specific changes mentioned. Initial setup and configurations for the project.
+
+---
+
 # 0.0.1-test.1 (2024-02-07)
+
+Initial release for testing.
+
+## What's Changed
+No specific changes mentioned. This marks the initial release for testing purposes.
