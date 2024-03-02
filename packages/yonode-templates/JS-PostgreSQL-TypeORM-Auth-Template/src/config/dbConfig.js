@@ -5,7 +5,7 @@ import chalk from "chalk";
 import User from "../entity/User.js";
 
 const AppDataSource = new DataSource({
-  type: "mysql",
+  type: "postgres",
   url: dbUrl,
   database: dbName,
   entities: [User],
