@@ -21,7 +21,7 @@
 * added JS for Auth Templates by [@isasharafdin](https://github.com/isasharafdin) in [#234](https://github.com/sharafdin/yonode/pull/234)
 * version 0.7.2 to 0.8.0 by [@isasharafdin](https://github.com/isasharafdin) in [#235](https://github.com/sharafdin/yonode/pull/235)
 
-**Full Changelog**: [https://github.com/sharafdin/yonode/compare/v0.7.2...v0.8.0](https://github.com/sharafdin/yonode/compare/v0.7.2
+**Full Changelog**: [https://github.com/sharafdin/yonode/compare/v0.7.2...v0.8.0](https://github.com/sharafdin/yonode/compare/v0.7.2).
 
 # 0.7.2 (2024-02-27)
 
