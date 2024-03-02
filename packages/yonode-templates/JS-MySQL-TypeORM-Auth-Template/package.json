@@ -20,7 +20,8 @@
     "express-validator": "^7.0.1",
     "helmet": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
-    "mongodb": "^5.9.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.9.1",
     "morgan": "^1.10.0",
     "reflect-metadata": "^0.1.13",
     "typeorm": "0.3.20"
