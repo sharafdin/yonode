@@ -9,7 +9,7 @@ import compression from "compression";
 import cookieParser from "cookie-parser";
 import { nodeEnv, port } from "./config/initialConfig.js";
 import authRoutes from "./routes/authRoutes.js";
-
+import "../src/config/dbConfig.js";
 // Initializing the app
 const app = express();
 app.use(cookieParser());

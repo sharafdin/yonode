@@ -1,7 +1,8 @@
-import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import User from "../models/User.js";
+import User from "../entity/User.js";
 import { jwtSecret } from "../config/initialConfig.js";
+import AppDataSource from "../config/dbConfig.js";
+import { comparePassword, hashedPassword } from "../utils/passwordUtils.js";
 
 // Handles new user registration
 export async function registerUser(req, res) {
@@ -9,15 +10,25 @@ export async function registerUser(req, res) {
 
   try {
     // Check if a user with the given email already exists
-    let user = await User.findOne({ email });
+    const userRepository = AppDataSource.getMongoRepository(User);
+
+    let user = await userRepository.findOneBy({ email });
+
     if (user) {
       return res.status(400).json({ message: "User already exists" });
     }
+
+    const hashPassword = await hashedPassword(password);
+
     // Create a new user instance and save it to the database
-    user = new User({ email, password });
-    await user.save();
+    user = userRepository.create({
+      email,
+      password: hashPassword,
+    });
+    await userRepository.save(user);
+    console.log(user);
     // Respond with the generated token
-    res.status(201).json({message: "User created successfully"});
+    res.status(201).json({ message: "User created successfully" });
   } catch (error) {
     // Handle any errors that occur during the registration process
     res.status(500).json({ message: "Server Error" });
@@ -30,13 +41,15 @@ export async function loginUser(req, res) {
 
   try {
     // Check if a user with the given email exists
-    let user = await User.findOne({ email });
+    const userRepository = AppDataSource.getMongoRepository(User);
+
+    let user = await userRepository.findOneBy({ email });
     if (!user) {
       return res.status(400).json({ message: "Invalid Credentials" });
     }
 
     // Compare the provided password with the stored hashed password
-    const isMatch = await bcrypt.compare(password, user.password);
+    const isMatch = await comparePassword(password, user.password);
     if (!isMatch) {
       return res.status(400).json({ message: "Invalid Credentials" });
     }
@@ -50,6 +63,7 @@ export async function loginUser(req, res) {
     res.json({ token });
   } catch (error) {
     // Handle any errors that occur during the login process
+    console.log(error);
     res.status(500).json({ message: "Server Error" });
   }
 }
