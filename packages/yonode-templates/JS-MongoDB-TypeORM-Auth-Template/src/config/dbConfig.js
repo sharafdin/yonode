@@ -1,21 +1,22 @@
-// Import required modules and configuration
-import mongoose from "mongoose";
-import { dbName, dbUrl } from "./initialConfig.js";
+import "reflect-metadata";
+import { DataSource } from "typeorm";
+import { dbName, dbUrl } from "./initial.config.js";
 import chalk from "chalk";
 
-// Async function to connect to the MongoDB database
-const connectDB = async () => {
-  try {
-    // Connect to the database with the provided URL and name
-    await mongoose.connect(dbUrl, { dbName });
-    // Log success message in green
-    console.log(`${chalk.green.bold("Connected")} to the database`);
-  } catch (error) {
-    // Log error message in red and exit the application
-    console.log(`${chalk.red.bold("Error")} connecting to database`, error);
-    process.exit(1);
-  }
-};
+const AppDataSource = new DataSource({
+  type: "mongodb",
+  url: dbUrl,
+  database: dbName,
+  entities: ["../entity/**/*.js"],
+  synchronize: true,
+});
 
-// Export the connectDB function
-export default connectDB;
+AppDataSource.initialize()
+  .then(async () => {
+  console.log(`${chalk.green.bold('Connected')} to the database`);
+  })
+  .catch((error) =>
+      console.log(`${chalk.red.bold('Error')} connecting to database`, error);
+  );
+
+export default AppDataSource;

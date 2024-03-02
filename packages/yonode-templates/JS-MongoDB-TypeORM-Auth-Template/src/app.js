@@ -8,7 +8,6 @@ import rateLimit from "express-rate-limit";
 import compression from "compression";
 import cookieParser from "cookie-parser";
 import { nodeEnv, port } from "./config/initialConfig.js";
-import connectDB from "./config/dbConfig.js";
 import authRoutes from "./routes/authRoutes.js";
 
 // Initializing the app
@@ -50,9 +49,6 @@ app.use((err, req, res, next) => {
     error: {},
   });
 });
-
-// Database connection
-connectDB();
 
 // Server running
 app.listen(port, () => {
