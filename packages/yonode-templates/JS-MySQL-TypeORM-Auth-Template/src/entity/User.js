@@ -6,15 +6,15 @@ const User = new EntitySchema({
   columns: {
     _id: {
       primary: true,
-      type: "mongodb-object-id",
-      objectId: true,
+      type: "int",
+      generated: true,
     },
     email: {
-      type: "string",
+      type: "varchar",
       unique: true,
     },
     password: {
-      type: "string",
+      type: "varchar",
       required: true,
     },
   },

@@ -10,7 +10,7 @@ export async function registerUser(req, res) {
 
   try {
     // Check if a user with the given email already exists
-    const userRepository = AppDataSource.getMongoRepository(User);
+    const userRepository = AppDataSource.getRepository(User);
 
     let user = await userRepository.findOneBy({ email });
 
