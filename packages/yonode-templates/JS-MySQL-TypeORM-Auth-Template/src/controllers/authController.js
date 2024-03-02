@@ -26,7 +26,7 @@ export async function registerUser(req, res) {
       password: hashPassword,
     });
     await userRepository.save(user);
-    console.log(user);
+
     // Respond with the generated token
     res.status(201).json({ message: "User created successfully" });
   } catch (error) {
@@ -41,7 +41,7 @@ export async function loginUser(req, res) {
 
   try {
     // Check if a user with the given email exists
-    const userRepository = AppDataSource.getMongoRepository(User);
+    const userRepository = AppDataSource.getRepository(User);
 
     let user = await userRepository.findOneBy({ email });
     if (!user) {
