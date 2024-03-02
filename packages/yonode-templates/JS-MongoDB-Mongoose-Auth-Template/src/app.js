@@ -15,6 +15,7 @@ import authRoutes from "./routes/authRoutes.js"; // Make sure you have this impo
 // Initializing the app
 const app = express();
 app.use(cookieParser());
+
 // Essential security headers with Helmet
 app.use(helmet());
 
@@ -26,7 +27,8 @@ if (nodeEnv === "development") {
   app.use(morgan("dev"));
 }
 
-app.use(compression()); // Compress all routes
+// Compress all routes
+app.use(compression());
 
 // Rate limiting to prevent brute-force attacks
 const limiter = rateLimit({
@@ -37,9 +39,6 @@ app.use(limiter);
 
 // Built-in middleware for parsing JSON
 app.use(express.json());
-
-// Database connection
-connectDB();
 
 // Use authentication routes
 app.use("/api/auth", authRoutes);
@@ -53,6 +52,10 @@ app.use((err, req, res, next) => {
   });
 });
 
+// Database connection
+connectDB();
+
+// Server running
 app.listen(port, () => {
   console.log(`${chalk.green.bold("Server")} is listening on port ${port}`);
 });

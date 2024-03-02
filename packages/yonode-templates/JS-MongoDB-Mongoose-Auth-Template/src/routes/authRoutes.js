@@ -4,10 +4,10 @@ import { validateUserLogin, validateUserRegister } from "../middlewares/validato
 
 const router = express.Router();
 
-// Validate registration input
+// Register route
 router.post("/register", validateUserRegister, registerUser);
 
-// Validate login input
+// Login route
 router.post("/login", validateUserLogin, loginUser);
 
 export default router;
