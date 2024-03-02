@@ -1,4 +1,4 @@
-// Import the packages
+// Import required modules and configuration
 import express from "express";
 import chalk from "chalk";
 import helmet from "helmet";
@@ -7,10 +7,9 @@ import morgan from "morgan";
 import rateLimit from "express-rate-limit";
 import compression from "compression";
 import cookieParser from "cookie-parser";
-// Import your files
 import { nodeEnv, port } from "./config/initialConfig.js";
 import connectDB from "./config/dbConfig.js";
-import authRoutes from "./routes/authRoutes.js"; // Make sure you have this import for auth routes
+import authRoutes from "./routes/authRoutes.js";
 
 // Initializing the app
 const app = express();
