@@ -1,7 +1,7 @@
 {
   "name": "yonode",
   "description": "The Node.js Toolkit for Rapid Development.",
-  "version": "0.7.2",
+  "version": "0.8.0",
   "author": "Mr Sharafdin",
   "license": "MIT",
   "main": "./src/index.js",
