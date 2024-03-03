@@ -1,4 +1,4 @@
-import sequelize from '../config/db.config.js';
+import sequelize from '../config/dbConfig.js';
 import { DataTypes } from 'sequelize';
 
 // Define a schema for the user with email and password fields
