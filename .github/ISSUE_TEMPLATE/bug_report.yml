@@ -1,38 +1,75 @@
----
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+name: Bug Report
+description: Create a bug report to help improve Yonode
+labels: ['bug', 'pending triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Thank you for reporting a bug!** Before you proceed, please ensure this issue hasn't been reported already by [searching](https://github.com/sharafdin/yonode/issues) through existing issues. If you're reporting a new bug, please use this template to provide detailed information.
 
----
+        If you need help or have a question, consider starting a discussion on our [GitHub Discussions](https://github.com/sharafdin/yonode/discussions) page instead.
+        
+  - type: input
+    attributes:
+      label: Yonode Version
+      description: The version of Yonode where you are experiencing the issue.
+      placeholder: e.g., 1.2.3
+    validations:
+      required: true
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+  - type: input
+    attributes:
+      label: Link to the code or a minimal reproduction
+      description: |
+        Please provide a link to a **public** repository that minimally reproduces the problem. Ensure your reproduction is as minimal as possible and specific to Yonode.
+        **Note:** Issues without a reproduction will be given lower priority or might be closed until a reproduction is provided.
+      placeholder: 'https://github.com/user/my-minimal-yonode-issue-reproduction'
+    validations:
+      required: true
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce
+      description: Please describe the steps to reproduce the bug. Include commands, configurations, and any relevant links.
+      placeholder: |
+        1. Initialize a new Yonode project using `npx yonode@latest` or specify the specific version you're using with `npx yonode@specificVersion`.
+        2. Follow the prompts to set up your project.
+        3. Run `npm i` to install any necessary dependencies.
+        4. Start the Yonode application.
+        5. Encounter the error.
+    validations:
+      required: true
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+  - type: textarea
+    attributes:
+      label: Expected vs Actual Behavior
+      description: Describe what you expected to happen and what actually happened.
+      placeholder: 'Expected to see my API route working, but got an error in the console instead.'
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+  - type: textarea
+    attributes:
+      label: Environment Information
+      description: Provide the output of `npx envinfo --system --npmPackages 'express,node.js,yonode' --binaries --browsers`
+      render: bash
+      placeholder: |
+        Node.js Version:
+        NPM Version:
+        OS:
+        Browser:
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+  - type: checkboxes
+    attributes:
+      label: Checklist
+      options:
+        - label: I have filled in all the required fields.
+          required: true
+        - label: I have searched for existing issues to avoid duplicates.
+          required: true
+        - label: This is a bug report specific to Yonode and not general Node.js or Express.js issues.
+          required: true
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+  - type: textarea
+    attributes:
+      label: Additional context
+      description: Any other context or screenshots about the bug report.
+      placeholder: Add any other context about the problem here.
