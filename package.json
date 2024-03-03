@@ -1,8 +1,5 @@
 {
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "author": "Mr Sharafdin",
   "license": "MIT",
   "homepage": "https://yonode.org/",
