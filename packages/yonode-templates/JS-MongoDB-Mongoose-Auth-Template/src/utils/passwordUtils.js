@@ -1,7 +1,7 @@
 import bcrypt from "bcrypt";
 
 // Function to generate a hashed password asynchronously
-export const hashedPassword = async (password) => {
+export const hashPassword = async (password) => {
   // Generate a salt with a cost factor of 12
   const salt = await bcrypt.genSalt(12);
   // Hash the provided password using the generated salt

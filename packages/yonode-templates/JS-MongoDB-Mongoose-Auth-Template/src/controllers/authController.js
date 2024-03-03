@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";
 import { jwtSecret } from "../config/initialConfig.js";
-import { hashedPassword, comparePassword } from "../utils/passwordUtils.js";
+import { hashPassword, comparePassword } from "../utils/passwordUtils.js";
 
 // Handles new user registration
 export async function registerUser(req, res) {
@@ -14,7 +14,7 @@ export async function registerUser(req, res) {
       return res.status(400).json({ message: "User already exists" });
     }
     // Hash the password before saving it
-    const hashed = await hashedPassword(password);
+    const hashed = await hashPassword(password);
     // Create a new user instance with the hashed password and save it to the database
     user = new User({ email, password: hashed });
     await user.save();
