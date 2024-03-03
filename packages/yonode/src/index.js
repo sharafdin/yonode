@@ -33,7 +33,19 @@ const runCommand = (command) => {
 };
 let cloneDirectory = process.cwd();
 
-export const cloneRepo = (projectName, branchName) => {
+function removeGitDirectory(folderPath) {
+  return new Promise((resolve, reject) => {
+    fs.rm(folderPath, { recursive: true, force: true }, (error) => {
+      if (error) {
+        reject(error);
+      } else {
+        resolve("Folder deleted successfully");
+      }
+    });
+  });
+}
+
+export const cloneRepo = async (projectName, branchName) => {
   let tempProjectName = basename(process.cwd());
 
   if (projectName === ".") {
@@ -47,6 +59,8 @@ export const cloneRepo = (projectName, branchName) => {
   if (!gitClone) process.exit(1);
 
   if (projectName === ".") {
+    const folderPath = path.join(cloneDirectory, ".git");
+    await removeGitDirectory(folderPath);
     const packageJsonPath = path.join(cloneDirectory, "package.json");
     const packageJson = fs.readFileSync(packageJsonPath).toString();
 
@@ -60,7 +74,8 @@ export const cloneRepo = (projectName, branchName) => {
     console.log(`   npm install \n   npm start`);
   } else {
     cloneDirectory = path.join(process.cwd(), projectName);
-
+    const folderPath = path.join(cloneDirectory, ".git");
+    await removeGitDirectory(folderPath);
     const packageJsonPath = path.join(cloneDirectory, "package.json");
     const packageJson = fs.readFileSync(packageJsonPath).toString();
 
@@ -120,7 +135,7 @@ function main() {
     .then((answer) => {
       if (answer.language_type === "TypeScript") {
         console.log(
-            "Currently, TypeScript is unavailable. Expect its launch in v1.5.0. \nFor more info, visit: https://docs.yonode.org."
+          "Currently, TypeScript is unavailable. Expect its launch in v1.5.0. \nFor more info, visit: https://docs.yonode.org."
         );
         process.exit(0);
       }
