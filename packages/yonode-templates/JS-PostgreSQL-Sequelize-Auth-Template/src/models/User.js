@@ -1,4 +1,3 @@
-import bcryptjs from 'bcryptjs';
 import sequelize from '../config/db.config.js';
 import { DataTypes } from 'sequelize';
 
@@ -12,15 +11,6 @@ const User = sequelize.define('User', {
     password: {
         type: DataTypes.STRING,
         allowNull: false, // Makes this field mandatory
-    }
-})
-// Hash the user's password before saving it to the database
-User.beforeCreate( async (user , options) => {
-    // Hash the password only if it has been modified
-    if(user.changed('password')){
-        // Generate a salt and hash the password
-        const hashedPassword = await bcryptjs.hash(user.password,12);
-        user.password = hashedPassword
     }
 })
 
