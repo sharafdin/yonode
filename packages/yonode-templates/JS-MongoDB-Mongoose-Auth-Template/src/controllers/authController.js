@@ -1,7 +1,7 @@
-import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";
 import { jwtSecret } from "../config/initialConfig.js";
+import { hashedPassword, comparePassword } from "../utils/passwordUtils.js";
 
 // Handles new user registration
 export async function registerUser(req, res) {
@@ -13,11 +13,13 @@ export async function registerUser(req, res) {
     if (user) {
       return res.status(400).json({ message: "User already exists" });
     }
-    // Create a new user instance and save it to the database
-    user = new User({ email, password });
+    // Hash the password before saving it
+    const hashed = await hashedPassword(password);
+    // Create a new user instance with the hashed password and save it to the database
+    user = new User({ email, password: hashed });
     await user.save();
     // Respond with the generated token
-    res.status(201).json({message: "User created successfully"});
+    res.status(201).json({ message: "User created successfully" });
   } catch (error) {
     // Handle any errors that occur during the registration process
     res.status(500).json({ message: "Server Error" });
@@ -35,8 +37,8 @@ export async function loginUser(req, res) {
       return res.status(400).json({ message: "Invalid Credentials" });
     }
 
-    // Compare the provided password with the stored hashed password
-    const isMatch = await bcrypt.compare(password, user.password);
+    // Compare the provided password with the stored hashed password using the comparePassword function
+    const isMatch = await comparePassword(password, user.password);
     if (!isMatch) {
       return res.status(400).json({ message: "Invalid Credentials" });
     }
