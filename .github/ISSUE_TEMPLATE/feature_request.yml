@@ -1,6 +1,6 @@
 name: "New Feature Proposal"
 description: Suggest an enhancement for Yonode
-labels: ["enhancement","feature request"]
+labels: ["enhancement"]
 body:
   - type: markdown
     attributes:
