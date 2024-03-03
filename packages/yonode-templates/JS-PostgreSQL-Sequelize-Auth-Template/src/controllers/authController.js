@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";
-
+import { jwtSecret } from "../config/initialConfig.js";
+import { hashPassword, comparePassword } from "../utils/passwordUtils.js";
 // Handles new user registration
 export async function registerUser(req, res) {
   const { email, password } = req.body; // Extract email and password from request body
@@ -42,7 +43,7 @@ export async function loginUser(req, res) {
     
     // Create a JWT payload and generate a token
     const payload = { userId: user._id };
-    const token = jwt.sign(payload, process.env.JWT_SECRET, {
+    const token = jwt.sign(payload, jwtSecret, {
       expiresIn: "1h",
     });
     // Respond with the generated token
