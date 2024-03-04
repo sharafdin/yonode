@@ -1,2 +1,4 @@
 packages:
   - 'packages/*'
+  - 'yonode.org'
+  - 'docs.yonode.org'
