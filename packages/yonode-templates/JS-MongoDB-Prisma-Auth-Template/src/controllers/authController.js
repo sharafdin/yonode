@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 import prisma from "../../prisma/client.js";
-import { comparePassword, hashedPassword } from "../utils/password.js";
+import { comparePassword, hashedPassword } from "../utils/passwordUtils.js";
 import { jwtSecret } from "../config/initialConfig.js";
 
 // Handles new user registration
