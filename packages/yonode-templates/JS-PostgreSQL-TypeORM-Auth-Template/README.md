@@ -1,4 +1,4 @@
-# Yonode + MongoDB with TypeORM
+# Yonode + PostgreSQL with TypeORM
 
 This template simplifies setting up a server in [Yonode](https://yonode.org) with Node.js and Express, offering a quick start for server-side development.
 
