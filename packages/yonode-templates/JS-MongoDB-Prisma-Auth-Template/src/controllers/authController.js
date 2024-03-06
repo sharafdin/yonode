@@ -1,9 +1,7 @@
-
-import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { validationResult } from "express-validator";
 import prisma from "../../prisma/client.js";
-import { comparePassword, hashedPassword } from "../utils/password.js";
+import { comparePassword, hashedPassword } from "../utils/passwordUtils.js";
+import { jwtSecret } from "../config/initialConfig.js";
 
 // Handles new user registration
 export async function register(req, res) {
@@ -11,23 +9,25 @@ export async function register(req, res) {
 
   try {
     // Check if a user with the given email already exists
-    let user = await prisma.user.findUnique({ where: { email }});
+    let user = await prisma.user.findUnique({ where: { email } });
     if (user) {
       return res.status(400).json({ message: "User already exists" });
     }
 
     // Hash the password
-   const hashPassword = await hashedPassword(password);
+    const hashPassword = await hashedPassword(password);
 
     // Create a new user instance and save it to the database
-    user = await prisma.user.create({data: {email, password:hashPassword} });
+    user = await prisma.user.create({
+      data: { email, password: hashPassword },
+    });
     // Respond with the generated token
     res.status(201).json({ user });
   } catch (error) {
     // Handle any errors that occur during the registration process
     res.status(500).json({ message: "Server Error" });
-    
-    console.log("Error at user Registration" , error)
+
+    console.log("Error at user Registration", error);
   }
 }
 
@@ -37,7 +37,7 @@ export async function login(req, res) {
 
   try {
     // Check if a user with the given email exists
-    let user = await prisma.user.findUnique({ where: { email }});
+    let user = await prisma.user.findUnique({ where: { email } });
     if (!user) {
       return res.status(400).json({ message: "Invalid Credentials" });
     }
@@ -50,7 +50,7 @@ export async function login(req, res) {
 
     // Create a JWT payload and generate a token
     const payload = { userId: user._id };
-    const token = jwt.sign(payload, process.env.JWT_SECRET, {
+    const token = jwt.sign(payload, jwtSecret, {
       expiresIn: "1h",
     });
     // Respond with the generated token
