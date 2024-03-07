@@ -1,31 +1,23 @@
-import { body, validationResult } from "express-validator";
+import jwt from "jsonwebtoken";
+import { jwtSecret } from "../config/initialConfig.js";
 
-export const validateUserRegister = [
-  [
-    body("email").isEmail().withMessage("Invalid email").normalizeEmail(), // This takes care of converting the email to lowercase among other things
-    body("password")
-      .isLength({ min: 5 })
-      .withMessage("Password must be at least 5 characters long"),
-  ],
-  (req, res, next) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
-    }
-    next();
-  },
-];
+// Middleware to validate JWT tokens
+export default function auth(req, res, next) {
+  // Extract the token from the Authorization header
+  const token = req.header("Authorization").replace("Bearer ", "");
 
-export const validateUserLogin = [
-  [
-    body("email").isEmail().withMessage("Invalid email").normalizeEmail(), // Normalizes the email to lowercase
-    body("password").exists().withMessage("Password is required"),
-  ],
-    (req, res, next) => {
-      const errors = validationResult(req);
-      if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
-      }
-      next();
-    }
-]
+  // Deny access if the token is not provided
+  if (!token) {
+    return res.status(401).json({ message: "No token, authorization denied" });
+  }
+
+  try {
+    // Verify the token using the secret key
+    const decoded = jwt.verify(token, jwtSecret);
+    req.user = decoded.userId; // Attach the user ID to the request object
+    next(); // Proceed to the next middleware or route handler
+  } catch (error) {
+    // Respond with an error if the token is invalid
+    res.status(401).json({ message: "Token is not valid" });
+  }
+}
