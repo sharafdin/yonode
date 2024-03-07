@@ -1,6 +1,5 @@
 // Import required modules and configuration
 import mongoose from "mongoose";
-import bcrypt from "bcrypt";
 
 // Define a schema for the user with email and password fields
 const UserSchema = new mongoose.Schema({
