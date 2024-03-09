@@ -4,4 +4,4 @@ dotenv.config();
 
 export const port = process.env.SERVER_PORT || 8000;
 export const dbUrl = process.env.DATABASE_URL;
-export const dbName = process.env.DATABASE_NAME  || 'yonodeDB';
+export const nodeEnv = process.env.NODE_ENVIRONMENT
