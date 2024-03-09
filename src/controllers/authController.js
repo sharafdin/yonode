@@ -3,7 +3,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { validationResult } from "express-validator";
 import prisma from "../../prisma/client.js";
-import { comparePassword, hashedPassword } from "../utils/password.js";
+import { comparePassword, hashPassword } from "../utils/password.js";
 
 // Handles new user registration
 export async function register(req, res) {
@@ -17,10 +17,10 @@ export async function register(req, res) {
     }
 
     // Hash the password
-   const hashPassword = await hashedPassword(password);
+   const hashedPassword = await hashPassword(password);
 
     // Create a new user instance and save it to the database
-    user = await prisma.user.create({data: {email, password:hashPassword} });
+    user = await prisma.user.create({data: {email, password:hashedPassword} });
     // Respond with the generated token
     res.status(201).json({ user });
   } catch (error) {
