@@ -3,7 +3,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { validationResult } from "express-validator";
 import prisma from "../../prisma/client.js";
-import { comparePassword, hashPassword } from "../utils/password.js";
+import { comparePassword, hashPassword } from "../utils/passwordUtils.js";
 
 // Handles new user registration
 export async function register(req, res) {
