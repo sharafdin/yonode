@@ -13,9 +13,9 @@ export async function registerUser(req, res) {
       return res.status(400).json({ message: "User already exists" });
     }
     // Hash the password before saving it
-    const hashed = await hashPassword(password);
+    const hashedPassword = await hashPassword(password);
     // Create a new user builder and save it to the database
-    user = User.build({ email, password:hashed });
+    user = User.build({ email, password:hashedPassword });
     await user.save();
     res.status(201).json({ message: "User created successfully" });
   } catch (error) {
