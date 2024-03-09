@@ -9,24 +9,21 @@ export async function registerUser(req, res) {
   const { email, password } = req.body; // Extract email and password from request body
 
   try {
-    // Check if a user with the given email already exists
+    
     const userRepository = AppDataSource.getMongoRepository(User);
-
+    // Check if a user with the given email already exists
     let user = await userRepository.findOneBy({ email });
-
     if (user) {
       return res.status(400).json({ message: "User already exists" });
     }
-
+     // Hash the password before saving it
     const hashPassword = await hashedPassword(password);
-
     // Create a new user instance and save it to the database
     user = userRepository.create({
       email,
       password: hashPassword,
     });
     await userRepository.save(user);
-    console.log(user);
     // Respond with the generated token
     res.status(201).json({ message: "User created successfully" });
   } catch (error) {
@@ -40,9 +37,8 @@ export async function loginUser(req, res) {
   let { email, password } = req.body; // Extract email and password from request body
 
   try {
-    // Check if a user with the given email exists
     const userRepository = AppDataSource.getMongoRepository(User);
-
+    // Check if a user with the given email exists
     let user = await userRepository.findOneBy({ email });
     if (!user) {
       return res.status(400).json({ message: "Invalid Credentials" });
