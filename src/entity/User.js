@@ -1,5 +1,7 @@
+// Import required modules and configuration
 import { EntitySchema } from "typeorm";
 
+// Define a schema for the user with email and password fields
 const User = new EntitySchema({
   name: "User",
   tableName: "users",
@@ -11,11 +13,12 @@ const User = new EntitySchema({
     },
     email: {
       type: "varchar",
-      unique: true,
+      required: true, // Makes this field mandatory
+      unique: true, // Ensures email addresses are unique in the database
     },
     password: {
       type: "varchar",
-      required: true,
+      required: true, // Makes this field mandatory
     },
   },
 });
