@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 import prisma from "../../prisma/client.js";
-import { comparePassword, hashedPassword } from "../utils/passwordUtils.js";
+import { comparePassword, hashPassword } from "../utils/passwordUtils.js";
 import { jwtSecret } from "../config/initialConfig.js";
 
 // Handles new user registration
@@ -15,11 +15,11 @@ export async function register(req, res) {
     }
 
     // Hash the password
-    const hashPassword = await hashedPassword(password);
+    const hashedPassword = await hashPassword(password);
 
     // Create a new user instance and save it to the database
     user = await prisma.user.create({
-      data: { email, password: hashPassword },
+      data: { email, password: hashedPassword },
     });
     // Respond with the generated token
     res.status(201).json({ user });
