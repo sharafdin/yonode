@@ -1,6 +1,6 @@
 import chalk from "chalk";
 import { Sequelize } from "sequelize";
-import { dbUrl } from "./initialConfig.js";
+import { dbUrl } from "./initailConfig.js";
 
 const sequelize = new Sequelize(dbUrl);
 
