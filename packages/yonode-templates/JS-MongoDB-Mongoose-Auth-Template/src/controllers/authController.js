@@ -15,7 +15,7 @@ export async function registerUser(req, res) {
     }
     // Hash the password before saving it
     const hashedPassword = await hashPassword(password);
-    // Create a new user instance with the hashed password and save it to the database
+    // Create a new user instance and save it to the database
     user = new User({ email, password: hashedPassword });
     await user.save();
     // Respond with the generated token
