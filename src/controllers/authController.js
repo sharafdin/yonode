@@ -9,22 +9,25 @@ export async function registerUser(req, res) {
   const { email, password } = req.body; // Extract email and password from request body
 
   try {
-    
-    const userRepository = AppDataSource.getMongoRepository(User);
     // Check if a user with the given email already exists
+    const userRepository = AppDataSource.getMongoRepository(User);
+
     let user = await userRepository.findOneBy({ email });
+
     if (user) {
       return res.status(400).json({ message: "User already exists" });
     }
-     // Hash the password before saving it
+
+    // Hash the password before saving it
     const hashedPassword = await hashPassword(password);
-    // Create a new user instance and save it to the database
+    // Create a new user instance with the hashed password and save it to the database
     user = userRepository.create({
       email,
       password: hashedPassword,
     });
     await userRepository.save(user);
-    // Respond with the generated token
+    console.log(user);
+    // Respond with the created user
     res.status(201).json({ message: "User created successfully" });
   } catch (error) {
     // Handle any errors that occur during the registration process
@@ -37,8 +40,9 @@ export async function loginUser(req, res) {
   let { email, password } = req.body; // Extract email and password from request body
 
   try {
-    const userRepository = AppDataSource.getMongoRepository(User);
     // Check if a user with the given email exists
+    const userRepository = AppDataSource.getMongoRepository(User);
+
     let user = await userRepository.findOneBy({ email });
     if (!user) {
       return res.status(400).json({ message: "Invalid Credentials" });
