@@ -1,5 +1,5 @@
-
 import jwt from "jsonwebtoken";
+import { jwtSecret } from "../config/initialConfig.js";
 
 // Middleware to validate JWT tokens
 export default function auth(req, res, next) {
@@ -13,7 +13,7 @@ export default function auth(req, res, next) {
 
   try {
     // Verify the token using the secret key
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(token, jwtSecret);
     req.user = decoded.userId; // Attach the user ID to the request object
     next(); // Proceed to the next middleware or route handler
   } catch (error) {
@@ -21,4 +21,3 @@ export default function auth(req, res, next) {
     res.status(401).json({ message: "Token is not valid" });
   }
 }
-
