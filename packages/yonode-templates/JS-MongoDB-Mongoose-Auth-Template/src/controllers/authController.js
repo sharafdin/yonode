@@ -14,9 +14,9 @@ export async function registerUser(req, res) {
       return res.status(400).json({ message: "User already exists" });
     }
     // Hash the password before saving it
-    const hashed = await hashPassword(password);
-    // Create a new user instance with the hashed password and save it to the database
-    user = new User({ email, password: hashed });
+    const hashedPassword = await hashPassword(password);
+    // Create a new user instance with the hashedPassword password and save it to the database
+    user = new User({ email, password: hashedPassword });
     await user.save();
     // Respond with the generated token
     res.status(201).json({ message: "User created successfully" });
