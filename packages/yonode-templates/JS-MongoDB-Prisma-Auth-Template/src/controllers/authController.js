@@ -15,7 +15,7 @@ export async function registerUser(req, res) {
     }
     // Hash the password before saving it
     const hashedPassword = await hashPassword(password);
-    // Create a new user instance with the hashedPassword password and save it to the database
+    // Create a new user instance with the hashed password and save it to the database
     user = await prisma.user.create({
       data: { email, password: hashedPassword },
     });
