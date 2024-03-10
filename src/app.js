@@ -7,7 +7,7 @@ import morgan from "morgan";
 import rateLimit from "express-rate-limit";
 import compression from "compression";
 import cookieParser from "cookie-parser";
-import { nodeEnv, port } from "./config/initialConfig.js";
+import { nodeEnv, port } from "./config/initailConfig.js";
 import authRoutes from "./routes/authRoutes.js";
 
 // Initializing the app
