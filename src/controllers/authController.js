@@ -15,7 +15,7 @@ export async function registerUser(req, res) {
     // Hash the password before saving it
     const hashedPassword = await hashPassword(password);
     // Create a new user builder and save it to the database
-    user = User.build({ email, password:hashedPassword });
+    user = User.build({ email, password: hashedPassword });
     await user.save();
     res.status(201).json({ message: "User created successfully" });
   } catch (error) {
@@ -40,7 +40,7 @@ export async function loginUser(req, res) {
     if (!isMatch) {
       return res.status(400).json({ message: "Invalid Credentials" });
     }
-    
+
     // Create a JWT payload and generate a token
     const payload = { userId: user._id };
     const token = jwt.sign(payload, jwtSecret, {
