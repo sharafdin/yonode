@@ -1,0 +1,98 @@
+version: 2
+updates:
+  # Main package
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode"
+    schedule:
+      interval: "weekly"
+
+  # Templates
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MongoDB-Mongoose-Auth-Template"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MongoDB-Mongoose-NoAuth-Template"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MongoDB-Prisma-Auth-Template"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MongoDB-Prisma-NoAuth-Template"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MongoDB-TypeORM-Auth-Template"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MongoDB-TypeORM-NoAuth-Template"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MySQL-Prisma-Auth-Template"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MySQL-Prisma-NoAuth-Template"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MySQL-Sequelize-Auth-Template"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MySQL-Sequelize-NoAuth-Template"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MySQL-TypeORM-Auth-Template"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MySQL-TypeORM-NoAuth-Template"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-PostgreSQL-Prisma-Auth-Template"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-PostgreSQL-Prisma-NoAuth-Template"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-PostgreSQL-Sequelize-Auth-Template"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-PostgreSQL-Sequelize-NoAuth-Template"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-PostgreSQL-TypeORM-Auth-Template"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-PostgreSQL-TypeORM-NoAuth-Template"
+    schedule:
+      interval: "weekly"
