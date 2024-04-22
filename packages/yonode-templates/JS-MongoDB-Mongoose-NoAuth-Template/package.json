@@ -24,7 +24,7 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "yonode": "^0.7.0",
+    "yonode": "^1.0.0",
     "nodemon": "^3.0.1"
   }
 }
