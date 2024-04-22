@@ -24,7 +24,7 @@
     "nodemailer": "^6.9.9",
     "uuidv4": "^6.2.13",
     "pg": "^8.11.3",
-    "reflect-metadata": "^0.1.13",
+    "reflect-metadata": "^0.2.2",
     "typeorm": "0.3.20"
   },
   "devDependencies": {
