@@ -1,3 +1,11 @@
+# 1.0.0 (2024-03-11)
+
+## What's Changed
+* Removed package-lock.json by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#278](https://github.com/sharafdin/yonode/pull/278)
+* Release v1.0.0: Initial major release of Yonode by [@isasharafdin](https://github.com/isasharafdin) in [#280](https://github.com/sharafdin/yonode/pull/280)
+
+**Full Changelog**: [https://github.com/sharafdin/yonode/compare/v0.8.0...v1.0.0](https://github.com/sharafdin/yonode/compare/v0.8.0...v1.0.0)
+
 # 1.0.0-beta (2024-03-10)
 
 ## What's Changed

@@ -22,11 +22,11 @@
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^5.9.2",
     "morgan": "^1.10.0",
-    "reflect-metadata": "^0.1.13",
+    "reflect-metadata": "^0.2.2",
     "typeorm": "0.3.20"
   },
   "devDependencies": {
     "nodemon": "^3.0.1",
-    "yonode": "^0.7.0"
+    "yonode": "^1.0.0"
   }
 }
