@@ -111,6 +111,9 @@ importers:
       react-remove-scroll:
         specifier: ^2.5.5
         version: 2.5.7(@types/react@18.2.0)(react@18.2.0)
+      yonode:
+        specifier: ^0.7.0
+        version: 0.7.2
     devDependencies:
       '@babel/core':
         specifier: ^7.21.5
