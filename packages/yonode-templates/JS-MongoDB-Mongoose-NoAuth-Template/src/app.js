@@ -11,6 +11,7 @@ import cookieParser from 'cookie-parser';
 // import your files
 import { port } from './config/initial.config.js';
 import connectDB from './config/db.config.js';
+import helloWorldRouter from './routes/helloWorldRoutes.js';
 
 // Initializing the app
 const app = express();
@@ -42,7 +43,7 @@ app.use(express.json());
 connectDB();
 
 // Use your routes here
-// app.use('/api/', authRoutes);
+app.use('/api/helloworld', helloWorldRouter);
 
 // Global error handler
 app.use((err, req, res, next) => {

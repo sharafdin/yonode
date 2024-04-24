@@ -1,3 +1,49 @@
+# 1.0.0 (2024-03-11)
+
+## What's Changed
+* Removed package-lock.json by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#278](https://github.com/sharafdin/yonode/pull/278)
+* Release v1.0.0: Initial major release of Yonode by [@isasharafdin](https://github.com/isasharafdin) in [#280](https://github.com/sharafdin/yonode/pull/280)
+
+**Full Changelog**: [https://github.com/sharafdin/yonode/compare/v0.8.0...v1.0.0](https://github.com/sharafdin/yonode/compare/v0.8.0...v1.0.0)
+
+# 1.0.0-beta (2024-03-10)
+
+## What's Changed
+
+- feat: Added JS-MongoDB-TypeORM-Auth-Template by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#237](https://github.com/sharafdin/yonode/pull/237)
+- Added TypeORM-Auth-Template for MySQL and PostgreSQL by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#238](https://github.com/sharafdin/yonode/pull/238)
+- feat: Added bug_report.yml by [@isasharafdin](https://github.com/isasharafdin) in [#241](https://github.com/sharafdin/yonode/pull/241)
+- feat: Added feature_request.yml by [@isasharafdin](https://github.com/isasharafdin) in [#242](https://github.com/sharafdin/yonode/pull/242)
+- feat: Added enhancement and feature request labels by [@isasharafdin](https://github.com/isasharafdin) in [#244](https://github.com/sharafdin/yonode/pull/244)
+- Removed labels by [@isasharafdin](https://github.com/isasharafdin) in [#245](https://github.com/sharafdin/yonode/pull/245)
+- feat: Added docs.yml by [@isasharafdin](https://github.com/isasharafdin) in [#246](https://github.com/sharafdin/yonode/pull/246)
+- feat: Added config.yml by [@isasharafdin](https://github.com/isasharafdin) in [#247](https://github.com/sharafdin/yonode/pull/247)
+- refactor: Use password hashing and comparison functions from utils folder by [@isasharafdin](https://github.com/isasharafdin) in [#248](https://github.com/sharafdin/yonode/pull/248)
+- feat: Added development in initialConfig.js by [@isasharafdin](https://github.com/isasharafdin) in [#250](https://github.com/sharafdin/yonode/pull/250)
+- fix: Two issues: remove cookie after user login and logOut controller by [@Miirshe](https://github.com/Miirshe) in [#249](https://github.com/sharafdin/yonode/pull/249)
+- feat: Renamed hashedPassword to hashPassword by [@isasharafdin](https://github.com/isasharafdin) in [#251](https://github.com/sharafdin/yonode/pull/251)
+- chore: Update .gitignore file by [@isasharafdin](https://github.com/isasharafdin) in [#252](https://github.com/sharafdin/yonode/pull/252)
+- chore: Implemented pnpm package manager by [@isasharafdin](https://github.com/isasharafdin) in [#254](https://github.com/sharafdin/yonode/pull/254)
+- Completed [JS-PostgreSQL-Sequelize-Auth-Template] by [@Miirshe](https://github.com/Miirshe) in [#253](https://github.com/sharafdin/yonode/pull/253)
+- fix: Removed .git folder by [@isasharafdin](https://github.com/isasharafdin) in [#255](https://github.com/sharafdin/yonode/pull/255)
+- feat: Updated Prisma For Auth Template by [@Omar-Tood](https://github.com/Omar-Tood) in [#256](https://github.com/sharafdin/yonode/pull/256)
+- Added yonode.org site by [@isasharafdin](https://github.com/isasharafdin) in [#257](https://github.com/sharafdin/yonode/pull/257)
+- Removed yonode.org to remove .git folder by [@isasharafdin](https://github.com/isasharafdin) in [#258](https://github.com/sharafdin/yonode/pull/258)
+- Added yonode.org site again by [@isasharafdin](https://github.com/isasharafdin) in [#259](https://github.com/sharafdin/yonode/pull/259)
+- Added docs.yonode.org site by [@isasharafdin](https://github.com/isasharafdin) in [#260](https://github.com/sharafdin/yonode/pull/260)
+- feat: Added yonode.org and docs.yonode.org by [@isasharafdin](https://github.com/isasharafdin) in [#261](https://github.com/sharafdin/yonode/pull/261)
+- Auth For MySQL-Sequelize by [@hanad124](https://github.com/hanad124) in [#262](https://github.com/sharafdin/yonode/pull/262)
+- feat: Updated README by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#270](https://github.com/sharafdin/yonode/pull/270)
+- Remove [bcrypt import package] and update [authMiddleware] by [@Miirshe](https://github.com/Miirshe) in [#272](https://github.com/sharafdin/yonode/pull/272)
+- Updated JS-MongoDB-TypeORM-Auth-Template by [@Miirshe](https://github.com/Miirshe) in [#273](https://github.com/sharafdin/yonode/pull/273)
+- Updated -JS-MySQL-Sequelize-Auth-Template, JS-MySQL-Prisma-Auth-Template, JS-MySQL-TypeORM-Auth-Template, and JS-PostgreSQL-Auth-Template by [@Miirshe](https://github.com/Miirshe) in [#274](https://github.com/sharafdin/yonode/pull/274)
+- Adjusting with all templates by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#275](https://github.com/sharafdin/yonode/pull/275)
+- Adjusting comments and correcting variable name by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#276](https://github.com/sharafdin/yonode/pull/276)
+- Release v1.0.0-beta: Initial beta release of Yonode by [@isasharafdin](https://github.com/isasharafdin) in [#277](https://github.com/sharafdin/yonode/pull/277)
+
+**Full Changelog**: [v0.8.0...v1.0.0-beta](https://github.com/sharafdin/yonode/compare/v0.8.0...v1.0.0-beta)
+
+
 # 0.8.0 (2024-03-02)
 
 ## What's Changed

@@ -98,7 +98,9 @@ if (projectName === ".") {
   const files = fs.readdirSync(cloneDirectory);
 
   if (files.length) {
-    console.log("The directory is not empty.");
+    console.log(
+      "Error: Directory not empty. Please use an empty directory or specify a new project name."
+    );
     process.exit(1);
   }
 }
@@ -117,7 +119,9 @@ if (!projectName) {
         const files = fs.readdirSync(cloneDirectory);
 
         if (files.length) {
-          console.log("The directory is not empty.");
+          console.log(
+            "Error: Directory not empty. Please use an empty directory or specify a new project name."
+          );
           process.exit(1);
         }
         (projectName = name.projectName), main();
@@ -135,7 +139,7 @@ function main() {
     .then((answer) => {
       if (answer.language_type === "TypeScript") {
         console.log(
-          "Currently, TypeScript is unavailable. Expect its launch in v1.5.0. \nFor more info, visit: https://docs.yonode.org."
+          "Currently, TypeScript is unavailable. Expect its launch in v1.5.0. \nFor more info, visit: https://docs.yonode.org/#typescript"
         );
         process.exit(0);
       }

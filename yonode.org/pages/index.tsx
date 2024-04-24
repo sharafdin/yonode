@@ -79,7 +79,7 @@ const HeroSection: React.FC = () => {
             }
             description={
               <FallInPlace delay={0.4} fontWeight="medium">
-                Yonode is a <Em>Node.js framework</Em>
+                Yonode is a <Em>Node.js toolkit</Em>
                 <Br /> that streamlines your workflow, enabling you <Br /> to
                 craft efficient server solutions rapidly.
               </FallInPlace>
@@ -321,7 +321,7 @@ export async function getStaticProps() {
   return {
     props: {
       announcement: {
-        title: 'Yonode is under beta version',
+        title: 'Yonode has officially launched!',
         href: 'https://www.npmjs.com/package/yonode?activeTab=versions',
       },
     },
