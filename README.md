@@ -1,3 +1,14 @@
+<p align="center">
+  <a href="https://yonode.org" target="_blank" rel="noopener noreferrer">
+    <img width="180" src="assets/yonode icon.png" alt="Yonode logo">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://npmjs.com/package/yonode"><img src="https://img.shields.io/npm/v/yonode.svg" alt="yonode package"></a>
+  <a href="https://nodejs.org/en/about/previous-releases"><img src="https://img.shields.io/node/v/yonode.svg" alt="node compatibility"></a>
+</p>
+
 # Yonode
 
 The Node.js Toolkit for Rapid Development
