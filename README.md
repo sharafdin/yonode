@@ -22,7 +22,7 @@ Visit our documentation to [get started with Yonode](https://docs.yonode.org).
 Join the vibrant Yonode community:
 
 - **GitHub Discussions**: Engage in conversations, ask questions, share ideas, and showcase your projects.
-- **Discord**: Connect and chat with fellow Yonode users and contributors. [Join](https://discord.gg/GFUK9rS9)
+- **Discord**: Connect and chat with fellow Yonode users and contributors. [Join](https://discord.gg/6wCFbkhwQn)
 
 ## Contributing
 
