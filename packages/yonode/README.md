@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://yonode.org" target="_blank" rel="noopener noreferrer">
-    <img width="180" src="../../assets/yonode-icon.png" alt="Yonode logo">
+    <img width="180" src="https://raw.githubusercontent.com/sharafdin/yonode/main/assets/yonode-icon.png" alt="Yonode logo">
   </a>
 </p>
 
