@@ -39,9 +39,6 @@ app.use(limiter);
 // Built-in middleware for parsing JSON
 app.use(express.json());
 
-// Database connection
-connectDB();
-
 // Use your routes here
 app.use("/api/helloworld", helloWorldRouter);
 
@@ -53,6 +50,9 @@ app.use((err, req, res, next) => {
     error: {},
   });
 });
+
+// Database connection
+connectDB();
 
 app.listen(port, () => {
   console.log(`${chalk.green.bold("Server")} is listening on port ${port}`);
