@@ -1,27 +1,3 @@
-# Logs and Runtime data
-logs/
-*.log
-
-# Dependency directories
-node_modules/
-
-# TypeScript cache
-*.tsbuildinfo
-
-# Optional cache directories
-.eslintcache
-.stylelintcache
-
-# Environment variables
+.vscode
+/node_modules
 .env
-.env.development.local
-.env.test.local
-.env.production.local
-.env.local
-
-# Yarn and npm cache
-.npm/
-
-# Miscellaneous
-.node_repl_history
-.vscode-test

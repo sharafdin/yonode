@@ -1,37 +1,25 @@
-<p align="center">
-  <a href="https://yonode.org" target="_blank" rel="noopener noreferrer">
-    <img width="180" src="assets/yonode-icon.png" alt="Yonode logo">
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://npmjs.com/package/yonode"><img src="https://img.shields.io/npm/v/yonode.svg" alt="yonode package"></a>
-  <a href="https://nodejs.org/en/about/previous-releases"><img src="https://img.shields.io/node/v/yonode.svg" alt="node compatibility"></a>
-</p>
-
 # Yonode
 
-The Node.js Toolkit for Rapid Development
+This template simplifies setting up a server in [Yonode](https://yonode.org) with Node.js and Express, offering a quick start for server-side development.
 
 ## Getting Started
 
-Visit our documentation to [get started with Yonode](https://docs.yonode.org).
+Initially, navigate to the .env file to set up the required environment variables.
 
-## Community
+Next, launch the development server:
 
-Join the vibrant Yonode community:
+```bash
+npm start
+# or
+yarn start
+# or
+pnpm start
+# or
+bun start
+```
 
-- **GitHub Discussions**: Engage in conversations, ask questions, share ideas, and showcase your projects.
-- **Discord**: Connect and chat with fellow Yonode users and contributors. [Join](https://discord.gg/6wCFbkhwQn)
+The server is running and ready to serve requests.
 
-## Contributing
+Now, Go to the Src directory and start building the server.
 
-Interested in contributing to Yonode? Check out our [contributing guidelines](CONTRIBUTING.md).
-
-## License
-
-Yonode is an open-source package licensed under the [MIT License](LICENSE)
-
-## Security
-
-[Reporting a Vulnerability](SECURITY.md)
+Happy coding! 
