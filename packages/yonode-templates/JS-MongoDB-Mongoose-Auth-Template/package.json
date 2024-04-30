@@ -25,6 +25,6 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1",
-    "yonode": "^1.0.0"
+    "yonode": "^0.9.0"
   }
 }
