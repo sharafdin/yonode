@@ -4,6 +4,12 @@ export const repoConditions = () => {
   switch (true) {
     // JavaScript for NoAuth
 
+    // NoDB
+    case options.language_type === "JavaScript" &&
+    options.database === false:
+    cloneRepo(projectName, "JS-NoDB-Template");
+    break;
+
     // MongoDB
     case options.language_type === "JavaScript" &&
       options.database_type === "MongoDB" &&
