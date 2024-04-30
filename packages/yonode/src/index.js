@@ -9,14 +9,15 @@
 
 import { execSync } from "child_process";
 import fs from "fs";
-import path, { basename } from "path";
 import inquirer from "inquirer";
+import path, { basename } from "path";
 import "./lib/programOptions.js";
-import { databaseType } from "./lib/prompt/db.js";
+import { databaseConfirmQuestion } from "./lib/prompt/db.js";
 import { languageType } from "./lib/questions.js";
 
 export const options = {
   language_type: "",
+  database: true,
   database_type: "",
   orm_type: "",
   auth: false,
@@ -144,7 +145,7 @@ function main() {
         process.exit(0);
       }
       options.language_type = answer.language_type;
-      databaseType();
+      databaseConfirmQuestion();
     })
     .catch((error) => {
       if (error.isTtyError) {

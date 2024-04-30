@@ -6,6 +6,14 @@ export const languageType = {
     default: "JavaScript",
 }
 
+export const dbQuestion = [
+    {
+        type: "confirm",
+        name: "dbQuestion",
+        message: "Do you need database?",
+    },
+]
+
 export const databaseQuestion = [
     {
         type: "list",

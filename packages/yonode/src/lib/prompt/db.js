@@ -1,28 +1,23 @@
-import inquirer from 'inquirer'
-import { mongodbOrm } from '../../orm/mongoDB.js';
-import { ormType } from '../../orm/orm.js';
-import { options } from '../../index.js';
-import { databaseQuestion } from '../questions.js';
+import inquirer from "inquirer";
+import { options } from "../../index.js";
+import { dbQuestion } from "../questions.js";
+import { repoConditions } from "../repoConditions.js";
+import { databaseType } from "./dbType.js";
 
-export const databaseType = () => {
-    inquirer.prompt(
-        databaseQuestion
-    ).then(answer => {
-        if (answer.database_type === 'MongoDB') {
-            options.database_type = answer.database_type
-            mongodbOrm()
-        } else if (answer.database_type === 'MySQL') {
-            options.database_type = answer.database_type
-            ormType()
-        }
-        else {
-            options.database_type = answer.database_type
-            ormType()
-        }
+export const databaseConfirmQuestion = () => {
+  inquirer
+    .prompt(dbQuestion)
+    .then((answer) => {
+      if (answer.dbQuestion === true) {
+        databaseType();
+      } else if(answer.dbQuestion === false) {
+        options.database = answer.dbQuestion;
+        repoConditions();
+      }
     })
-        .catch((error) => {
-            if (error.isTtyError) {
-            } else {
-            }
-        });
-}
+    .catch((error) => {
+      if (error.isTtyError) {
+      } else {
+      }
+    });
+};
