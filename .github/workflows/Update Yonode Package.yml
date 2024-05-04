@@ -45,7 +45,7 @@ jobs:
           git push origin update-yonode-dependencies
 
       - name: Create Pull Request for updated package.json
-        uses: peter-evans/create-pull-request@v4
+        uses: peter-evans/create-pull-request@v6
         with:
           commit-message: Update dependencies in Yonode
           title: 'Update Yonode dependencies'
