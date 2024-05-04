@@ -1,6 +1,6 @@
 {
   "extends": ["config:base"],
-  "includePaths": ["packages/yonode"],
+  "includePaths": ["packages/yonode", "packages/yonode-templates/JS-MongoDB-Mongoose-Auth-Template"],
   "reviewers": ["isasharafdin"],
   "labels": ["dependencies"]
 }
