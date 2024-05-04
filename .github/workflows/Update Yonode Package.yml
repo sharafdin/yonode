@@ -5,70 +5,35 @@ on:
     - cron: '*/5 * * * *'
 
 jobs:
-  update-JS-MongoDB-Mongoose-Auth-Template:
+  some-job:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Necessary to ensure the history is available for operations like push
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-
-      - name: Update JS-MongoDB-Mongoose-Auth-Template dependencies
+      
+      - name: Make changes and commit
         run: |
-          cd packages/yonode-templates/JS-MongoDB-Mongoose-Auth-Template
-          npm install -g npm-check-updates
-          ncu -u
-          if [ -n "$(git status --porcelain)" ]; then
-            git config --local user.email "action@github.com"
-            git config --local user.name "GitHub Action"
-            git checkout -b update-JS-MongoDB-Mongoose-Auth-Template
-            git commit -am "Update dependencies for JS-MongoDB-Mongoose-Auth-Template"
-            git push origin update-JS-MongoDB-Mongoose-Auth-Template
-            echo "Changes committed and new branch pushed."
-          else
-            echo "No updates found for JS-MongoDB-Mongoose-Auth-Template"
+          # Your commands to update files or dependencies
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git checkout -b new-branch-for-updates
+          # Make some changes
+          git add .
+          git commit -m "Update dependencies"
+          git push origin new-branch-for-updates
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
-          commit-message: Update dependencies in JS-MongoDB-Mongoose-Auth-Template
-          title: 'Update dependencies for JS-MongoDB-Mongoose-Auth-Template'
-          body: 'This pull request updates dependencies for the JS-MongoDB-Mongoose-Auth-Template.'
-          branch: update-JS-MongoDB-Mongoose-Auth-Template
+          commit-message: "Update dependencies"
+          title: "Update dependencies"
+          body: "Automatically generated PR to update dependencies."
+          branch: new-branch-for-updates
           base: 'main'
           labels: 'dependencies'
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}  # Default GitHub token
 
-  update-JS-MySQL-Prisma-Auth-Template:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Update JS-MySQL-Prisma-Auth-Template dependencies
-        run: |
-          cd packages/yonode-templates/JS-MySQL-Prisma-Auth-Template
-          npm install -g npm-check-updates
-          ncu -u
-          if [ -n "$(git status --porcelain)" ]; then
-            git config --local user.email "action@github.com"
-            git config --local user.name "GitHub Action"
-            git checkout -b update-JS-MySQL-Prisma-Auth-Template
-            git commit -am "Update dependencies for JS-MySQL-Prisma-Auth-Template"
-            git push origin update-JS-MySQL-Prisma-Auth-Template
-            echo "Changes committed and new branch pushed."
-          else
-            echo "No updates found for JS-MySQL-Prisma-Auth-Template"
-
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v4
-        with:
-          commit-message: Update dependencies in JS-MySQL-Prisma-Auth-Template
-          title: 'Update dependencies for JS-MySQL-Prisma-Auth-Template'
-          body: 'This pull request updates dependencies for the JS-MySQL-Prisma-Auth-Template.'
-          branch: update-JS-MySQL-Prisma-Auth-Template
-          base: 'main'
-          labels: 'dependencies'
-          token: ${{ secrets.GITHUB_TOKEN }}
