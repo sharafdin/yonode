@@ -1,6 +1,6 @@
 {
   "extends": ["config:base"],
-  "includePaths": ["packages"],
+  "includePaths": ["packages/**"],
   "reviewers": ["isasharafdin"],
   "labels": ["dependencies"]
 }
