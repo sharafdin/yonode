@@ -26,12 +26,12 @@ Join the vibrant Yonode community:
 
 ## Contributing
 
-Interested in contributing to Yonode? Check out our [contributing guidelines](CONTRIBUTING.md).
+Interested in contributing to Yonode? Check out our [contributing guidelines](https://github.com/sharafdin/yonode/blob/main/CONTRIBUTING.md).
 
 ## License
 
-Yonode is an open-source package licensed under the [MIT License](LICENSE)
+Yonode is an open-source package licensed under the [MIT License](https://github.com/sharafdin/yonode/blob/main/LICENSE)
 
 ## Security
 
-[Reporting a Vulnerability](SECURITY.md)
+[Reporting a Vulnerability](https://github.com/sharafdin/yonode/blob/main/SECURITY.md)
