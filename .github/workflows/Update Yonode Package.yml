@@ -1,61 +1,61 @@
-name: Update Yonode Package
+# name: Update Yonode Package
 
-on:
-  schedule:
-    # Runs every 5 minutes
-    - cron: '*/5 * * * *'
-  workflow_dispatch:
+# on:
+#   schedule:
+#     # Runs every 5 minutes
+#     - cron: '*/5 * * * *'
+#   workflow_dispatch:
 
-jobs:
-  update-yonode:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0  # Important to fetch all history for branch operations
+# jobs:
+#   update-yonode:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v3
+#         with:
+#           fetch-depth: 0  # Important to fetch all history for branch operations
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: '16'
 
-      - name: Change directory to yonode
-        run: cd packages/yonode-templates/JS-MongoDB-Mongoose-Auth-Template
+#       - name: Change directory to yonode
+#         run: cd packages/yonode-templates/JS-MongoDB-Mongoose-Auth-Template
 
-      - name: Install npm-check-updates
-        run: npm install -g npm-check-updates
+#       - name: Install npm-check-updates
+#         run: npm install -g npm-check-updates
 
-      - name: Check for updated packages
-        run: ncu -u
+#       - name: Check for updated packages
+#         run: ncu -u
 
-      - name: Install updated packages
-        run: npm install
+#       - name: Install updated packages
+#         run: npm install
 
-      - name: Commit updated package.json and package-lock.json
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add package.json package-lock.json
-          git diff-index --quiet HEAD || git commit -m "Update dependencies"
+#       - name: Commit updated package.json and package-lock.json
+#         run: |
+#           git config --local user.email "action@github.com"
+#           git config --local user.name "GitHub Action"
+#           git add package.json package-lock.json
+#           git diff-index --quiet HEAD || git commit -m "Update dependencies"
 
-      - name: Push changes
-        run: |
-          git checkout -b update-yonode-dependencies
-          git push -u origin update-yonode-dependencies
-      - name: Push to Status Check-Protected Branches
-        uses: CasperWA/push-protected@v2.15.0
+#       - name: Push changes
+#         run: |
+#           git checkout -b update-yonode-dependencies
+#           git push -u origin update-yonode-dependencies
+#       - name: Push to Status Check-Protected Branches
+#         uses: CasperWA/push-protected@v2.15.0
 
-      - name: Create Pull Request for updated package.json
-        uses: peter-evans/create-pull-request@v4
-        with:
-          commit-message: Update dependencies in Yonode
-          title: 'Update Yonode dependencies'
-          body: 'This pull request updates dependencies for the Yonode package.'
-          branch: 'update-yonode-dependencies'
-          base: 'main'
-          labels: 'dependencies'
-          token: ${{ secrets.GITHUB_TOKEN }}
+#       - name: Create Pull Request for updated package.json
+#         uses: peter-evans/create-pull-request@v4
+#         with:
+#           commit-message: Update dependencies in Yonode
+#           title: 'Update Yonode dependencies'
+#           body: 'This pull request updates dependencies for the Yonode package.'
+#           branch: 'update-yonode-dependencies'
+#           base: 'main'
+#           labels: 'dependencies'
+#           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Check outputs
-        run: echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+#       - name: Check outputs
+#         run: echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
