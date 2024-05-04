@@ -40,7 +40,7 @@
     "@types/joi": "^17.2.3",
     "@types/jsonwebtoken": "^9.0.5",
     "@types/morgan": "^1.9.9",
-    "@types/node": "^16.11.10",
+    "@types/node": "^20.0.0",
     "@types/nodemailer": "^6.4.14",
     "@types/uuidv4": "^5.0.0",
     "nodemon": "^3.0.1",
