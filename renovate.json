@@ -2,68 +2,9 @@
   "extends": ["config:base"],
   "packageRules": [
     {
-      "description": "Major updates for Yonode package across all paths",
-      "packageNames": ["yonode"],
-      "managers": ["npm"],
-      "paths": [
-        "packages/yonode",
-        "packages/yonode-templates/JS-MongoDB-Mongoose-Auth-Template",
-        "packages/yonode-templates/JS-MongoDB-Mongoose-NoAuth-Template",
-        "packages/yonode-templates/JS-MongoDB-Prisma-Auth-Template",
-        "packages/yonode-templates/JS-MongoDB-Prisma-NoAuth-Template",
-        "packages/yonode-templates/JS-MongoDB-TypeORM-Auth-Template",
-        "packages/yonode-templates/JS-MongoDB-TypeORM-NoAuth-Template",
-        "packages/yonode-templates/JS-MySQL-Prisma-Auth-Template",
-        "packages/yonode-templates/JS-MySQL-Prisma-NoAuth-Template",
-        "packages/yonode-templates/JS-MySQL-Sequelize-Auth-Template",
-        "packages/yonode-templates/JS-MySQL-Sequelize-NoAuth-Template",
-        "packages/yonode-templates/JS-MySQL-TypeORM-Auth-Template",
-        "packages/yonode-templates/JS-MySQL-TypeORM-NoAuth-Template",
-        "packages/yonode-templates/JS-PostgreSQL-Prisma-Auth-Template",
-        "packages/yonode-templates/JS-PostgreSQL-Prisma-NoAuth-Template",
-        "packages/yonode-templates/JS-PostgreSQL-Sequelize-Auth-Template",
-        "packages/yonode-templates/JS-PostgreSQL-Sequelize-NoAuth-Template",
-        "packages/yonode-templates/JS-PostgreSQL-TypeORM-Auth-Template",
-        "packages/yonode-templates/JS-PostgreSQL-TypeORM-NoAuth-Template"
-      ],
-      "groupName": "Major Yonode Package Updates",
-      "schedule": ["before 5am on Monday"],
-      "enabled": true,
-      "updateTypes": ["major"],
-      "semanticCommits": true,
-      "commitMessagePrefix": "major update"
-    },
-    {
-      "description": "Minor and Patch updates for all packages and templates",
-      "packagePatterns": ["*"],
-      "managers": ["npm"],
-      "paths": [
-        "packages/yonode",
-        "packages/yonode-templates/JS-MongoDB-Mongoose-Auth-Template",
-        "packages/yonode-templates/JS-MongoDB-Mongoose-NoAuth-Template",
-        "packages/yonode-templates/JS-MongoDB-Prisma-Auth-Template",
-        "packages/yonode-templates/JS-MongoDB-Prisma-NoAuth-Template",
-        "packages/yonode-templates/JS-MongoDB-TypeORM-Auth-Template",
-        "packages/yonode-templates/JS-MongoDB-TypeORM-NoAuth-Template",
-        "packages/yonode-templates/JS-MySQL-Prisma-Auth-Template",
-        "packages/yonode-templates/JS-MySQL-Prisma-NoAuth-Template",
-        "packages/yonode-templates/JS-MySQL-Sequelize-Auth-Template",
-        "packages/yonode-templates/JS-MySQL-Sequelize-NoAuth-Template",
-        "packages/yonode-templates/JS-MySQL-TypeORM-Auth-Template",
-        "packages/yonode-templates/JS-MySQL-TypeORM-NoAuth-Template",
-        "packages/yonode-templates/JS-PostgreSQL-Prisma-Auth-Template",
-        "packages/yonode-templates/JS-PostgreSQL-Prisma-NoAuth-Template",
-        "packages/yonode-templates/JS-PostgreSQL-Sequelize-Auth-Template",
-        "packages/yonode-templates/JS-PostgreSQL-Sequelize-NoAuth-Template",
-        "packages/yonode-templates/JS-PostgreSQL-TypeORM-Auth-Template",
-        "packages/yonode-templates/JS-PostgreSQL-TypeORM-NoAuth-Template"
-      ],
-      "groupName": "Minor and Patch Updates for Yonode",
-      "schedule": ["every weekend"],
-      "enabled": true,
-      "updateTypes": ["minor", "patch"],
-      "semanticCommits": true,
-      "commitMessagePrefix": "update"
+      "paths": ["package/yonode"],
+      "dependencyType": "all",
+      "enabled": true
     }
   ]
 }
