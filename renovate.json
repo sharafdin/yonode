@@ -1,6 +1,6 @@
 {
   "extends": ["config:base"],
-  "includePaths": ["packages/yonode"]
+  "includePaths": ["packages/yonode"],
   "packageRules": [
     {
       "paths": ["package/yonode"],
