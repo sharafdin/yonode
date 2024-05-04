@@ -3,7 +3,7 @@ name: Update Yonode Package
 on:
   schedule:
     # Runs every day at 05:00 UTC
-    - cron:  '0 5 * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 jobs:
