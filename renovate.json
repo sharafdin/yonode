@@ -115,12 +115,5 @@
       "managers": ["npm"],
       "paths": ["/packages/yonode-templates/JS-PostgreSQL-TypeORM-NoAuth-Template"]
     },
-    {
-      "description": "Branch-specific updates for JS-MongoDB-Mongoose-Auth-Template",
-      "packagePatterns": ["*"],
-      "managers": ["npm"],
-      "paths": ["/"],
-      "targetBranch": "JS-MongoDB-Mongoose-Auth-Template"
-    }
   ]
 }
