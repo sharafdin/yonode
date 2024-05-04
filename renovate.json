@@ -1,6 +1,247 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
+  "extends": ["config:base"],
+  "timezone": "Europe/London",
+  "schedule": ["every Saturday"],
+  "packageRules": [
+    {
+      "description": "Main package updates",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/packages/yonode"]
+    },
+    {
+      "description": "Template updates for JS-MongoDB-Mongoose-Auth",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/packages/yonode-templates/JS-MongoDB-Mongoose-Auth-Template"]
+    },
+    {
+      "description": "Template updates for JS-MongoDB-Mongoose-NoAuth",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/packages/yonode-templates/JS-MongoDB-Mongoose-NoAuth-Template"]
+    },
+    {
+      "description": "Template updates for JS-MongoDB-Prisma-Auth",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/packages/yonode-templates/JS-MongoDB-Prisma-Auth-Template"]
+    },
+    {
+      "description": "Template updates for JS-MongoDB-Prisma-NoAuth",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/packages/yonode-templates/JS-MongoDB-Prisma-NoAuth-Template"]
+    },
+    {
+      "description": "Template updates for JS-MongoDB-TypeORM-Auth",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/packages/yonode-templates/JS-MongoDB-TypeORM-Auth-Template"]
+    },
+    {
+      "description": "Template updates for JS-MongoDB-TypeORM-NoAuth",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/packages/yonode-templates/JS-MongoDB-TypeORM-NoAuth-Template"]
+    },
+    {
+      "description": "Template updates for JS-MySQL-Prisma-Auth",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/packages/yonode-templates/JS-MySQL-Prisma-Auth-Template"]
+    },
+    {
+      "description": "Template updates for JS-MySQL-Prisma-NoAuth",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/packages/yonode-templates/JS-MySQL-Prisma-NoAuth-Template"]
+    },
+    {
+      "description": "Template updates for JS-MySQL-Sequelize-Auth",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/packages/yonode-templates/JS-MySQL-Sequelize-Auth-Template"]
+    },
+    {
+      "description": "Template updates for JS-MySQL-Sequelize-NoAuth",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/packages/yonode-templates/JS-MySQL-Sequelize-NoAuth-Template"]
+    },
+    {
+      "description": "Template updates for JS-MySQL-TypeORM-Auth",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/packages/yonode-templates/JS-MySQL-TypeORM-Auth-Template"]
+    },
+    {
+      "description": "Template updates for JS-MySQL-TypeORM-NoAuth",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/packages/yonode-templates/JS-MySQL-TypeORM-NoAuth-Template"]
+    },
+    {
+      "description": "Template updates for JS-PostgreSQL-Prisma-Auth",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/packages/yonode-templates/JS-PostgreSQL-Prisma-Auth-Template"]
+    },
+    {
+      "description": "Template updates for JS-PostgreSQL-Prisma-NoAuth",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/packages/yonode-templates/JS-PostgreSQL-Prisma-NoAuth-Template"]
+    },
+    {
+      "description": "Template updates for JS-PostgreSQL-Sequelize-Auth",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/packages/yonode-templates/JS-PostgreSQL-Sequelize-Auth-Template"]
+    },
+    {
+      "description": "Template updates for JS-PostgreSQL-Sequelize-NoAuth",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/packages/yonode-templates/JS-PostgreSQL-Sequelize-NoAuth-Template"]
+    },
+    {
+      "description": "Template updates for JS-PostgreSQL-TypeORM-Auth",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/packages/yonode-templates/JS-PostgreSQL-TypeORM-Auth-Template"]
+    },
+    {
+      "description": "Template updates for JS-PostgreSQL-TypeORM-NoAuth",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/packages/yonode-templates/JS-PostgreSQL-TypeORM-NoAuth-Template"]
+    },
+    {
+      "description": "Branch-specific updates for JS-MongoDB-Mongoose-Auth-Template",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/"],
+      "targetBranches": ["JS-MongoDB-Mongoose-Auth-Template"]
+    },
+    {
+      "description": "Branch-specific updates for JS-MongoDB-Mongoose-NoAuth-Template",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/"],
+      "targetBranches": ["JS-MongoDB-Mongoose-NoAuth-Template"]
+    },
+    {
+      "description": "Branch-specific updates for JS-MongoDB-Prisma-Auth-Template",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/"],
+      "targetBranches": ["JS-MongoDB-Prisma-Auth-Template"]
+    },
+    {
+      "description": "Branch-specific updates for JS-MongoDB-Prisma-NoAuth-Template",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/"],
+      "targetBranches": ["JS-MongoDB-Prisma-NoAuth-Template"]
+    },
+    {
+      "description": "Branch-specific updates for JS-MongoDB-TypeORM-Auth-Template",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/"],
+      "targetBranches": ["JS-MongoDB-TypeORM-Auth-Template"]
+    },
+    {
+      "description": "Branch-specific updates for JS-MongoDB-TypeORM-NoAuth-Template",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/"],
+      "targetBranches": ["JS-MongoDB-TypeORM-NoAuth-Template"]
+    },
+    {
+      "description": "Branch-specific updates for JS-MySQL-Prisma-Auth-Template",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/"],
+      "targetBranches": ["JS-MySQL-Prisma-Auth-Template"]
+    },
+    {
+      "description": "Branch-specific updates for JS-MySQL-Prisma-NoAuth-Template",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/"],
+      "targetBranches": ["JS-MySQL-Prisma-NoAuth-Template"]
+    },
+    {
+      "description": "Branch-specific updates for JS-MySQL-Sequelize-Auth-Template",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/"],
+      "targetBranches": ["JS-MySQL-Sequelize-Auth-Template"]
+    },
+    {
+      "description": "Branch-specific updates for JS-MySQL-Sequelize-NoAuth-Template",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/"],
+      "targetBranches": ["JS-MySQL-Sequelize-NoAuth-Template"]
+    },
+    {
+      "description": "Branch-specific updates for JS-MySQL-TypeORM-Auth-Template",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/"],
+      "targetBranches": ["JS-MySQL-TypeORM-Auth-Template"]
+    },
+    {
+      "description": "Branch-specific updates for JS-MySQL-TypeORM-NoAuth-Template",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/"],
+      "targetBranches": ["JS-MySQL-TypeORM-NoAuth-Template"]
+    },
+    {
+      "description": "Branch-specific updates for JS-PostgreSQL-Prisma-Auth-Template",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/"],
+      "targetBranches": ["JS-PostgreSQL-Prisma-Auth-Template"]
+    },
+    {
+      "description": "Branch-specific updates for JS-PostgreSQL-Prisma-NoAuth-Template",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/"],
+      "targetBranches": ["JS-PostgreSQL-Prisma-NoAuth-Template"]
+    },
+    {
+      "description": "Branch-specific updates for JS-PostgreSQL-Sequelize-Auth-Template",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/"],
+      "targetBranches": ["JS-PostgreSQL-Sequelize-Auth-Template"]
+    },
+    {
+      "description": "Branch-specific updates for JS-PostgreSQL-Sequelize-NoAuth-Template",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/"],
+      "targetBranches": ["JS-PostgreSQL-Sequelize-NoAuth-Template"]
+    },
+    {
+      "description": "Branch-specific updates for JS-PostgreSQL-TypeORM-Auth-Template",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/"],
+      "targetBranches": ["JS-PostgreSQL-TypeORM-Auth-Template"]
+    },
+    {
+      "description": "Branch-specific updates for JS-PostgreSQL-TypeORM-NoAuth-Template",
+      "packagePatterns": ["*"],
+      "managers": ["npm"],
+      "paths": ["/"],
+      "targetBranches": ["JS-PostgreSQL-TypeORM-NoAuth-Template"]
+    }
   ]
 }
