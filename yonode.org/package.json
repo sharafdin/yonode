@@ -29,7 +29,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
     "react-remove-scroll": "^2.5.5",
-    "yonode": "^0.7.0"
+    "yonode": "^0.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.21.5",
