@@ -1,9 +1,9 @@
-name: Update Yonode Package on New Tag
+name: Update Yonode Package Every 5 Minutes
 
 on:
-  push:
-    tags:
-      - 'v*'
+  schedule:
+    # Runs at every 5 minutes
+    - cron:  '*/5 * * * *'
 
 jobs:
   update-yonode:
@@ -34,8 +34,8 @@ jobs:
         with:
           commit-message: Update dependencies in Yonode
           title: 'Update Yonode dependencies'
-          body: 'This pull request updates dependencies for the Yonode package to coincide with new tag.'
-          branch: 'update-yonode-dependencies-${{ github.ref_name }}'
+          body: 'This pull request updates dependencies for the Yonode package.'
+          branch: 'update-yonode-dependencies'
           base: 'main'
           labels: 'dependencies'
           token: ${{ secrets.GITHUB_TOKEN }}
