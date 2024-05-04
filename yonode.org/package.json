@@ -27,7 +27,7 @@
     "nextra-theme-docs": "^2.13.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.8.0",
+    "react-icons": "^5.0.0",
     "react-remove-scroll": "^2.5.5",
     "yonode": "^0.7.0"
   },
