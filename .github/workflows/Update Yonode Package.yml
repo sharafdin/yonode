@@ -1,13 +1,26 @@
-name: Update Yonode Package Every 5 Minutes
+name: Update Yonode Templates Every 5 Minutes
 
 on:
   schedule:
-    # Runs at every 5 minutes
-    - cron:  '*/5 * * * *'
+    - cron: '*/5 * * * *'
 
 jobs:
-  update-yonode:
+  update-templates:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        template: [
+          'JS-MongoDB-Mongoose-Auth-Template', 'JS-MongoDB-Mongoose-NoAuth-Template',
+          'JS-MongoDB-Prisma-Auth-Template', 'JS-MongoDB-Prisma-NoAuth-Template',
+          'JS-MongoDB-TypeORM-Auth-Template', 'JS-MongoDB-TypeORM-NoAuth-Template',
+          'JS-MySQL-Prisma-Auth-Template', 'JS-MySQL-Prisma-NoAuth-Template',
+          'JS-MySQL-Sequelize-Auth-Template', 'JS-MySQL-Sequelize-NoAuth-Template',
+          'JS-MySQL-TypeORM-Auth-Template', 'JS-MySQL-TypeORM-NoAuth-Template',
+          'JS-NoDB-Template', 'JS-PostgreSQL-Prisma-Auth-Template',
+          'JS-PostgreSQL-Prisma-NoAuth-Template', 'JS-PostgreSQL-Sequelize-Auth-Template',
+          'JS-PostgreSQL-Sequelize-NoAuth-Template', 'JS-PostgreSQL-TypeORM-Auth-Template',
+          'JS-PostgreSQL-TypeORM-NoAuth-Template'
+        ]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -17,28 +30,29 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Change directory to yonode
+      - name: Change directory and update packages
         run: |
-          cd packages/yonode
-
-      - name: Install npm-check-updates
-        run: npm install -g npm-check-updates
-
-      - name: Update package.json if newer versions are available
-        run: |
+          cd packages/yonode-templates/${{ matrix.template }}
+          npm install -g npm-check-updates
           ncu -u
+          if [ -n "$(git status --porcelain)" ]; then
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git checkout -b update-${{ matrix.template }}-dependencies
+            git commit -am "Update dependencies for ${{ matrix.template }}"
+            git push origin update-${{ matrix.template }}-dependencies
+            echo "Changes committed and new branch pushed."
+          else
+            echo "No updates found for ${{ matrix.template }}"
+          fi
 
       - name: Create Pull Request for updated package.json
-        id: cpr
         uses: peter-evans/create-pull-request@v4
         with:
-          commit-message: Update dependencies in Yonode
-          title: 'Update Yonode dependencies'
-          body: 'This pull request updates dependencies for the Yonode package.'
-          branch: 'update-yonode-dependencies'
+          commit-message: Update dependencies in ${{ matrix.template }}
+          title: 'Update dependencies for ${{ matrix.template }}'
+          body: 'This pull request updates dependencies for ${{ matrix.template }}.'
+          branch: update-${{ matrix.template }}-dependencies
           base: 'main'
           labels: 'dependencies'
           token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Check outputs
-        run: echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
