@@ -12,5 +12,12 @@
     "api",
     "server",
     "backend"
-  ]
+  ],
+  "scripts": {
+    "prettier-check": "prettier --check .",
+    "prettier-write": "prettier --write ."
+  },  
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
 }
