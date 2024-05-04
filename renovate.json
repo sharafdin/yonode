@@ -2,5 +2,5 @@
   "extends": ["config:base"],
   "includePaths": ["packages/yonode"],
   "reviewers": ["isasharafdin"],
-  "labels": ["dependencies"],
+  "labels": ["dependencies"]
 }
