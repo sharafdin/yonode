@@ -1,58 +1,244 @@
-name: Update Yonode Templates Every 5 Minutes
+version: 2
+updates:
+  # Main package
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
 
-on:
-  schedule:
-    - cron: '*/5 * * * *'
+  # Templates
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MongoDB-Mongoose-Auth-Template"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
 
-jobs:
-  update-templates:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        template: [
-          'JS-MongoDB-Mongoose-Auth-Template', 'JS-MongoDB-Mongoose-NoAuth-Template',
-          'JS-MongoDB-Prisma-Auth-Template', 'JS-MongoDB-Prisma-NoAuth-Template',
-          'JS-MongoDB-TypeORM-Auth-Template', 'JS-MongoDB-TypeORM-NoAuth-Template',
-          'JS-MySQL-Prisma-Auth-Template', 'JS-MySQL-Prisma-NoAuth-Template',
-          'JS-MySQL-Sequelize-Auth-Template', 'JS-MySQL-Sequelize-NoAuth-Template',
-          'JS-MySQL-TypeORM-Auth-Template', 'JS-MySQL-TypeORM-NoAuth-Template',
-          'JS-NoDB-Template', 'JS-PostgreSQL-Prisma-Auth-Template',
-          'JS-PostgreSQL-Prisma-NoAuth-Template', 'JS-PostgreSQL-Sequelize-Auth-Template',
-          'JS-PostgreSQL-Sequelize-NoAuth-Template', 'JS-PostgreSQL-TypeORM-Auth-Template',
-          'JS-PostgreSQL-TypeORM-NoAuth-Template'
-        ]
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MongoDB-Mongoose-NoAuth-Template"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MongoDB-Prisma-Auth-Template"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
 
-      - name: Change directory and update packages
-        run: |
-          cd packages/yonode-templates/${{ matrix.template }}
-          npm install -g npm-check-updates
-          ncu -u
-          if [ -n "$(git status --porcelain)" ]; then
-            git config --local user.email "action@github.com"
-            git config --local user.name "GitHub Action"
-            git checkout -b update-${{ matrix.template }}-dependencies
-            git commit -am "Update dependencies for ${{ matrix.template }}"
-            git push origin update-${{ matrix.template }}-dependencies
-            echo "Changes committed and new branch pushed."
-          else
-            echo "No updates found for ${{ matrix.template }}"
-          fi
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MongoDB-Prisma-NoAuth-Template"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
 
-      - name: Create Pull Request for updated package.json
-        uses: peter-evans/create-pull-request@v4
-        with:
-          commit-message: Update dependencies in ${{ matrix.template }}
-          title: 'Update dependencies for ${{ matrix.template }}'
-          body: 'This pull request updates dependencies for ${{ matrix.template }}.'
-          branch: update-${{ matrix.template }}-dependencies
-          base: 'main'
-          labels: 'dependencies'
-          token: ${{ secrets.GITHUB_TOKEN }}
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MongoDB-TypeORM-Auth-Template"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MongoDB-TypeORM-NoAuth-Template"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MySQL-Prisma-Auth-Template"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MySQL-Prisma-NoAuth-Template"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MySQL-Sequelize-Auth-Template"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MySQL-Sequelize-NoAuth-Template"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MySQL-TypeORM-Auth-Template"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-MySQL-TypeORM-NoAuth-Template"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-PostgreSQL-Prisma-Auth-Template"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-PostgreSQL-Prisma-NoAuth-Template"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-PostgreSQL-Sequelize-Auth-Template"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-PostgreSQL-Sequelize-NoAuth-Template"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-PostgreSQL-TypeORM-Auth-Template"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+
+  - package-ecosystem: "npm"
+    directory: "/packages/yonode-templates/JS-PostgreSQL-TypeORM-NoAuth-Template"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+
+  # Branches
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+    target-branch: "JS-MongoDB-Mongoose-Auth-Template"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+    target-branch: "JS-MongoDB-Mongoose-NoAuth-Template"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+    target-branch: "JS-MongoDB-Prisma-Auth-Template"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+    target-branch: "JS-MongoDB-Prisma-NoAuth-Template"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+    target-branch: "JS-MongoDB-TypeORM-Auth-Template"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+    target-branch: "JS-MongoDB-TypeORM-NoAuth-Template"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+    target-branch: "JS-MySQL-Prisma-Auth-Template"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+    target-branch: "JS-MySQL-Prisma-NoAuth-Template"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+    target-branch: "JS-MySQL-Sequelize-Auth-Template"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+    target-branch: "JS-MySQL-Sequelize-NoAuth-Template"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+    target-branch: "JS-MySQL-TypeORM-Auth-Template"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+    target-branch: "JS-MySQL-TypeORM-NoAuth-Template"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+    target-branch: "JS-PostgreSQL-Prisma-Auth-Template"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+    target-branch: "JS-PostgreSQL-Prisma-NoAuth-Template"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+    target-branch: "JS-PostgreSQL-Sequelize-Auth-Template"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+    target-branch: "JS-PostgreSQL-Sequelize-NoAuth-Template"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+    target-branch: "JS-PostgreSQL-TypeORM-Auth-Template"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+    target-branch: "JS-PostgreSQL-TypeORM-NoAuth-Template"
