@@ -1,7 +1,5 @@
 {
   "extends": ["config:base"],
-  "timezone": "Europe/London",
-  "schedule": ["every Saturday"],
   "packageRules": [
     {
       "description": "Main package updates",
