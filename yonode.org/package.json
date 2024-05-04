@@ -19,7 +19,7 @@
     "@saas-ui/react": "1.9.1",
     "@svgr/webpack": "^7.0.0",
     "contentlayer": "^0.3.2",
-    "date-fns": "^2.29.3",
+    "date-fns": "^3.0.0",
     "framer-motion": "^10.12.4",
     "next": "13.3.1",
     "next-contentlayer": "^0.3.2",
