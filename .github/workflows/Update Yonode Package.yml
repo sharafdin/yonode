@@ -42,7 +42,7 @@ jobs:
       - name: Push changes
         run: |
           git checkout -b update-yonode-dependencies
-          git push origin update-yonode-dependencies
+          git push -u origin update-yonode-dependencies
 
       - name: Create Pull Request for updated package.json
         uses: peter-evans/create-pull-request@v4
