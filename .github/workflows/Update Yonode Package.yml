@@ -43,6 +43,8 @@ jobs:
         run: |
           git checkout -b update-yonode-dependencies
           git push -u origin update-yonode-dependencies
+      - name: Push to Status Check-Protected Branches
+        uses: CasperWA/push-protected@v2.15.0
 
       - name: Create Pull Request for updated package.json
         uses: peter-evans/create-pull-request@v4
