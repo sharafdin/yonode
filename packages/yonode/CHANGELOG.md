@@ -186,7 +186,23 @@
 * fixed mysql and postgresql by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#168](https://github.com/sharafdin/yonode/pull/168)
 * fix: Update README.md by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#169](https://github.com/sharafdin/yonode/pull/169)
 * initializing typescript with Prisma by [@Omar-Tood](https://github.com/Omar-Tood) in [#170](https://github.com/sharafdin/yonode/pull/170)
-* Customized project: Node.js, TypeScript, Sequelize by [@Miirshe](https://github.com/Miirshe) in [#172](https://github.com/sharafdin/yonode/pull/172)
+* Customized project: Node.js,import { program } from 'commander'
+
+import { readFile } from 'fs/promises';
+const pkg = JSON.parse(await readFile(new URL('../../package.json', import.meta.url)));
+
+program
+    .option('-v, --version', 'output the version number')
+
+program.parse(process.argv);
+
+const options = program.opts();
+
+if (options.version) {
+    console.log(pkg.version);
+    process.exit(1)
+}
+ TypeScript, Sequelize by [@Miirshe](https://github.com/Miirshe) in [#172](https://github.com/sharafdin/yonode/pull/172)
 * Merge pull request #172 from sharafdin/miirshe by [@Miirshe](https://github.com/Miirshe) in [#173](https://github.com/sharafdin/yonode/pull/173)
 * Completed: Node.js, TypeScript, Sequelize + PostgreSQL by [@Miirshe](https://github.com/Miirshe) in [#174](https://github.com/sharafdin/yonode/pull/174)
 * finished the ts-prisma with postgresql by [@abdinasir-Tman](https://github.com/abdinasir-Tman) in [#175](https://github.com/sharafdin/yonode/pull/175)
