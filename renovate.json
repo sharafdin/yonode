@@ -1,10 +1,6 @@
 {
   "extends": ["config:base"],
   "includePaths": ["packages/yonode"],
-  "packageRules": [
-    {
-      "paths": ["package/yonode"],
-      "enabled": true
-    }
-  ]
+  "reviewers": ["isasharafdin"],
+  "labels": ["dependencies"],
 }
