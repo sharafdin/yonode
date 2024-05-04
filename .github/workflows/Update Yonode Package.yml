@@ -1,0 +1,44 @@
+name: Update Yonode Package on New Tag
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  update-yonode:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Change directory to yonode
+        run: |
+          cd packages/yonode
+
+      - name: Install npm-check-updates
+        run: npm install -g npm-check-updates
+
+      - name: Update package.json if newer versions are available
+        run: |
+          ncu -u
+
+      - name: Create Pull Request for updated package.json
+        id: cpr
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: Update dependencies in Yonode
+          title: 'Update Yonode dependencies'
+          body: 'This pull request updates dependencies for the Yonode package to coincide with new tag.'
+          branch: 'update-yonode-dependencies-${{ github.ref_name }}'
+          base: 'main'
+          labels: 'dependencies'
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check outputs
+        run: echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
