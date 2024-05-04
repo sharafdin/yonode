@@ -2,7 +2,7 @@ name: Update Yonode Package
 
 on:
   schedule:
-    # Runs every day at 05:00 UTC
+    # Runs every 5 minutes
     - cron: '*/5 * * * *'
   workflow_dispatch:
 
@@ -12,24 +12,39 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Important to fetch all history for branch operations
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-      
+
       - name: Change directory to yonode
         run: cd packages/yonode-templates/JS-MongoDB-Mongoose-Auth-Template
 
       - name: Install npm-check-updates
         run: npm install -g npm-check-updates
 
-      - name: Update package.json if newer versions are available
+      - name: Check for updated packages
+        run: ncu -u
+
+      - name: Install updated packages
+        run: npm install
+
+      - name: Commit updated package.json and package-lock.json
         run: |
-          ncu -u
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add package.json package-lock.json
+          git diff-index --quiet HEAD || git commit -m "Update dependencies"
+
+      - name: Push changes
+        run: |
+          git checkout -b update-yonode-dependencies
+          git push origin update-yonode-dependencies
 
       - name: Create Pull Request for updated package.json
-        id: cpr
         uses: peter-evans/create-pull-request@v4
         with:
           commit-message: Update dependencies in Yonode
