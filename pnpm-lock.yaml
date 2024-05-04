@@ -6,7 +6,11 @@ settings:
 
 importers:
 
-  .: {}
+  .:
+    devDependencies:
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
 
   docs.yonode.org:
     dependencies:
@@ -26,8 +30,8 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
       yonode:
-        specifier: ^0.7.0
-        version: 0.7.2
+        specifier: ^1.0.0
+        version: link:../packages/yonode
     devDependencies:
       '@types/node':
         specifier: 18.11.10
@@ -112,8 +116,8 @@ importers:
         specifier: ^2.5.5
         version: 2.5.7(@types/react@18.2.0)(react@18.2.0)
       yonode:
-        specifier: ^0.7.0
-        version: 0.7.2
+        specifier: ^1.0.0
+        version: link:../packages/yonode
     devDependencies:
       '@babel/core':
         specifier: ^7.21.5
@@ -8716,6 +8720,12 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
+  /prettier@3.2.5:
+    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
+
   /prop-types@15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
     dependencies:
@@ -10150,15 +10160,6 @@ packages:
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
-
-  /yonode@0.7.2:
-    resolution: {integrity: sha512-AMEa3bB0GFfMiwMR6KBYox0uT32FqUI8HEeiwwbB2GtNVNtNSijHbwoRrReO+4jopOnaD4+VyLm6rAVtdg8rtA==}
-    engines: {node: '>=0.10.0'}
-    hasBin: true
-    dependencies:
-      commander: 12.0.0
-      inquirer: 9.2.15
-    dev: false
 
   /zod@3.22.4:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
