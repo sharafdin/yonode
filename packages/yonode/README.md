@@ -7,6 +7,8 @@
 <p align="center">
   <a href="https://npmjs.com/package/yonode"><img src="https://img.shields.io/npm/v/yonode.svg" alt="yonode package"></a>
   <a href="https://nodejs.org/en/about/previous-releases"><img src="https://img.shields.io/node/v/yonode.svg" alt="node compatibility"></a>
+  <a href="https://socket.dev/npm/package/yonode"><img src="https://socket.dev/api/badge/npm/package/yonode" alt="Socket Badge"></a>
+  <a href="https://github.com/sharafdin/yonode/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/yonode" alt="Yonode License"></a>
 </p>
 
 # Yonode
