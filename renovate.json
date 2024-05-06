@@ -1,6 +1,0 @@
-{
-  "extends": ["config:base"],
-  "ignorePaths": ["**/typescript/**"],
-  "reviewers": ["isasharafdin"],
-  "labels": ["dependencies"]
-}
