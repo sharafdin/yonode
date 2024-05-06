@@ -9,7 +9,15 @@
     "dependencies"
   ],
   "ignorePaths": [
-    "**/typescript/**"
+    "**/typescript/**",
+    "**/node_modules/**",
+    "**/__tests__/**",
+    "**/__mocks__/**",
+    "**/dist/**",
+    "**/coverage/**",
+    "yonode.org",
+    "docs.yonode.org"
   ],
-  "rangeStrategy": "bump"
+  "rangeStrategy": "bump",
+  "reviewers": ["isasharafdin"]
 }
