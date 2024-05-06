@@ -15,8 +15,8 @@
     "**/__mocks__/**",
     "**/dist/**",
     "**/coverage/**",
-    "/yonode.org",
-    "/docs.yonode.org"
+    "/yonode.org/**",
+    "/docs.yonode.org/**"
   ],
   "rangeStrategy": "bump",
   "reviewers": ["isasharafdin"]
