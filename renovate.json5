@@ -11,11 +11,5 @@
   "ignorePaths": [
     "**/typescript/**"
   ],
-  "rangeStrategy": "bump",
-  "ignoreDeps": [
-    "esbuild",
-    "rollup",
-    "node",
-    "typescript"
-  ]
+  "rangeStrategy": "bump"
 }
