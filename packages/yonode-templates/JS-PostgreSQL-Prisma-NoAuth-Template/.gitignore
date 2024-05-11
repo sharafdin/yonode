@@ -4,7 +4,7 @@ logs/
 
 # Dependency directories
 node_modules/
-
+package-lock.json
 # Yarn and npm cache directories
 .yarn/cache/
 .npm/
@@ -17,7 +17,7 @@ node_modules/
 .stylelintcache
 
 # Environment variables
-.env
+
 .env.development.local
 .env.test.local
 .env.production.local
