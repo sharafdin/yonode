@@ -9,6 +9,13 @@ import { port } from "./config/initial.config.js";
 const app = express();
 app.use(express.json());
 
+
+// use your routes here 
+
+app.use("/api/helloworld", helloWorldRouter);
+
+
+
 // rest of your code here
 
 
