@@ -17,7 +17,7 @@ node_modules/
 .stylelintcache
 
 # Environment variables
-.env
+
 .env.development.local
 .env.test.local
 .env.production.local
