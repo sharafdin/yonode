@@ -15,7 +15,7 @@ AppDataSource.initialize()
    console.log(`${chalk.green.bold('Connected')} to the database`);
   })
   .catch((error) =>
-     console.log(`${chalk.red.bold('Error')} connecting to database`, error);
+     console.log(`${chalk.red.bold('Error')} connecting to database`, error)
   );
 
 export default AppDataSource;
