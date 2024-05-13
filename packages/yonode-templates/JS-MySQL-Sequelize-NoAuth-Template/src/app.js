@@ -9,8 +9,8 @@ import compression from "compression";
 import cookieParser from "cookie-parser";
 
 // import your files
-import { port } from './config/initial.config.js';
-import { connectDB } from './config/db.config.js';
+import { port } from './config/initialConfig.js';
+import { connectDB } from './config/dbConfig.js';
 import './models/models.js';
 import helloWorldRouter from './routes/helloWorldRouter.js';
 
