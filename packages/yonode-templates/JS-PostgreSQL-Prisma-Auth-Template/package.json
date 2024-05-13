@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.0",
-    "yonode": "^1.2.2"
+    "yonode": "^1.2.3"
   },
   "keywords": [],
   "author": "",

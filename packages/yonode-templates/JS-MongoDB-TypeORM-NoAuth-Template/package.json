@@ -28,7 +28,7 @@
     "typeorm": "0.3.20"
   },
   "devDependencies": {
-    "yonode": "^1.2.2",
+    "yonode": "^1.2.3",
     "nodemon": "^3.1.0"
   }
 }
