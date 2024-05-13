@@ -1,6 +1,6 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
-import { dbName, dbUrl } from "./initial.config.js";
+import { dbName, dbUrl } from "./initialConfig.js";
 import chalk from "chalk";
 
 const AppDataSource = new DataSource({
@@ -16,7 +16,7 @@ AppDataSource.initialize()
   console.log(`${chalk.green.bold('Connected')} to the database`);
   })
   .catch((error) =>
-      console.log(`${chalk.red.bold('Error')} connecting to database`, error);
+      console.log(`${chalk.red.bold('Error')} connecting to database`, error)
   );
 
 export default AppDataSource;
