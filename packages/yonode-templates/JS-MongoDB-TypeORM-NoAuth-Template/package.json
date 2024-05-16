@@ -26,7 +26,7 @@
     "nodemailer": "^6.9.13",
     "uuidv4": "^6.2.13",
     "reflect-metadata": "^0.2.2",
-    "typeorm": "0.3.17"
+    "typeorm": "0.3.20"
   },
   "devDependencies": {
     "yonode": "^1.2.3",
