@@ -8,7 +8,7 @@
  * @param {Object} res The Express.js response object
  * @param {Object} req The Express.js request object
  */
-export const helloWorld = async (res, req) => {
+export const helloWorld = async (req, res) => {
     try {
 
         // Send a "Hello World" message in the response body
