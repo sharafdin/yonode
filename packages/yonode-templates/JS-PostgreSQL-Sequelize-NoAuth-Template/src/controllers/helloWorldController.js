@@ -1,5 +1,5 @@
 
-export const helloWorld = async (res, req) => {
+export const helloWorld = async (req, res) => {
     try {
         // Send a simple string as a response
         res.send("Hello World!")

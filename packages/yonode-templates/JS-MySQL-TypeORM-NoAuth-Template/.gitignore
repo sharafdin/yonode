@@ -4,7 +4,7 @@ logs/
 
 # Dependency directories
 node_modules/
-
+package-lock
 # Yarn and npm cache directories
 .yarn/cache/
 .npm/

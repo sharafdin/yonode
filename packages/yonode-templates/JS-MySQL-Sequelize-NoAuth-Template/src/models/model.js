@@ -1,4 +1,4 @@
-import { sequelize } from '../config/db.config.js';
+import { sequelize } from '../config/dbConfig.js';
 
 const modelName = sequelize.define('modelName', {
     // rest of your schema here

@@ -9,9 +9,9 @@ import compression from "compression";
 import cookieParser from "cookie-parser";
 
 // import your files
-import { port } from "./config/initial.config.js";
-import "./config/db.config.js";
-
+import { port } from "./config/initialConfig.js";
+import "./config/dbConfig.js";
+import helloWorldRouter from "./routes/helloWorldRoutes.js";
 // Initializing the app
 const app = express();
 app.use(cookieParser());
