@@ -11,7 +11,7 @@ import cookieParser from "cookie-parser";
 // import your files
 import { port } from "./config/initialConfig.js";
 import "./config/dbConfig.js";
-
+import helloWorldRouter from "./routes/helloWorldRoutes.js";
 // Initializing the app
 const app = express();
 app.use(cookieParser());
