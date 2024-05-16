@@ -12,7 +12,7 @@ import cookieParser from "cookie-parser";
 import { port } from './config/initialConfig.js';
 import { connectDB } from './config/dbConfig.js';
 import './models/models.js';
-import helloWorldRouter from './routes/helloWorldRouter.js';
+import helloWorldRouter from './routes/helloWorldRoutes.js';
 
 // Initializing the app
 const app = express();
