@@ -1,0 +1,32 @@
+version: '3.9'
+
+services:
+  db:
+    image: mysql:latest
+    container_name: mysql-db
+    ports:
+      - '5431:5432'
+    environment:
+      MYSQL_USER: yonode
+      MYSQL_PASSWORD: 123321
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./db:/var/lib/mysql
+    restart: on-failure
+
+  server:
+    build: .
+    container_name: yonode-server
+    restart: on-failure
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - '8000:8000'
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      SERVER_PORT: ${SERVER_PORT}
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY}
+      NODE_ENVIRONMENT: ${NODE_ENVIRONMENT}
+    depends_on:
+      - db
