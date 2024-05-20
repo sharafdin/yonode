@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import { nodeEnv } from "../../JS-MongoDB-Prisma-Auth-Template/src/config/initialConfig.js";
+import { nodeEnv } from "../src/config/initailConfig.js";
 
 let prisma;
 
