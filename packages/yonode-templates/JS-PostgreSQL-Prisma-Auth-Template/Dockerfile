@@ -8,6 +8,8 @@ COPY . .
 
 RUN npm install -g pnpm
 
+RUN npm install -g nodemon
+
 RUN pnpm install
 
 RUN npx prisma generate
