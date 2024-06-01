@@ -28,7 +28,7 @@
     "uuidv4": "^6.2.13"
   },
   "devDependencies": {
-    "nodemon": "^3.1.1",
+    "nodemon": "^3.1.2",
     "yonode": "^1.2.3"
   }
 }
