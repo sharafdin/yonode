@@ -1,4 +1,4 @@
-export const helloWorld = async (req, res)=>{
+export const hellWorld = async (req, res)=>{
   try{
     res.send("Hello world!")
   }
