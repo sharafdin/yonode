@@ -1,0 +1,49 @@
+# Logs and Runtime data
+logs/
+*.log
+
+# Dependency directories
+node_modules/
+
+# Yarn and npm cache directories
+.yarn/cache/
+.npm/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional cache directories
+.eslintcache
+.stylelintcache
+
+# Environment variables
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Build output
+dist/
+build/
+out/
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Editor-specific files
+.vscode/
+.idea/
+*.swp
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Miscellaneous
+.node_repl_history
+.vscode-test
