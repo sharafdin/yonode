@@ -12,6 +12,4 @@ RUN npm install -g nodemon
 
 RUN pnpm install
 
-RUN npx prisma generate
-
 CMD ["nodemon", "-L", "./src/app.js"]

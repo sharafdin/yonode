@@ -20,7 +20,6 @@
     "express-validator": "^7.0.1",
     "helmet": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
-    "mysql": "^2.18.1",
     "mysql2": "^3.9.7",
     "morgan": "^1.10.0",
     "reflect-metadata": "^0.2.2",
