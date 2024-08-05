@@ -1,8 +1,8 @@
 import express from 'express'
-import { hellWorld } from '../controllers/helloWorldController.js'
+import { helloWorld } from '../controllers/helloWorldController.js'
 
-const hellWorldRouter = express.Router()
+const helloWorldRouter = express.Router()
 
-hellWorldRouter.get("/", hellWorld)
+helloWorldRouter.get("/", helloWorld)
 
-export default hellWorldRouter;
+export default helloWorldRouter;
