@@ -12,4 +12,4 @@ RUN npm install -g nodemon
 
 RUN pnpm install
 
-CMD ["pnpm", "run", "dev"]
+CMD ["nodemon", "-L", "./src/app.js"]
