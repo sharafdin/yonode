@@ -10,6 +10,7 @@ const AppDataSource = new DataSource({
   database: dbName,
   entities: [User],
   synchronize: true,
+  authSource: "admin"
 });
 
 AppDataSource.initialize()

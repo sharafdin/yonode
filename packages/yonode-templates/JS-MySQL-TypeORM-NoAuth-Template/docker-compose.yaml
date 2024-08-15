@@ -1,0 +1,42 @@
+version: '3.9'
+
+services:
+  db:
+    image: mysql:latest
+    container_name: mysql-db
+    volumes:
+      - ./db-data:/var/lib/mysql
+    ports:
+      - '3306:3306'
+      - '33060:33060'
+    environment:
+      MYSQL_USER: yonode
+      MYSQL_PASSWORD: 123321
+      MYSQL_ROOT_PASSWORD: 123321
+      MYSQL_DATABASE: yonodeDB
+      MYSQL_ROOT_HOST: "%"
+    restart: on-failure
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 30s
+      timeout: 3s
+      retries: 10
+
+  server:
+    build: .
+    container_name: yonode-server
+    restart: on-failure
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - '8000:8000'
+    environment:
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_URL: ${DATABASE_URL}
+      SERVER_PORT: ${SERVER_PORT}
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY}
+      NODE_ENVIRONMENT: ${NODE_ENVIRONMENT}
+    depends_on:
+      db:
+        condition: service_healthy

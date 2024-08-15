@@ -23,3 +23,14 @@ The server is running and ready to serve requests.
 Now, Go to the Src directory and start building the server.
 
 Happy coding!
+
+
+## NOTES
+
+### Using Docker
+
+To use Docker, you do not need to install `node_modules` locally. Simply run the following command:
+
+```bash
+docker-compose up
+```
