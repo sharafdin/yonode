@@ -25,7 +25,7 @@
     "yonode": "^1.2.3"
   },
   "devDependencies": {
-    "@types/node": "20.12.10",
+    "@types/node": "20.12.12",
     "typescript": "^5.4.5"
   }
 }
